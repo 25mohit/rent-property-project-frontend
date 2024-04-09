@@ -5,4 +5,6 @@ style.css
     For your all styling
 
 UserAuth/page.tsx
-    This is Main Page for 'UserAuth' Route, where both form (Register User and Login User) comes. In this file there is HOC (High Order Component), that will a Wrapper for Both Form, for same styling for Both Forms.
+    This is Main Page for 'UserAuth' Route, where both form (Register User and Login User) comes. In this file there is HOC
+     (High Order Component), that will a Wrapper for Both Form, for same styling for Both Forms.
+
