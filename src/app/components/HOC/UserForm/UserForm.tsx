@@ -1,11 +1,16 @@
 import React from "react"
 
 interface UserFormProps{
-  children: any
+  children: any,
+  title: string
 }
-const UserForm:React.FC<UserFormProps> = ({ children }) => {
+
+const UserForm:React.FC<UserFormProps> = ({ children, title }) => {
   return (
-    <div>{children}</div>
+    <form method="post" className="main-user-form-container flex flex-col gap-4">
+      <h2>{title}</h2>
+      {children}
+    </form>
   )
 }
 
