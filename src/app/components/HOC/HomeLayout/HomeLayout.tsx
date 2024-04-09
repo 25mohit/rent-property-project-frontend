@@ -1,4 +1,5 @@
 import React from 'react'
+import BottomBar from '../../Utils/BottomBar/BottomBar'
 
 interface HomeLayoutInterface{
     children: any
@@ -6,8 +7,9 @@ interface HomeLayoutInterface{
 
 const HomeLayout:React.FC<HomeLayoutInterface> = ({ children }) => {
   return (
-    <section>
+    <section className='home-layout'>
         {children}
+        <BottomBar />
     </section>
   )
 }

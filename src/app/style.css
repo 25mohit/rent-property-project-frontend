@@ -6,6 +6,7 @@ body{
 }
 .container-main{
     width: 35vw;
+    max-width: 35vw;
     height: 100vh;
     padding: var(--primary-padding);
     margin: 0 auto;
@@ -15,4 +16,21 @@ body{
 .main-user-form-container{
     border: 1px solid red;
     padding: var(--primary-padding);
+}
+.home-layout{
+    /* background-color: rgb(221, 221, 221); */
+    max-width: 100%;
+}
+.bottom-bar{
+    position: fixed;
+    bottom: 0;
+    background-color: gray;
+}
+.property-card{
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    padding: var(--primary-padding);
+    margin: 0.6rem 0;
+    border-radius: 1rem;
 }
