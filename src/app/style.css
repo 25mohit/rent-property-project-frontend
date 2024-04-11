@@ -25,6 +25,7 @@ body{
     position: fixed;
     bottom: 0;
     background-color: gray;
+    height: var( --bottom-bar-height);
 }
 .property-card{
     background-color: orange;
