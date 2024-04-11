@@ -1,0 +1,85 @@
+@import "variables.scss";
+@import "fonts.scss";
+
+* {
+    box-sizing: border-box;
+}
+*, body {
+    margin: 0;
+    padding: 0;
+}
+html {
+    display: block;
+}
+
+body{
+    display: block;
+    background-color:var(--bodyBg);
+    font-family: 'Poppins' !important;
+    width: 100%;
+    height: 100%;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+
+.onBoardingSection {
+
+    .pageTitle {
+        font-size: 28px;
+        text-align: center;
+        font-weight: 600;
+    }
+}
+
+.pageContent {
+    display: flex;
+	
+	.leftContent {
+		background-color: var(--bodyBg);
+		border-right: 2px solid #e3e3e3;
+		height: 100vh;
+		left: 0;
+		max-width: 400px;
+		position: absolute;
+		width: 100%;
+	
+		.titleBar {
+			margin: 0;
+			padding: 12px 0px;
+			background: #fff;
+			border-bottom: 1px solid #e3e3e3;
+			
+			.menuBtn {
+				font-size: 22px;
+				padding: 0px;
+				color:#222 !important;
+				background: transparent !important;
+				border:none;
+			}
+			.walletIcon {
+				text-decoration: none;
+				background: #efefef !important;
+				display: inline-flex;
+				padding: 5px 10px;
+				border-radius: 5px;
+				align-items: center;
+				justify-content: end;
+				color:#222 !important;
+				border:none;
+				
+				.icon {
+				   margin-right:5px;
+				}
+			}
+		}
+		.scrollBody {
+			overflow: hidden;
+			overflow-x: hidden;
+			overflow-y: auto;
+			height: calc(100vh - 60px);
+			padding:15px;
+		}
+	}
+}

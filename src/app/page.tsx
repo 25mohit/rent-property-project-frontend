@@ -1,7 +1,9 @@
+
+
 export default function Home() {
   return (
-    <main>
-      hello 45
-    </main>
+    <section className="">
+        <h5>Home</h5> 
+    </section>
   );
 }
