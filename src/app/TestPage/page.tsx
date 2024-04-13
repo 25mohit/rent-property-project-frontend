@@ -1,17 +1,13 @@
 'use client'
-import React, { useLayoutEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
-interface TestPageLayout{
-  children: any
-}
-
-const Page:React.FC<TestPageLayout> = ({ children}) => {
+const Page = () => {
     const [containerH, setContainerH] = useState(0)
 
   useLayoutEffect(() => {
     const setContainerHeight = () => {
-      const navElement = document.querySelector('.lessSpace1') as HTMLElement;
-      const bottomElement = document.querySelector('.lessSpace2') as HTMLElement;
+      const navElement = document.querySelector('.nav') as HTMLElement;
+      const bottomElement = document.querySelector('.bottom') as HTMLElement;
 
       if (navElement && bottomElement) {
         const navHeight = navElement?.offsetHeight ;
@@ -19,7 +15,7 @@ const Page:React.FC<TestPageLayout> = ({ children}) => {
         const windowHeight = window.innerHeight;
         const containerHeight = windowHeight - navHeight - bottomHeight;
 
-        const containers = document.querySelectorAll('.mainPlayArea');
+        const containers = document.querySelectorAll('.container');
         containers.forEach(container => {
             (container as HTMLElement).style.height = `${containerHeight}px`;
         });
@@ -43,8 +39,9 @@ const Page:React.FC<TestPageLayout> = ({ children}) => {
       <div className="nav" style={{ height: '60px' }}>
         NavBar
       </div>
-      <div className="container" style={{ height: `${containerH}px`}}>
-       {children}
+      <div className="container">
+        Container <br />
+        {containerH}px
       </div>
       <div className="bottom" style={{ height: '70px' }}>
         Bottom Bar
