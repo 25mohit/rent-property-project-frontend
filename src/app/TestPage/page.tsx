@@ -1,7 +1,11 @@
 'use client'
-import { useLayoutEffect, useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 
-const Page = () => {
+interface TestPageLayout{
+  children: any
+}
+
+const Page:React.FC<TestPageLayout> = ({ children}) => {
     const [containerH, setContainerH] = useState(0)
 
   useLayoutEffect(() => {
@@ -39,9 +43,8 @@ const Page = () => {
       <div className="nav" style={{ height: '60px' }}>
         NavBar
       </div>
-      <div className="container">
-        Container <br />
-        {containerH}px
+      <div className="container" style={{ height: `${containerH}px`}}>
+       {children}
       </div>
       <div className="bottom" style={{ height: '70px' }}>
         Bottom Bar
