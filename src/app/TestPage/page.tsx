@@ -1,13 +1,13 @@
 'use client'
-import React, { useLayoutEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
 const Page = () => {
     const [containerH, setContainerH] = useState(0)
 
   useLayoutEffect(() => {
     const setContainerHeight = () => {
-      const navElement = document.querySelector('.lessSpace1') as HTMLElement;
-      const bottomElement = document.querySelector('.lessSpace2') as HTMLElement;
+      const navElement = document.querySelector('.nav') as HTMLElement;
+      const bottomElement = document.querySelector('.bottom') as HTMLElement;
 
       if (navElement && bottomElement) {
         const navHeight = navElement?.offsetHeight ;
@@ -15,7 +15,7 @@ const Page = () => {
         const windowHeight = window.innerHeight;
         const containerHeight = windowHeight - navHeight - bottomHeight;
 
-        const containers = document.querySelectorAll('.mainPlayArea');
+        const containers = document.querySelectorAll('.container');
         containers.forEach(container => {
             (container as HTMLElement).style.height = `${containerHeight}px`;
         });

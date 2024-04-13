@@ -1,6 +1,5 @@
 
 'use client'
-import Page from '@/app/TestPage/page';
 import React, { useEffect, useLayoutEffect, useState } from 'react'
 
 interface LayoutInterface{
@@ -68,6 +67,7 @@ const Layout:React.FC<LayoutInterface> = ({ children }) => {
          }
     },[])
     
+    console.log("windowWidthCalculated", windowWidthCalculated, windowHeightCalculated)
   return (
     <div>
         {/* <h1 style={{fontSize}}>Mohit Agarwal</h1> */}
