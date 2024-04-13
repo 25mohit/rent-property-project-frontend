@@ -44,7 +44,6 @@ const Signup = () => {
             <Image src={google} alt="google" />
             <p>Continue with Google</p>
         </button>
-
         <p className="switchScreen">Already have an account? <Link className="link" href="/Login">Signup</Link></p>
     </UserForm>
   );
