@@ -9,9 +9,11 @@ interface UserFormProps{
 
 const UserForm:React.FC<UserFormProps> = ({ children, title }) => {
   return (
-    <form method="post" className="p-4 onBoardingSection">
-      {children}
-    </form>
+    <div className="scroll">
+      <form method="post" className="p-4 onBoardingSection">
+        {children}
+      </form>
+    </div>
   )
 }
 

@@ -69,12 +69,12 @@ const Layout:React.FC<LayoutInterface> = ({ children }) => {
     },[])
     
   return (
-    <Page>
+    <div>
         {/* <h1 style={{fontSize}}>Mohit Agarwal</h1> */}
         {/* {windowWidthCalculated} <br></br> */}
         {/* <span>{fontSize}</span> */}
         {children}
-    </Page>
+    </div>
   )
 }
 

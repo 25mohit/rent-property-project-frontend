@@ -145,10 +145,13 @@ textarea:focus-visible {
 		}
 	}
     .pageTitle {
-        font-size: 20px;
-        text-align: left;
-        font-weight: 600;
 		margin-bottom: 20px;
+
+		h2 {
+			font-size: 20px;
+			text-align: left;
+			font-weight: 600;
+		}
     }
 }
 
@@ -219,6 +222,8 @@ textarea:focus-visible {
 		background-color: greenyellow;
 	}
 }
-.layout{
-	// background-color: red;
+.scroll {
+    height: calc(100vh - 1px);
+    overflow: hidden;
+    overflow-y: scroll;
 }
