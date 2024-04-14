@@ -1,11 +1,13 @@
 'use client'
-import React from "react";
+import React, { useState } from 'react';
 import UserForm from '../components/HOC/UserForm/UserForm'
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
+import OtpInput from 'react-otp-input';
 
 const OTPVerifivation = () => {
- 
+  const [otp, setOtp] = useState('');
+  
   return (
     <UserForm title="Forgot Password">
         <div className="topHead flex justify-between">
@@ -17,7 +19,15 @@ const OTPVerifivation = () => {
             <p>OTP has been sent your registred email Id <br/>jkdesigner26@gmail.com</p>
         </div>
         <div className="formGroup">
-            <input type="email" className='form-control' placeholder='Enter Email'/>
+          <div className='otpBox'>
+            <OtpInput
+            value={otp}
+            onChange={setOtp}
+            numInputs={4}
+            renderInput={(props) => <input {...props} />}
+          />
+          </div>
+        
             <p className='error danger'></p>
         </div>
         <button className='btn mainBtn fillBtn'>Verify</button>

@@ -20,7 +20,7 @@ const ForgotPassword = () => {
             <input type="email" className='form-control' placeholder='Enter Email'/>
             <p className='error danger'></p>
         </div>
-        <button className='btn mainBtn fillBtn'>Submit</button>
+        <Link href="/OTP" className='btn mainBtn fillBtn'>Submit</Link>
 
 
         <p className="switchScreen">Don't have an account? <Link className="link" href="/Signup">Signup</Link></p>
