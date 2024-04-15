@@ -18,6 +18,7 @@ body{
     font-family: 'Poppins' !important;
     width: 100%;
     height: 100%;
+	overflow: hidden;
 }
 *, ::after, ::before {
     box-sizing: border-box;
@@ -27,16 +28,40 @@ select:focus-visible,
 textarea:focus-visible {
 	outline: none;
 }
+input::placeholder {
+	color:#c7c6c6;
+	opacity: 1;
+  }
+  
+input::-ms-input-placeholder { 
+	color:#c7c6c6;
+  }
+
+
 .formGroup {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+	position: relative;
+
+	.formLabel {
+		position: absolute;
+		left: 8px;
+		top: -8px;
+		font-size: 12px;
+		background: #fff;
+		padding: 0px 7px;
+	    z-index: 1;
+	}
 }
 .form-control {
-    width: 100%;
+	width: 100%;
     min-height: 55px;
-	border: 1px solid #ddd;
+    border: 1px solid #ddd;
     background-color: #fff;
     padding: 10px 15px;
     border-radius: 8px;
+    font-size: 16px;
+    line-height: 2.5;
+	font-weight: 400;
 
 	&:focus {
 	    border: 1px solid var(--main);
@@ -45,11 +70,12 @@ textarea:focus-visible {
 .otpBox {
 
     div {
-		gap: 5;
+		gap: 10px;
+		justify-content: center;
 	
 		input {
-			width: 80px !important;
-			height: 80px !important;
+			width: 75px !important;
+			height: 75px !important;
 			min-height: 55px;
 			border: 1px solid #ddd;
 			background-color: #fff;
@@ -78,14 +104,28 @@ textarea:focus-visible {
 		border: 2px solid var(--main);
 		color: var(--main);
 		background-color: #fff;
+
+		&:disabled {
+			border: 2px solid #d8d8d8;
+			color: #898989;
+			background-color: #f3f3f3;
+		}
 	}
 	&.fillBtn {
 		border: 2px solid var(--main);
 		color: #fff;
 		background-color: var(--main);
+
+		&:disabled {
+			border: 2px solid #d8d8d8;
+			color: #898989;
+			background-color: #d8d8d8;
+		}
 	}
 }
-
+.width100 {
+	width: 100%;
+}
 .errorBorder{
 	border-color: red !important;
 }
@@ -176,7 +216,7 @@ textarea:focus-visible {
 		}
 	}
     .pageTitle {
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 
 		h2 {
 			font-size: 20px;
@@ -197,43 +237,94 @@ textarea:focus-visible {
 		max-width: 400px;
 		position: absolute;
 		width: 100%;
-		height: calc(100vh - 1px);   
+		overflow: hidden;
+
+		.col {
+			flex: 1 0 0%;
+		}
+
+		
 	
-		.titleBar {
+		.headerBar {
 			margin: 0;
-			padding: 12px 0px;
 			background: #fff;
 			border-bottom: 1px solid #e3e3e3;
+			display: flex;
+			align-items: center;
+
+			.leftMenu {
+				display: flex;
+				flex: 100%;
 			
-			.menuBtn {
-				font-size: 22px;
-				padding: 0px;
-				color:#222 !important;
-				background: transparent !important;
-				border:none;
-			}
-			.walletIcon {
-				text-decoration: none;
-				background: #efefef !important;
-				display: inline-flex;
-				padding: 5px 10px;
-				border-radius: 5px;
-				align-items: center;
-				justify-content: end;
-				color:#222 !important;
-				border:none;
-				
-				.icon {
-				   margin-right:5px;
+				.menuBtn {
+					font-size: 36px;
+					padding: 0px;
+					color: #222;
+					background: transparent;
+					border: none;
+					width: 60px;
+					height: 60px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				.location {
+					display: flex;
+					align-items: center;
+					gap: 5px;
+
+					.icon {
+						font-size: 20px;
+					}
+					.locationBody {
+
+						h5 {
+							font-size: 16px;
+							font-weight: 500;
+							line-height: 1;
+							margin-bottom: 5px;
+						}
+						p {
+							font-size: 12px;
+							overflow: hidden;
+							-o-text-overflow: ellipsis;
+							text-overflow: ellipsis;
+							display: -webkit-box;
+							-webkit-line-clamp: 1;
+							-webkit-box-orient: vertical;
+							line-height: 1;
+						}
+					}
 				}
 			}
-		}
-		.scrollBody {
-			overflow: hidden;
-			overflow-x: hidden;
-			overflow-y: auto;
-			height: calc(100vh - 60px);
-			padding:15px;
+			
+			
+			.headerAction {
+				list-style: none;
+				display: flex;
+				align-items: center;
+				justify-content: end;
+
+				li {
+
+					.btn {
+						font-size: 30px;
+						padding: 0px;
+						color: #222;
+						background: transparent;
+						border: none;
+						width: 50px;
+						height: 60px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+
+						&.search{
+							font-size: 26px;
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -257,4 +348,25 @@ textarea:focus-visible {
     height: calc(100vh - 1px);
     overflow: hidden;
     overflow-y: scroll;
+}
+
+
+
+@media (max-width:991px) {
+
+	.pageContent {
+		display: flex;
+		
+		.leftContent {
+			max-width: 100%;
+			border-right: none;
+		}
+
+
+	   .rightContent {
+		  display:none;
+	   }
+	}
+
+	
 }

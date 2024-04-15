@@ -19,12 +19,14 @@ const Login = () => {
         <h2>Welcome to login</h2>
         </div>
         <div className="formGroup">
-            <input type="email" className='form-control' placeholder='Enter Email'/>
+            <label className="formLabel">Email Address</label>
+            <input type="email" className='form-control' placeholder='Enter Your Email Address'/>
             <p className='error danger'></p>
         </div>
         <div className="formGroup">
+            <label className="formLabel">Password</label>
             <div className='flex relative'>
-                <input type="password" className='form-control' placeholder='Enter Password'/>
+                <input type="password" className='form-control' placeholder='Enter Your Password'/>
                 <button className="eyeAction">
                   <AiFillEye/>
                   {/* <AiFillEyeInvisible /> */}
@@ -32,7 +34,7 @@ const Login = () => {
             </div>
             <p className='error danger'></p>
         </div>
-        <button className='btn mainBtn fillBtn'>Login</button>
+        <button className='btn mainBtn fillBtn' >Login</button>
         <p className="forgotPassword"><Link className="link" href="/ForgotPassword">Forgot Password?</Link></p>
 
         <p className="orLogin"><span>or</span></p>

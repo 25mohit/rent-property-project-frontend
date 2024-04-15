@@ -30,7 +30,8 @@ const OTPVerifivation = () => {
         
             <p className='error danger'></p>
         </div>
-        <button className='btn mainBtn fillBtn'>Verify</button>
+        <button className='btn mainBtn fillBtn' disabled>Verify</button>
+        <p className="forgotPassword"><Link className="link" href="#">Resend OTP</Link></p>
 
 
     </UserForm>

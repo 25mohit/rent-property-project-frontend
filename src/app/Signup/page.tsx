@@ -19,11 +19,13 @@ const Signup = () => {
         <h2>Create an account</h2>
         </div>
         <div className="formGroup">
-            <input type="text" className='form-control' placeholder='Full Name'/>
+            <label className="formLabel">Email Address</label>
+            <input type="text" className='form-control' placeholder='Enter Your Full Name'/>
             <p className='error danger'></p>
         </div>
         <div className="formGroup">
-            <input type="email" className='form-control' placeholder='Enter Email'/>
+            <label className="formLabel">Email Address</label>
+            <input type="email" className='form-control' placeholder='Enter Your Email Address'/>
             <p className='error danger'></p>
         </div>
         <div className="formGroup">
