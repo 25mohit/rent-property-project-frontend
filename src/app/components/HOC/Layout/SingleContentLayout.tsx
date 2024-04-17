@@ -12,9 +12,7 @@ const SingleContentLayout:React.FC<SingleContentInterface> = ({ children }) => {
       const containerHTML = document.querySelector('.single-content-layout');
       (containerHTML as HTMLElement).style.height = `${window.innerHeight}px`;
     };
-
     window.addEventListener('resize', onResize);
-
     return () => window.removeEventListener('resize', onResize);
   }, []);
 

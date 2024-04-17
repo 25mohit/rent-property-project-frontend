@@ -1,5 +1,4 @@
-'use client'
-import React, { useLayoutEffect, useState } from "react";
+import React from "react";
 import UserForm from '../components/HOC/UserForm/UserForm'
 import { AiFillEye } from "react-icons/ai";
 import { AiFillEyeInvisible } from "react-icons/ai";
@@ -8,16 +7,13 @@ import { google } from "../../../public/images";
 import Link from "next/link";
 
 const Login = () => {
-
   return (
     <UserForm title="Welcome to login">
         <div className="topHead flex justify-between">
           {/* <button className="backBtn"><IoArrowBack /></button> */}
             <Link className="link" href="#">Skip {'>'}{'>'} </Link>
         </div>
-        <div className="pageTitle">
-        <h2>Welcome to login</h2>
-        </div>
+        <h2 className="pageTitle">Welcome to login</h2>
         <div className="formGroup">
             <label className="formLabel">Email Address</label>
             <input type="email" className='form-control' placeholder='Enter Your Email Address'/>
@@ -44,7 +40,7 @@ const Login = () => {
             <p>Continue with Google</p>
         </button>
 
-        <p className="switchScreen">Don't have an account? <Link className="link" href="/Signup">Signup</Link></p>
+        <p className="switchScreen">Don't have an account? <Link className="link" href="#">Signup</Link></p>
     </UserForm>
   );
 };
