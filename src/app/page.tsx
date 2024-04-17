@@ -1,15 +1,11 @@
-import BottomBar from "./components/Utils/BottomBar/BottomBar";
-import HeaderBar from "./components/Utils/HeaderBar/HeaderBar";
+import HomePage from "./Home/page";
+
 
 
 export default function Home() {
   return (
-    <section className="">
-        <HeaderBar/>
-        <div className="Body">
-
-        </div>
-        <BottomBar/>
-    </section>
+    <>
+     <HomePage />
+    </>
   );
 }

@@ -1,5 +1,7 @@
 "use client"
 import { useEffect } from 'react'
+import HeaderBar from '../../Utils/HeaderBar/HeaderBar';
+import BottomBar from '../../Utils/BottomBar/BottomBar';
 
 interface multiContentInterface{
     children: any
@@ -8,8 +10,8 @@ const MultiContentLayout:React.FC<multiContentInterface> = ({ children }) => {
 
   useEffect(() => {
     const setContainerHeight = () => {
-      const navElement = document.querySelector('.nav') as HTMLElement;
-      const bottomElement = document.querySelector('.bottom') as HTMLElement;
+      const navElement = document.querySelector('.headerSpace') as HTMLElement;
+      const bottomElement = document.querySelector('.bottomBarSpace') as HTMLElement;
 
       if (navElement && bottomElement) {
         const navHeight = navElement?.offsetHeight ;
@@ -17,7 +19,7 @@ const MultiContentLayout:React.FC<multiContentInterface> = ({ children }) => {
         const windowHeight = window.innerHeight;
         const containerHeight = windowHeight - navHeight - bottomHeight;
 
-        const containers = document.querySelectorAll('.container');
+        const containers = document.querySelectorAll('.multiContentLayout');
         containers.forEach(container => {
             (container as HTMLElement).style.height = `${containerHeight}px`;
         });
@@ -36,11 +38,11 @@ const MultiContentLayout:React.FC<multiContentInterface> = ({ children }) => {
   }, []);
 
   return (
-    <div className='multi-content-layout'>
-        <div className="nav" style={{height: '60px'}}></div>
-        <section className='container'>{children}</section>
-        <div className="bottom" style={{height: '60px'}}></div>
-    </div>
+    <>
+      <div className='headerSpace'><HeaderBar/></div>
+      <section className='multiContentLayout scroll'>{children}</section>
+      <div className='bottomBarSpace'><BottomBar/></div>
+      </>
   )
 }
 

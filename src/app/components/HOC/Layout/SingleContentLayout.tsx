@@ -9,7 +9,7 @@ const SingleContentLayout:React.FC<SingleContentInterface> = ({ children }) => {
 
   useEffect(() => {
     const onResize = () => {
-      const containerHTML = document.querySelector('.single-content-layout');
+      const containerHTML = document.querySelector('.singleContentLayout');
       (containerHTML as HTMLElement).style.height = `${window.innerHeight}px`;
     };
     window.addEventListener('resize', onResize);
@@ -17,7 +17,7 @@ const SingleContentLayout:React.FC<SingleContentInterface> = ({ children }) => {
   }, []);
 
   return (
-    <div className='single-content-layout scroll' style={{height: `${window.innerHeight}px`}}> 
+    <div className='singleContentLayout scroll' style={{height: `${window.innerHeight}px`}}> 
         {children}
     </div>
   )
