@@ -1,5 +1,4 @@
-'use client'
-import React, { useLayoutEffect, useState } from "react";
+import React from "react";
 import UserForm from '../components/HOC/UserForm/UserForm'
 import { AiFillEye } from "react-icons/ai";
 import { AiFillEyeInvisible } from "react-icons/ai";
@@ -8,38 +7,6 @@ import { google } from "../../../public/images";
 import Link from "next/link";
 
 const Login = () => {
-  const [containerH, setContainerH] = useState(0)
-
-  useLayoutEffect(() => {
-    const setContainerHeight = () => {
-      const navElement = document.querySelector('.lessSpace1') as HTMLElement;
-      const bottomElement = document.querySelector('.lessSpace2') as HTMLElement;
-
-      if (navElement && bottomElement) {
-        const navHeight = navElement?.offsetHeight ;
-        const bottomHeight = bottomElement?.offsetHeight;
-        const windowHeight = window.innerHeight;
-        const containerHeight = windowHeight - navHeight - bottomHeight;
-
-        const containers = document.querySelectorAll('.mainPlayArea');
-        containers.forEach(container => {
-            (container as HTMLElement).style.height = `${containerHeight}px`;
-        });
-        setContainerH(containerHeight)
-      }
-    };
-
-    setContainerHeight();
-
-    window.addEventListener("resize", setContainerHeight);
-    document.addEventListener("DOMContentLoaded", setContainerHeight);
-
-    return () => {
-      window.removeEventListener("resize", setContainerHeight);
-      document.removeEventListener("DOMContentLoaded", setContainerHeight);
-    };
-  }, []);
-
   return (
     <UserForm title="Welcome to login">
         <div className="topHead flex justify-between">
