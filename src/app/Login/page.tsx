@@ -8,6 +8,37 @@ import { google } from "../../../public/images";
 import Link from "next/link";
 
 const Login = () => {
+  const [containerH, setContainerH] = useState(0)
+
+  useLayoutEffect(() => {
+    const setContainerHeight = () => {
+      const navElement = document.querySelector('.lessSpace1') as HTMLElement;
+      const bottomElement = document.querySelector('.lessSpace2') as HTMLElement;
+
+      if (navElement && bottomElement) {
+        const navHeight = navElement?.offsetHeight ;
+        const bottomHeight = bottomElement?.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const containerHeight = windowHeight - navHeight - bottomHeight;
+
+        const containers = document.querySelectorAll('.mainPlayArea');
+        containers.forEach(container => {
+            (container as HTMLElement).style.height = `${containerHeight}px`;
+        });
+        setContainerH(containerHeight)
+      }
+    };
+
+    setContainerHeight();
+
+    window.addEventListener("resize", setContainerHeight);
+    document.addEventListener("DOMContentLoaded", setContainerHeight);
+
+    return () => {
+      window.removeEventListener("resize", setContainerHeight);
+      document.removeEventListener("DOMContentLoaded", setContainerHeight);
+    };
+  }, []);
 
   return (
     <UserForm title="Welcome to login">
@@ -15,11 +46,9 @@ const Login = () => {
           {/* <button className="backBtn"><IoArrowBack /></button> */}
             <Link className="link" href="#">Skip {'>'}{'>'} </Link>
         </div>
-        <div className="pageTitle">
-        <h2>Welcome to login</h2>
-        </div>
+        <h2 className="pageTitle">Welcome to login</h2>
         <div className="formGroup">
-            <input type="email" className='form-control' placeholder='Enter Email'/>
+            <input type="text" className='form-control' placeholder='Enter Email'/>
             <p className='error danger'></p>
         </div>
         <div className="formGroup">
@@ -33,7 +62,7 @@ const Login = () => {
             <p className='error danger'></p>
         </div>
         <button className='btn mainBtn fillBtn'>Login</button>
-        <p className="forgotPassword"><Link className="link" href="/ForgotPassword">Forgot Password?</Link></p>
+        <p className="forgotPassword"><Link className="link" href="#">Forgot Password?</Link></p>
 
         <p className="orLogin"><span>or</span></p>
 
@@ -42,7 +71,7 @@ const Login = () => {
             <p>Continue with Google</p>
         </button>
 
-        <p className="switchScreen">Don't have an account? <Link className="link" href="/Signup">Signup</Link></p>
+        <p className="switchScreen">Don't have an account? <Link className="link" href="#">Signup</Link></p>
     </UserForm>
   );
 };
