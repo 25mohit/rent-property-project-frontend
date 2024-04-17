@@ -29,6 +29,21 @@ const Signup = () => {
             <p className='error danger'></p>
         </div>
         <div className="formGroup">
+            <label className="formLabel">Email Address</label>
+            <input type="email" className='form-control' placeholder='Enter Your Email Address'/>
+            <p className='error danger'></p>
+        </div>
+        <div className="formGroup">
+            <label className="formLabel">Email Address</label>
+            <input type="email" className='form-control' placeholder='Enter Your Email Address'/>
+            <p className='error danger'></p>
+        </div>
+        <div className="formGroup">
+            <label className="formLabel">Email Address</label>
+            <input type="email" className='form-control' placeholder='Enter Your Email Address'/>
+            <p className='error danger'></p>
+        </div>
+        <div className="formGroup">
             <div className='flex relative'>
                 <input type="password" className='form-control' placeholder='Create Password'/>
                 <button className="eyeAction">
@@ -39,9 +54,7 @@ const Signup = () => {
             <p className='error danger'></p>
         </div>
         <button className='btn mainBtn fillBtn'>Signup</button>
-
         <p className="orLogin"><span>or</span></p>
-
         <button className="gamilSignup">
             <Image src={google} alt="google" />
             <p>Continue with Google</p>
