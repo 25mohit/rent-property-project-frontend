@@ -17,7 +17,8 @@ const ForgotPassword = () => {
             <p>Please Enter Your Registred Email Id</p>
         </div>
         <div className="formGroup">
-            <input type="email" className='form-control' placeholder='Enter Email'/>
+            <label className="formLabel">Email Address</label>
+            <input type="email" className='form-control' placeholder='Enter Your Email Address'/>
             <p className='error danger'></p>
         </div>
         <Link href="/OTP" className='btn mainBtn fillBtn'>Submit</Link>

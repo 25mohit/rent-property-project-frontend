@@ -1,6 +1,7 @@
 import Link from "next/link"
 import React from "react"
 import { IoArrowBack } from "react-icons/io5";
+import SingleContentLayout from "../Layout/SingleContentLayout";
 
 interface UserFormProps{
   children: any,
@@ -9,11 +10,12 @@ interface UserFormProps{
 
 const UserForm:React.FC<UserFormProps> = ({ children, title }) => {
   return (
-    <div className="scroll">
+    <SingleContentLayout>
       <form method="post" className="p-4 onBoardingSection">
         {children}
       </form>
-    </div>
+    </SingleContentLayout>
+    
   )
 }
 
