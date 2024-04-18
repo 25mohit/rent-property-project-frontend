@@ -425,6 +425,20 @@ input::-ms-input-placeholder {
 	}
 }
 
+.titleBox {
+	display: block;
+    width: 100%;
+	padding: 0 6px 6px 6px;
+	margin-top: 10px;
+
+	.titleS {
+		font-size:var(--fontSize20);
+		font-weight: 500;
+	}
+}
+.bottomSpace {
+	padding-bottom: 30px !important;
+}
 .categoyList {
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     position: sticky;
@@ -478,6 +492,10 @@ input::-ms-input-placeholder {
        width: 50%;
 	   padding:8px;
 	}
+	.col-12 {
+       width: 100%;
+	   padding:8px;
+	}
 }
 .scroll {
     height: calc(100vh - 1px);
@@ -513,6 +531,20 @@ input::-ms-input-placeholder {
 			min-height: 100%;
 			margin: auto;
 		}
+		.favIcon {
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			top:8px;
+			right:8px;
+			font-size:20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: #fff;
+			border-radius: 50px;
+			color: var(--main);
+		}
 	}
 	.productCardBoy {
 		padding-top: 5px;
@@ -530,6 +562,50 @@ input::-ms-input-placeholder {
 			opacity: 0.5;
 		}
 	}
+}
+
+.myAdsCard {
+
+	.myAdsCardIn {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		
+		.productCardImg {
+			min-height: 80px;
+			min-width: 80px;
+			max-height: 80px;
+			max-width: 80px;
+			position: relative;
+			padding: 0;
+			box-sizing: border-box;
+			overflow: hidden;
+			border-radius: 5px;
+			border: 1px solid #cbcbcb;
+
+			img {
+				min-height: 100%;
+				margin: auto;
+			}
+		}
+		
+		.productCardBoy {
+
+			.itemPrice {
+				font-size: var(--fontSize18);
+				font-weight: 600;
+				margin-bottom: 3px;
+			}
+			.prdTitle{
+			margin-bottom: 3px;
+			}
+			.location {
+				font-size: var(--fontSize12);
+				opacity: 0.5;
+			}
+		}
+	}
+
 }
 
 .listingProduct {

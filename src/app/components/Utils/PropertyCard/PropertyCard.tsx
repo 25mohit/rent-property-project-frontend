@@ -1,5 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
+import { prImg1 } from '../../../../../public/images'
+import { IoHeartOutline, IoHeartSharp } from "react-icons/io5";
+import Link from 'next/link';
 
 interface PropertyCardInterface{
     label: string, 
@@ -9,11 +12,21 @@ interface PropertyCardInterface{
 
 const PropertyCard:React.FC<PropertyCardInterface> = ({ label, image, description }) => {
   return (
-    <div className='property-card'>
-        <h1>{label}</h1>
-        <p>{description}</p>
-        {/* <Image src={image} alt='This is Card Image' width={100} height={100}/> */}
-    </div>
+    <Link href="#" className="productCard">
+      <figure className="productCardImg">
+        <Image src={prImg1} alt="pr1" />
+        <button className='favIcon'>
+        <IoHeartOutline />
+        {/* <IoHeartSharp /> */}
+        </button>
+      </figure>
+      <div className="productCardBoy">
+        <h3 className="itemPrice">₹ 2,25,000</h3>
+        <h4 className="distance">3.0 km</h4>
+        <h5 className="prdTitle textLimit l1">Toyota Etios Liva G SP*, 2011, CNG & Hybrids</h5>
+        <p className="location textLimit l1">Airport Road, Ahmedabad</p>
+      </div>
+    </Link>  
   )
 }
 

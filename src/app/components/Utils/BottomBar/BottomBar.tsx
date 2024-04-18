@@ -1,15 +1,14 @@
 import Link from "next/link";
-import { GoHome, GoTasklist } from "react-icons/go";
+import { GoComment, GoHeart, GoHome, GoTasklist } from "react-icons/go";
 import { LuPlus } from "react-icons/lu";
 import { BsChatSquareText } from "react-icons/bs";
-import { TbCategory2 } from "react-icons/tb";
 
 const BottomBar = () => {
   return (
     <>
       <div className="bottomBar">
         <div className="col">
-          <Link href="#" className="link homeTap active">
+          <Link href="/" className="link homeTap active">
             <div className="block">
               <span className="iconBox"><GoHome className="icon" /></span>
               <h6>Home</h6>
@@ -17,9 +16,9 @@ const BottomBar = () => {
           </Link>
         </div>
         <div className="col">
-          <Link href="#" className="link categoryTap">
+          <Link href="/Whishlist" className="link categoryTap">
             <div className="block">
-              <span className="iconBox"><TbCategory2 className="icon" /></span>
+              <span className="iconBox"><GoHeart className="icon" /></span>
               <h6>Whishlist</h6>
             </div>
           </Link>
@@ -33,7 +32,7 @@ const BottomBar = () => {
           </Link>
         </div>
         <div className="col">
-          <Link href="#" className="link listingTap">
+          <Link href="/Listing" className="link listingTap">
             <div className="block">
               <span className="iconBox"><GoTasklist className="icon" /></span>
               <h6>Listing</h6>
@@ -43,7 +42,7 @@ const BottomBar = () => {
         <div className="col">
           <Link href="#" className="link chatTab">
             <div className="block">
-              <span className="iconBox"><BsChatSquareText className="icon" /></span>
+              <span className="iconBox"><GoComment className="icon" /></span>
               <h6>Chats</h6>
             </div>
           </Link>
