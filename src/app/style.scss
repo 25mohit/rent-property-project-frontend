@@ -337,12 +337,29 @@ input::-ms-input-placeholder {
 			flex-wrap: wrap;
 			border-top: 1px solid #FEEFDA;
 			align-items: center;
+			height: 70px;
 
 			.link {
-				display: block;
+				display: flex;
 				text-align: center;
-				padding: 8px 10px;
-				height: 100%;
+				padding: 0px 10px;
+				position: relative;
+				align-items: center;
+				justify-content: center;
+				height: 70px;
+
+				&.active {
+
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						height: 4px;
+						background-color: var(--main);
+					}
+				}
 
 				.iconBox {
 					width: 30px;
@@ -370,16 +387,23 @@ input::-ms-input-placeholder {
 
 
 				h6 {
-					font-size: 14px;
+					font-size: 12px;
 					margin-top: 2px;
 					color: #333;
 				}
 				&.center {
-					margin-top: -23px;
+					margin-top: -31px;
+
+					&.active {
+
+						&::after {
+							display: none;
+						}
+					}
 
 					.centerMenu {
-						width: 50px;
-						height: 50px;
+						width: 60px;
+						height: 60px;
 						background-color: var(--main);
 						display: flex;
 						justify-content: center;
@@ -400,25 +424,60 @@ input::-ms-input-placeholder {
 	}
 }
 
+.categoyList {
+	box-shadow: 0 0 5px rgb(0 0 0 / 20%);
 
-.parent{
-    background-color: rgba(240, 239, 239, 0.685);
-	.nav{
-		background-color: red;
-		color: white;
-	}
-	.bottom{
-		background: orange;
-		color: white;
-	}
-	.container{
-		background-color: greenyellow;
+	ul {
+		list-style: none;
+		display: flex;
+		gap: 20px;
+		padding: 0px 15px;
+
+		li {
+
+			.link {
+				padding: 10px 0;
+
+				span {
+					width: 40px;
+					height: 40px;
+					background-color: #ededed;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin: 0 auto;
+					border-radius: 50px;
+
+					.icon {
+						height: 20px;
+						margin: 0 auto;
+					}
+				}
+				h5 {
+					font-size: 12px;
+					margin-top: 2px;
+				}
+				&.active {
+					border-bottom: 2px solid var(--main);
+				}
+			}
+		}
 	}
 }
+
+
 .scroll {
     height: calc(100vh - 1px);
     overflow: hidden;
     overflow-y: scroll;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+.scroll2 {
+    overflow: hidden;
+    overflow-x: scroll;
 
 	&::-webkit-scrollbar {
 		display: none;
