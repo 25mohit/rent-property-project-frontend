@@ -5,9 +5,9 @@ import { IoHeartOutline, IoHeartSharp } from "react-icons/io5";
 import Link from 'next/link';
 
 interface PropertyCardInterface{
-    label: string, 
-    image: string,
-    description: string
+    label?: string, 
+    image?: string,
+    description?: string
 }
 
 const PropertyCard:React.FC<PropertyCardInterface> = ({ label, image, description }) => {

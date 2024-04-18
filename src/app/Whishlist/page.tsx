@@ -4,7 +4,6 @@ import Image from "next/image";
 import { electronic, furniture, property } from "../../../public/images";
 import PropertyCard from "../components/Utils/PropertyCard/PropertyCard";
 
-
 const Wishlist = () => {
   return (
     <>
