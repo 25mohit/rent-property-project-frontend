@@ -2,6 +2,7 @@
 import { useEffect } from 'react'
 import HeaderBar from '../../Utils/HeaderBar/HeaderBar';
 import BottomBar from '../../Utils/BottomBar/BottomBar';
+import CalculateFontSize from './CalculateFontSize';
 
 interface multiContentInterface{
     children: any
@@ -38,11 +39,11 @@ const MultiContentLayout:React.FC<multiContentInterface> = ({ children }) => {
   }, []);
 
   return (
-    <>
+    <CalculateFontSize>
       <div className='headerSpace'><HeaderBar/></div>
       <section className='multiContentLayout scroll'>{children}</section>
       <div className='bottomBarSpace'><BottomBar/></div>
-      </>
+      </CalculateFontSize>
   )
 }
 

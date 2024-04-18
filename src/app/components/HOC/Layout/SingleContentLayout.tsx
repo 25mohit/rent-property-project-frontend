@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
+import CalculateFontSize from './CalculateFontSize';
 
 interface SingleContentInterface{
     children: any
@@ -23,10 +24,13 @@ const SingleContentLayout:React.FC<SingleContentInterface> = ({ children }) => {
   const containerStyle = {
       height: height ? `${height}px` : '100vh', // Use calculated height or default to 100vh
   };
+  
   return (
-    <div className='single-content-layout scroll' style={containerStyle}> 
-        {children}
-    </div>
+    <CalculateFontSize>
+        <div className='single-content-layout scroll' style={containerStyle}> 
+            {children}
+        </div>
+    </CalculateFontSize>
   )
 }
 
