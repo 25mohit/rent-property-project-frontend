@@ -24,7 +24,7 @@ const OTPVerifivation = () => {
             value={otp}
             onChange={setOtp}
             numInputs={4}
-            renderInput={(props) => <input {...props} />}
+            renderInput={(props: any) => <input {...props} />}
           />
           </div>
         
@@ -32,8 +32,6 @@ const OTPVerifivation = () => {
         </div>
         <button className='btn mainBtn fillBtn' disabled>Verify</button>
         <p className="forgotPassword"><Link className="link" href="#">Resend OTP</Link></p>
-
-
     </UserForm>
   );
 };

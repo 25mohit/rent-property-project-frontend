@@ -1,6 +1,4 @@
-import Link from "next/link"
 import React from "react"
-import { IoArrowBack } from "react-icons/io5";
 import SingleContentLayout from "../Layout/SingleContentLayout";
 
 interface UserFormProps{
