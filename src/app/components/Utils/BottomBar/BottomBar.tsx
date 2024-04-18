@@ -17,10 +17,10 @@ const BottomBar = () => {
           </Link>
         </div>
         <div className="col">
-          <Link href="#" className="link chatTab">
+          <Link href="#" className="link categoryTap">
             <div className="block">
-              <span className="iconBox"><BsChatSquareText className="icon" /></span>
-              <h6>Chats</h6>
+              <span className="iconBox"><TbCategory2 className="icon" /></span>
+              <h6>Whishlist</h6>
             </div>
           </Link>
         </div>
@@ -41,10 +41,10 @@ const BottomBar = () => {
           </Link>
         </div>
         <div className="col">
-          <Link href="#" className="link categoryTap">
+          <Link href="#" className="link chatTab">
             <div className="block">
-              <span className="iconBox"><TbCategory2 className="icon" /></span>
-              <h6>Category</h6>
+              <span className="iconBox"><BsChatSquareText className="icon" /></span>
+              <h6>Chats</h6>
             </div>
           </Link>
         </div>
