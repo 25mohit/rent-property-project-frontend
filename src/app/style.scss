@@ -263,7 +263,7 @@ input::-ms-input-placeholder {
 					background: transparent;
 					border: none;
 					width: 60px;
-					height: 60px;
+					height: 70px;
 					display: flex;
 					align-items: center;
 					justify-content: center;
@@ -274,7 +274,7 @@ input::-ms-input-placeholder {
 					gap: 5px;
 
 					.icon {
-						font-size: 20px;
+						font-size: 24px;
 					}
 					.locationBody {
 
@@ -282,10 +282,13 @@ input::-ms-input-placeholder {
 							font-size: 16px;
 							font-weight: 500;
 							line-height: 1;
-							margin-bottom: 5px;
+							margin-bottom: 3px;
+							display: flex;
+							align-items: center;
+							gap: 5px;
 						}
 						p {
-							font-size: 12px;
+							font-size: 13px;
 							overflow: hidden;
 							-o-text-overflow: ellipsis;
 							text-overflow: ellipsis;
@@ -293,6 +296,7 @@ input::-ms-input-placeholder {
 							-webkit-line-clamp: 1;
 							-webkit-box-orient: vertical;
 							line-height: 1;
+
 						}
 					}
 				}
@@ -314,7 +318,7 @@ input::-ms-input-placeholder {
 						background: transparent;
 						border: none;
 						width: 50px;
-						height: 60px;
+						height: 70px;
 						display: flex;
 						align-items: center;
 						justify-content: center;
@@ -324,6 +328,73 @@ input::-ms-input-placeholder {
 						}
 					}
 				}
+			}
+		}
+
+		.bottomBar {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			border-top: 1px solid #FEEFDA;
+			align-items: center;
+
+			.link {
+				display: block;
+				text-align: center;
+				padding: 8px 10px;
+				height: 100%;
+
+				.iconBox {
+					width: 30px;
+					height: 30px;
+					margin: 0 auto;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					.icon {
+						font-size: 26px;
+						margin: 0 auto;
+					}
+				}
+				&.chatTab {
+
+					.iconBox {
+	
+						.icon {
+							font-size: 22px;
+							color: #333;
+						}
+					}
+				}
+
+
+				h6 {
+					font-size: 14px;
+					margin-top: 2px;
+					color: #333;
+				}
+				&.center {
+					margin-top: -23px;
+
+					.centerMenu {
+						width: 50px;
+						height: 50px;
+						background-color: var(--main);
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						border-radius: 50%;
+						margin: 0 auto;
+						margin-bottom: 6px;
+	
+						.icon {
+							font-size: 30px;
+							color: #fff;
+						}
+					}
+				}
+				
 			}
 		}
 	}
@@ -348,6 +419,10 @@ input::-ms-input-placeholder {
     height: calc(100vh - 1px);
     overflow: hidden;
     overflow-y: scroll;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 

@@ -19,7 +19,7 @@ const Signup = () => {
         <h2>Create an account</h2>
         </div>
         <div className="formGroup">
-            <label className="formLabel">Email Address</label>
+            <label className="formLabel">Full Name</label>
             <input type="text" className='form-control' placeholder='Enter Your Full Name'/>
             <p className='error danger'></p>
         </div>
@@ -29,6 +29,7 @@ const Signup = () => {
             <p className='error danger'></p>
         </div>
         <div className="formGroup">
+            <label className="formLabel">Password</label>
             <div className='flex relative'>
                 <input type="password" className='form-control' placeholder='Create Password'/>
                 <button className="eyeAction">
@@ -36,6 +37,11 @@ const Signup = () => {
                   {/* <AiFillEyeInvisible /> */}
                 </button>
             </div>
+            <p className='error danger'></p>
+        </div>
+        <div className="formGroup">
+            <label className="formLabel">Refer Code</label>
+            <input type="text" className='form-control' placeholder='Refer Code'/>
             <p className='error danger'></p>
         </div>
         <button className='btn mainBtn fillBtn'>Signup</button>
