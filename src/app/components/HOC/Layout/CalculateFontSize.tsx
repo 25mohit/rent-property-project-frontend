@@ -7,8 +7,19 @@ interface TestInterface{
 const CalculateFontSize:React.FC<TestInterface> = ({children}) => {
   useEffect(() => {
     const calculateFontSizes = () => {
-      const windowWidth = window.innerWidth;
+      let windowWidth = window.innerWidth;
+      let windowHeight = window.innerHeight;
+      
       const root = document.querySelector(":root");
+      if(windowWidth > 480)
+        {
+            let tempWidth = Math.round(windowHeight*412/914);
+            if(tempWidth >= 479)
+                windowWidth = 480;
+            else
+                windowWidth = tempWidth;
+        }
+
       (root as HTMLElement).style.fontSize = (windowWidth / 425) + "px";
 
       const hiddenDivToCheckFont = document.createElement('div');

@@ -3,7 +3,6 @@ import MultiContentLayout from "../components/HOC/Layout/MultiContentLayout";
 import Image from "next/image";
 import MyAds from "../components/Utils/MyAds/MyAds";
 
-
 const Listing = () => {
   return (
     <>
