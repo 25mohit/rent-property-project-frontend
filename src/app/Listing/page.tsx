@@ -12,6 +12,10 @@ const Listing = () => {
             <div className="col"><h3 className="titleS">My Ads</h3></div>
           </div>
           <div className="col-12"><MyAds /></div>
+          <div className="col-12"><MyAds /></div>
+          <div className="col-12"><MyAds /></div>
+          <div className="col-12"><MyAds /></div>
+          <div className="col-12"><MyAds /></div>
       </div>
    </MultiContentLayout>
    </>

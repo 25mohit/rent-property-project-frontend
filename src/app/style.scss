@@ -348,6 +348,18 @@ input::-ms-input-placeholder {
 					}
 				}
 			}
+
+			&.detailsHeader {
+				background: transparent;
+				position: fixed;
+				width: 425rem;
+				top: 0;
+				border:none;
+
+				.right {
+					flex: 100%;
+				}
+			}
 		}
 
 		.bottomBar {
@@ -584,11 +596,74 @@ input::-ms-input-placeholder {
 }
 
 .myAdsCard {
+    overflow: hidden;
+	border-radius: 10rem;
+	box-shadow: 0rem 0rem 10rem 0rem #231f1f75;
 
+	.myAdsCardHead {
+		background: #5b4b4e;
+		padding: 12rem 15rem;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.time {
+			margin-left: 12rem;
+		}
+		.dropdownMenu {
+			position: relative;
+
+			.icon {
+				cursor: pointer;
+				width: 30rem;
+				height: 30rem;
+			}
+			.dropdownBody {
+				position: absolute;
+				background: #fff;
+				color: #222;
+				right: 0;
+				width: 120rem;
+				box-shadow: 0rem 0rem 10rem 0rem rgb(35 31 31 / 36%);
+				padding: 8rem 15rem;
+				border-radius: 5rem;
+				display: none;
+				transition: 0.5s;
+
+				ul {
+					list-style: none;
+
+					li {
+
+						button {
+							width: 100%;
+							padding:10rem 0;
+							text-align: left;
+							line-height: 1;
+						}
+					}
+				}
+			}
+			&:hover {
+
+				
+			.dropdownBody {
+			    display: block; 
+			}
+			}
+		}
+	}
+
+	.productCardBottom {
+		padding: 12rem 15rem;
+		border-top: 1rem solid #c3c3c3;
+	}
 	.myAdsCardIn {
 		display: flex;
 		align-items: center;
 		gap: 10rem;
+		padding: 15rem;
 		
 		.productCardImg {
 			min-height: 80rem;
@@ -601,6 +676,7 @@ input::-ms-input-placeholder {
 			overflow: hidden;
 			border-radius: 5rem;
 			border: 1rem solid #cbcbcb;
+			display: flex;
 
 			img {
 				min-height: 100%;
@@ -621,6 +697,11 @@ input::-ms-input-placeholder {
 			.location {
 				font-size: var(--fontSize12);
 				opacity: 0.5;
+			}
+			.counts {
+				font-size: var(--fontSize14);
+				display: flex;
+				gap: 20rem;
 			}
 		}
 	}
@@ -654,6 +735,13 @@ input::-ms-input-placeholder {
 	&.l5 {
 		-webkit-line-clamp: 5;
 	}
+}
+
+.text-danger {
+	color: red;
+}
+.text-success {
+	color: green;
 }
 
 @media (max-width:991px) {
