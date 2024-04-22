@@ -32,7 +32,7 @@ const Signup = () => {
             <label className="formLabel">Password</label>
             <div className='flex relative'>
                 <input type="password" className='form-control' placeholder='Create Password'/>
-                <button className="eyeAction">
+                <button type="button" className="eyeAction">
                   <AiFillEye/>
                   {/* <AiFillEyeInvisible /> */}
                 </button>

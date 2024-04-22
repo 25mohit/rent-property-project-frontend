@@ -13,7 +13,9 @@ const Login = () => {
           {/* <button className="backBtn"><IoArrowBack /></button> */}
             <Link className="link" href="#">Skip {'>'}{'>'} </Link>
         </div>
+        <div className="pageTitle">
         <h2 className="pageTitle">Welcome to login</h2>
+        </div>
         <div className="formGroup">
             <label className="formLabel">Email Address</label>
             <input type="email" className='form-control' placeholder='Enter Your Email Address'/>
@@ -23,7 +25,7 @@ const Login = () => {
             <label className="formLabel">Password</label>
             <div className='flex relative'>
                 <input type="password" className='form-control' placeholder='Enter Your Password'/>
-                <button className="eyeAction">
+                <button type="button" className="eyeAction">
                   <AiFillEye/>
                   {/* <AiFillEyeInvisible /> */}
                 </button>
@@ -40,7 +42,7 @@ const Login = () => {
             <p>Continue with Google</p>
         </button>
 
-        <p className="switchScreen">Don't have an account? <Link className="link" href="#">Signup</Link></p>
+        <p className="switchScreen">Don't have an account? <Link className="link" href="/Signup">Signup</Link></p>
     </UserForm>
   );
 };

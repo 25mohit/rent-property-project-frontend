@@ -19,7 +19,7 @@ body{
     width: 100%;
     height: 100%;
 	overflow: hidden;
-	font-size: var(--fontSize14);
+	font-size: var(--fontSize16);
 }
 *, ::after, ::before {
     box-sizing: border-box;
@@ -40,53 +40,53 @@ input::-ms-input-placeholder {
 
 
 .formGroup {
-    margin-bottom: 10px;
+    margin-bottom: 10rem;
 	position: relative;
 
 	.formLabel {
 		position: absolute;
-		left: 8px;
-		top: -8px;
-		font-size: var(--fontSize12);
+		left: 8rem;
+		top: -8rem;
+		font-size: var(--fontSize14);
 		background: #fff;
-		padding: 0px 7px;
+		padding: 0 7rem;
 	    z-index: 1;
 	}
 }
 .form-control {
 	width: 100%;
-    min-height: 55px;
-    border: 1px solid #ddd;
+    min-height: 55rem;
+    border: 1rem solid #ddd;
     background-color: #fff;
-    padding: 10px 15px;
-    border-radius: 8px;
+    padding: 10rem 15rem;
+    border-radius: 8rem;
     font-size: var(--fontSize16);
     line-height: 2.5;
 	font-weight: 400;
 
 	&:focus {
-	    border: 1px solid var(--main);
+	    border: 1rem solid var(--main);
 	}
 }
 .otpBox {
 
     div {
-		gap: 10px;
+		gap: 10rem;
 		justify-content: center;
 	
 		input {
-			width: 75px !important;
-			height: 75px !important;
-			min-height: 55px;
-			border: 1px solid #ddd;
+			width: 88rem !important;
+			height: 88rem !important;
+			min-height: 55rem;
+			border: 1rem solid #ddd;
 			background-color: #fff;
-			padding: 10px 15px;
-			border-radius: 8px;
+			padding: 10rem 15rem;
+			border-radius: 8rem;
 			font-size: var(--fontSize40);
 			font-weight: 600;
 
 			&:focus {
-				border: 1px solid var(--main);
+				border: 1rem solid var(--main);
 			}
 		}
 	}
@@ -94,31 +94,31 @@ input::-ms-input-placeholder {
 
 .mainBtn {
     width: 100%;
-    height: 55px;
-    border-radius: 8px;
+    height: 55rem;
+    border-radius: 8rem;
     font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
 
 	&.borderBtn {
-		border: 2px solid var(--main);
+		border: 2rem solid var(--main);
 		color: var(--main);
 		background-color: #fff;
 
 		&:disabled {
-			border: 2px solid #d8d8d8;
+			border: 2rem solid #d8d8d8;
 			color: #898989;
 			background-color: #f3f3f3;
 		}
 	}
 	&.fillBtn {
-		border: 2px solid var(--main);
+		border: 2rem solid var(--main);
 		color: #fff;
 		background-color: var(--main);
 
 		&:disabled {
-			border: 2px solid #d8d8d8;
+			border: 2rem solid #d8d8d8;
 			color: #898989;
 			background-color: #d8d8d8;
 		}
@@ -132,8 +132,8 @@ input::-ms-input-placeholder {
 }
 .error {
     font-size: var(--fontSize12);
-	margin-top: 3px;
-	min-height: 20px;
+	margin-top: 3rem;
+	min-height: 20rem;
 
 	&.danger{
 		color:red;
@@ -141,11 +141,11 @@ input::-ms-input-placeholder {
 }
 .eyeAction {
     position: absolute;
-    right: 10px;
+    right: 10rem;
     top: 50%;
     transform: translate(-0%, -50%);
-    width: 30px;
-    height: 30px;
+    width: 30rem;
+    height: 30rem;
 	display: flex;
     align-items: center;
     justify-content: center;
@@ -155,11 +155,12 @@ input::-ms-input-placeholder {
 
 
 .onBoardingSection {
+	padding: 20rem;
 
 	.topHead {
-		margin-bottom: 20px;
+		margin-bottom: 20rem;
 		align-items: center;
-		padding-top: 20px;
+		padding-top: 20rem;
 
 		.backBtn {
 			font-size: var(--fontSize30);
@@ -167,32 +168,32 @@ input::-ms-input-placeholder {
 	}
 	.orLogin {
 		text-align: center;
-		border-top: 1px solid #ddd;
-		margin-top: 30px;
-		margin-bottom: 10px;
+		border-top: 1rem solid #ddd;
+		margin-top: 30rem;
+		margin-bottom: 10rem;
 
 		span {
-			top: -12px;
+			top: -12rem;
 			position: relative;
 			background: #fff;
-			padding: 0 5px;
+			padding: 0 5rem;
 		}
 	}
 	.gamilSignup {
 		display: flex;
 		align-items: center;
 		width: 100%;
-		border: 1px solid #222;
-		border-radius: 8px;
+		border: 1rem solid #222;
+		border-radius: 8rem;
 		text-align: center;
 		font-weight: 500;
-		padding: 10px 15px;
-		border-radius: 8px;
-		height: 55px;
+		padding: 10rem 15rem;
+		border-radius: 8rem;
+		height: 55rem;
 
 		img {
-			width: 30px;
-			height: 30px;
+			width: 30rem;
+			height: 30rem;
 		}
 		p {
 			text-align: center;
@@ -201,7 +202,7 @@ input::-ms-input-placeholder {
 	}
 	.switchScreen {
 		text-align: center;
-		margin-top: 30px;
+		margin-top: 30rem;
 
 		.link {
 			color:var(--main);
@@ -210,14 +211,14 @@ input::-ms-input-placeholder {
 	}
 	.forgotPassword {
 		text-align: center;
-		margin-top: 15px;
+		margin-top: 15rem;
 
 		.link {
 			color:#222;
 		}
 	}
     .pageTitle {
-		margin-bottom: 30px;
+		margin-bottom: 30rem;
 
 		h2 {
 			font-size: var(--fontSize20);
@@ -233,9 +234,9 @@ input::-ms-input-placeholder {
 	
 	.leftContent {
 		background-color: var(--bodyBg);
-		border-right: 2px solid #e3e3e3;
+		border-right: 2rem solid #e3e3e3;
 		left: 0;
-		max-width: 400px;
+		max-width: 425rem;
 		position: absolute;
 		width: 100%;
 		overflow: hidden;
@@ -249,7 +250,7 @@ input::-ms-input-placeholder {
 		.headerBar {
 			margin: 0;
 			background: #fff;
-			border-bottom: 1px solid #e3e3e3;
+			border-bottom: 1rem solid #e3e3e3;
 			display: flex;
 			align-items: center;
 
@@ -259,12 +260,12 @@ input::-ms-input-placeholder {
 			
 				.menuBtn {
 					font-size:var(--fontSize36);
-					padding: 0px;
+					padding: 0;
 					color: #222;
 					background: transparent;
 					border: none;
-					width: 60px;
-					height: 70px;
+					width: 60rem;
+					height: 70rem;
 					display: flex;
 					align-items: center;
 					justify-content: center;
@@ -272,7 +273,7 @@ input::-ms-input-placeholder {
 				.location {
 					display: flex;
 					align-items: center;
-					gap: 5px;
+					gap: 5rem;
 
 					.icon {
 						font-size: var(--fontSize24);
@@ -283,10 +284,10 @@ input::-ms-input-placeholder {
 							font-size: var(--fontSize16);
 							font-weight: 500;
 							line-height: 1;
-							margin-bottom: 3px;
+							margin-bottom: 3rem;
 							display: flex;
 							align-items: center;
-							gap: 5px;
+							gap: 5rem;
 						}
 						p {
 							font-size: var(--fontSize13);
@@ -314,18 +315,18 @@ input::-ms-input-placeholder {
 
 					.btn {
 						font-size: var(--fontSize30);
-						padding: 0px;
+						padding: 0;
 						color: #222;
 						background: transparent;
 						border: none;
-						width: 50px;
-						height: 70px;
+						width: 50rem;
+						height: 70rem;
 						display: flex;
 						align-items: center;
 						justify-content: center;
 
 						&.search{
-							font-size: 26px;
+							font-size: 26rem;
 						}
 					}
 				}
@@ -336,18 +337,18 @@ input::-ms-input-placeholder {
 			width: 100%;
 			display: flex;
 			flex-wrap: wrap;
-			border-top: 1px solid #FEEFDA;
+			border-top: 1rem solid #FEEFDA;
 			align-items: center;
-			height: 70px;
+			height: 70rem;
 
 			.link {
 				display: flex;
 				text-align: center;
-				padding: 0px 10px;
+				padding: 0rem 10rem;
 				position: relative;
 				align-items: center;
 				justify-content: center;
-				height: 70px;
+				height: 70rem;
 
 				&.active {
 
@@ -357,14 +358,14 @@ input::-ms-input-placeholder {
 						bottom: 0;
 						left: 0;
 						width: 100%;
-						height: 4px;
+						height: 4rem;
 						background-color: var(--main);
 					}
 				}
 
 				.iconBox {
-					width: 30px;
-					height: 30px;
+					width: 30rem;
+					height: 30rem;
 					margin: 0 auto;
 					display: flex;
 					align-items: center;
@@ -389,11 +390,11 @@ input::-ms-input-placeholder {
 
 				h6 {
 					font-size: var(--fontSize12);
-					margin-top: 2px;
+					margin-top: 2rem;
 					color: #333;
 				}
 				&.center {
-					margin-top: -31px;
+					margin-top: -31rem;
 
 					&.active {
 
@@ -403,15 +404,15 @@ input::-ms-input-placeholder {
 					}
 
 					.centerMenu {
-						width: 60px;
-						height: 60px;
+						width: 60rem;
+						height: 60rem;
 						background-color: var(--main);
 						display: flex;
 						justify-content: center;
 						align-items: center;
 						border-radius: 50%;
 						margin: 0 auto;
-						margin-bottom: 6px;
+						margin-bottom: 6rem;
 	
 						.icon {
 							font-size: var(--fontSize30);
@@ -428,8 +429,8 @@ input::-ms-input-placeholder {
 .titleBox {
 	display: block;
     width: 100%;
-	padding: 0 6px 6px 6px;
-	margin-top: 10px;
+	padding: 0 6rem 6rem 6rem;
+	margin-top: 10rem;
 
 	.titleS {
 		font-size:var(--fontSize20);
@@ -437,10 +438,10 @@ input::-ms-input-placeholder {
 	}
 }
 .bottomSpace {
-	padding-bottom: 30px !important;
+	padding-bottom: 30rem !important;
 }
 .categoyList {
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 5rem rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
     background: #fff;
@@ -449,35 +450,35 @@ input::-ms-input-placeholder {
 	ul {
 		list-style: none;
 		display: flex;
-		gap: 20px;
-		padding: 0px 15px;
+		gap: 20rem;
+		padding: 0 15rem;
 
 		li {
 
 			.link {
-				padding: 10px 0;
+				padding: 10rem 0;
 
 				span {
-					width: 40px;
-					height: 40px;
+					width: 40rem;
+					height: 40rem;
 					background-color: #ededed;
 					display: flex;
 					align-items: center;
 					justify-content: center;
 					margin: 0 auto;
-					border-radius: 50px;
+					border-radius: 50rem;
 
 					.icon {
-						height: 20px;
+						height: 20rem;
 						margin: 0 auto;
 					}
 				}
 				h5 {
 					font-size: var(--fontSize12);
-					margin-top: 2px;
+					margin-top: 2rem;
 				}
 				&.active {
-					border-bottom: 2px solid var(--main);
+					border-bottom: 2rem solid var(--main);
 				}
 			}
 		}
@@ -490,15 +491,15 @@ input::-ms-input-placeholder {
 
 	.col-6 {
        width: 50%;
-	   padding:8px;
+	   padding:8rem;
 	}
 	.col-12 {
        width: 100%;
-	   padding:8px;
+	   padding:8rem;
 	}
 }
 .scroll {
-    height: calc(100vh - 1px);
+    height: calc(100vh - 1rem);
     overflow: hidden;
     overflow-y: scroll;
 
@@ -518,44 +519,44 @@ input::-ms-input-placeholder {
 .productCard {
 
 	.productCardImg {
-		height: 150px;
+		height: 150rem;
 		width: 100%;
 		position: relative;
 		padding: 0;
 		box-sizing: border-box;
 		overflow: hidden;
-		border-radius: 5px;
-		border: 1px solid #cbcbcb;
+		border-radius: 5rem;
+		border: 1rem solid #cbcbcb;
 
 		img {
 			min-height: 100%;
 			margin: auto;
 		}
 		.favIcon {
-			width: 30px;
-			height: 30px;
+			width: 30rem;
+			height: 30rem;
 			position: absolute;
-			top:8px;
-			right:8px;
-			font-size:20px;
+			top:8rem;
+			right:8rem;
+			font-size:20rem;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			background: #fff;
-			border-radius: 50px;
+			border-radius: 50rem;
 			color: var(--main);
 		}
 	}
 	.productCardBoy {
-		padding-top: 5px;
+		padding-top: 5rem;
 
 		.itemPrice {
 			font-size: var(--fontSize18);
 			font-weight: 600;
-			margin-bottom: 3px;
+			margin-bottom: 3rem;
 		}
 		.prdTitle{
-           margin-bottom: 3px;
+           margin-bottom: 3rem;
 		}
 		.location {
 			font-size: var(--fontSize12);
@@ -569,19 +570,19 @@ input::-ms-input-placeholder {
 	.myAdsCardIn {
 		display: flex;
 		align-items: center;
-		gap: 10px;
+		gap: 10rem;
 		
 		.productCardImg {
-			min-height: 80px;
-			min-width: 80px;
-			max-height: 80px;
-			max-width: 80px;
+			min-height: 80rem;
+			min-width: 80rem;
+			max-height: 80rem;
+			max-width: 80rem;
 			position: relative;
 			padding: 0;
 			box-sizing: border-box;
 			overflow: hidden;
-			border-radius: 5px;
-			border: 1px solid #cbcbcb;
+			border-radius: 5rem;
+			border: 1rem solid #cbcbcb;
 
 			img {
 				min-height: 100%;
@@ -594,10 +595,10 @@ input::-ms-input-placeholder {
 			.itemPrice {
 				font-size: var(--fontSize18);
 				font-weight: 600;
-				margin-bottom: 3px;
+				margin-bottom: 3rem;
 			}
 			.prdTitle{
-			margin-bottom: 3px;
+			margin-bottom: 3rem;
 			}
 			.location {
 				font-size: var(--fontSize12);
@@ -609,7 +610,7 @@ input::-ms-input-placeholder {
 }
 
 .listingProduct {
-    padding: 5px 5px;
+    padding: 5rem 5rem;
 }
 
 .textLimit {
@@ -643,7 +644,7 @@ input::-ms-input-placeholder {
 		display: flex;
 		
 		.leftContent {
-			max-width: 100%;
+			max-width: 425rem;
 			border-right: none;
 		}
 

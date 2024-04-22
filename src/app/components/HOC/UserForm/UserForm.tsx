@@ -9,7 +9,7 @@ interface UserFormProps{
 const UserForm:React.FC<UserFormProps> = ({ children, title }) => {
   return (
     <SingleContentLayout>
-      <form method="post" className="p-4 onBoardingSection">
+      <form method="post" className="onBoardingSection">
         {children}
       </form>
     </SingleContentLayout>
