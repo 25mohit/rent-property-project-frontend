@@ -149,8 +149,11 @@ input::-ms-input-placeholder {
 	display: flex;
     align-items: center;
     justify-content: center;
-	font-size: var(--fontSize24);
 	color: #9f9f9f;
+
+	svg {
+		font-size: var(--fontSize24);
+	}
 }
 
 
@@ -259,7 +262,6 @@ input::-ms-input-placeholder {
 				flex: 100%;
 			
 				.menuBtn {
-					font-size:var(--fontSize36);
 					padding: 0;
 					color: #222;
 					background: transparent;
@@ -269,6 +271,11 @@ input::-ms-input-placeholder {
 					display: flex;
 					align-items: center;
 					justify-content: center;
+
+					svg {
+						width: 35rem;
+						height: 35rem;
+					}
 				}
 				.location {
 					display: flex;
@@ -276,7 +283,8 @@ input::-ms-input-placeholder {
 					gap: 5rem;
 
 					.icon {
-						font-size: var(--fontSize24);
+						width: 24rem;
+						height: 24rem;
 					}
 					.locationBody {
 
@@ -314,7 +322,6 @@ input::-ms-input-placeholder {
 				li {
 
 					.btn {
-						font-size: var(--fontSize30);
 						padding: 0;
 						color: #222;
 						background: transparent;
@@ -325,9 +332,19 @@ input::-ms-input-placeholder {
 						align-items: center;
 						justify-content: center;
 
-						&.search{
-							font-size: 26rem;
+						svg {
+							width: 30rem;
+							height: 30rem;
 						}
+
+						&.search{
+
+							svg {
+								width: 27rem;
+								height: 27rem;
+							}
+						}
+
 					}
 				}
 			}
@@ -372,7 +389,8 @@ input::-ms-input-placeholder {
 					justify-content: center;
 
 					.icon {
-						font-size: var(--fontSize26);
+						width: 28rem;
+						height: 28rem;
 						margin: 0 auto;
 					}
 				}
