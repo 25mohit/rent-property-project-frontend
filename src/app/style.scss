@@ -359,6 +359,76 @@ input::-ms-input-placeholder {
 				.right {
 					flex: 100%;
 				}
+				&::after {
+					content: "";
+					position: absolute;
+					top: 0;
+					width: 100%;
+					background-image: linear-gradient(#000000c7, transparent);
+					height: 150rem;
+					z-index: -1;
+				}
+
+				.leftMenu {
+				
+					.menuBtn {
+						color: #fff;
+					}
+				}
+				
+				
+				.headerAction {
+	
+					li {
+	
+						.btn {
+							color: #fff;
+						}
+						.dropdownMenu {
+							position: relative;
+				
+							.icon {
+								cursor: pointer;
+								width: 35rem;
+								height: 35rem;
+							}
+							.dropdownBody {
+								position: absolute;
+								background: #fff;
+								color: #222;
+								right: 20rem;
+								width: 120rem;
+								box-shadow: 0rem 0rem 10rem 0rem rgb(35 31 31 / 36%);
+								padding: 8rem 15rem;
+								border-radius: 5rem;
+								display: none;
+								transition: 0.5s;
+								top: 60rem;
+				
+								ul {
+									list-style: none;
+				
+									li {
+				
+										button {
+											width: 100%;
+											padding:10rem 0;
+											text-align: left;
+											line-height: 1;
+										}
+									}
+								}
+							}
+							&:hover {
+				
+								
+							.dropdownBody {
+								display: block; 
+							}
+							}
+						}
+					}
+				}
 			}
 		}
 
@@ -455,6 +525,105 @@ input::-ms-input-placeholder {
 		}
 	}
 }
+
+.sliderItem {
+    display: flex;
+	gap:5rem;
+
+	.itemImg {
+		min-width: 400rem;
+		max-width: 400rem;
+		min-height: 320rem;
+		max-height: 320rem;
+
+		img {
+			width: 100%;
+			min-height: 100%;
+			margin: auto;
+		}
+	}
+}
+
+
+.ItemsContentBody {
+
+	.titleDetails {
+		display: flex;
+		align-items: center;
+		padding: 15rem 20rem;
+
+		.left {
+			width: 100%;
+
+			.itemPrice {
+				font-size: var(--fontSize20);
+				font-weight: 600;
+				margin-bottom: 3rem;
+				color: var(--main);
+			}
+			.itemName {
+				font-size: var(--fontSize18);
+				margin-bottom: 5rem;
+				font-weight: 500;
+			}
+		}
+		.right {
+			
+			.favIcon {
+				width: 50rem;
+				height: 50rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: #fff;
+				border-radius: 50rem;
+				color: var(--main);
+				box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+
+				svg {
+					width: 30rem;
+					height: 30rem;
+				}
+			}
+		}
+	}
+
+	.featuresBox {
+
+		.menuTab {
+			display: flex;
+
+			button {
+				width: 50%;
+				background: #e7e6e6;
+				padding: 0 10rem;
+				height: 55rem;
+
+				&.active {
+					border-bottom: 2rem solid #222;
+					background: #222;
+					color: #fff;
+				}
+			}
+		}
+		.specifitionList {
+			padding: 0 20rem;
+
+			ul {
+				list-style: none;
+
+				li {
+					display: flex;
+					justify-content: space-between;
+					border-bottom: 1rem solid #d7d7d7;
+					padding: 10rem 0;
+					font-size: var(--fontSize14);
+				}
+			}
+		}
+	}
+}
+
 
 .titleBox {
 	display: block;
