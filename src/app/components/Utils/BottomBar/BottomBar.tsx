@@ -40,7 +40,7 @@ const BottomBar = () => {
           </Link>
         </div>
         <div className="col">
-          <Link href="#" className="link chatTab">
+          <Link href="/Chat" className="link chatTab">
             <div className="block">
               <span className="iconBox"><GoComment className="icon" /></span>
               <h6>Chats</h6>

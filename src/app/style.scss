@@ -381,9 +381,33 @@ input::-ms-input-placeholder {
 					}
 				}
 				.leftMenu {
+					align-items: center;
 				
 					.menuBtn {
 						color: #fff;
+					}
+					.userImage {
+						position: relative;
+						height: 50rem;
+
+						.imgBox {
+							width: 50rem;
+							height: 50rem;
+							border-radius: 8rem;
+							-o-object-fit: cover;
+							object-fit: cover;
+						}
+						.userProfile {
+							position: absolute;
+							width: 24rem;
+							height: 24rem;
+							right: -5rem;
+							bottom: -5rem;
+							border-radius: 50rem;
+							-o-object-fit: cover;
+							object-fit: cover;
+							border: 2rem solid #fff;
+						}
 					}
 				}
 				
@@ -408,7 +432,7 @@ input::-ms-input-placeholder {
 								background: #fff;
 								color: #222;
 								right: 20rem;
-								width: 120rem;
+								width: 140rem;
 								box-shadow: 0rem 0rem 10rem 0rem rgb(35 31 31 / 36%);
 								padding: 8rem 15rem;
 								border-radius: 5rem;
@@ -676,6 +700,15 @@ input::-ms-input-placeholder {
 	.titleS {
 		font-size:var(--fontSize20);
 		font-weight: 500;
+	}
+	&.fixTitle {
+		position: sticky;
+		margin: 0;
+		padding: 10rem 15rem;
+		top: 0;
+		z-index: 1;
+		background: #f9f8f8;
+		border-bottom: 1rem solid #e3e3e3;
 	}
 }
 .bottomSpace {
@@ -1019,6 +1052,79 @@ input::-ms-input-placeholder {
 		outline: none;
 	}
 }
+
+.chatList {
+	list-style: none;
+
+	li {
+
+		.link {
+			display: flex;
+			gap: 12rem;
+			align-items: center;
+			position: relative;
+			padding: 20rem 15rem;
+			border-bottom: 1rem solid #e3e3e3;
+
+			.imgBox {
+				width: 70rem;
+				height: 70rem;
+				border-radius: 10rem;
+				object-fit: cover;
+			}
+			.userProfile {
+				position: absolute;
+				width: 30rem;
+				height: 30rem;
+				left: 55rem;
+				bottom: 20rem;
+				border-radius: 50rem;
+				object-fit: cover;
+				border:2rem solid #fff;
+			}
+			.contentBody {
+				text-align: left;
+
+				h3 {
+					font-weight: 500;
+					font-size: var(--fontSize18);
+				}
+				p {
+					opacity: 0.6;
+				}
+				time {
+					font-size: var(--fontSize12);
+					line-height: 1;
+
+					span {
+						margin-left: 5rem;
+					}
+				}
+			}
+
+			&.active {
+				background: #ffd2da;
+				border-bottom: 1rem solid #ff95a8;
+
+				
+				.contentBody {
+
+					h3 {
+						font-weight: 600;
+					}
+					p {
+						opacity: 1;
+					}
+					time {
+						font-weight: 500;
+					}
+				}
+			}
+		}
+	}
+}
+
+
 
 @media (max-width:991px) {
 
