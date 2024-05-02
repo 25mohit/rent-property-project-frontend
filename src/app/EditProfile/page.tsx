@@ -10,7 +10,7 @@ import { FaCamera } from "react-icons/fa6";
 const EditProfile = () => {
     return (
         <>
-            <SingleContentLayout children={undefined}>
+            <SingleContentLayout>
                 <div className="headerBar innerHeader">
                     <div className="col">
                         <Link href="/Chat" className="btn backBtn"><IoArrowBack /></Link>

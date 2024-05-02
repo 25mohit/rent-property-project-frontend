@@ -43,7 +43,8 @@ const HeaderBar = () => {
       <div className={`sideBar ${sidebarActive ? 'active' : ''}`} id="sidebarMenu">
       <div className="overlayBg" id="hideSidebar" onClick={toggleSidebar}></div>
         <div className="sideBarBody">
-          <div className="nameProfile lessSpace" id="nameProfile">
+          
+          {/* <div className="nameProfile lessSpace" id="nameProfile">
             <span className="profileImg">
               <Image src={profileImg} alt="profileImg" className="userImg" />
             </span>
@@ -51,11 +52,15 @@ const HeaderBar = () => {
               <h5 className="textLimit l1">Jitendra Kumar Prajapat</h5>
               <p className="textLimit l1">jkdesigner62@gmail.com</p>
             </div>
+          </div> */}
+
+          <div className="noLogin">
+            <Link href="/Login" className='loginBtn'>Login</Link>
           </div>
 
-          <ul className="menuList">
+          <ul className="menuList" style={{ height:'calc(100vh - 1rem)' }}>
             <li>
-              <Link className="link" href="#">
+              <Link className="link" href="/EditProfile">
                 <span className="icon"><FiUser /></span>
                 <h6 className="textLimit l1">Edit Profile</h6>
                 <LiaAngleRightSolid className="arrow" />
@@ -83,9 +88,11 @@ const HeaderBar = () => {
               </Link>
             </li>
           </ul>
-          <div className='fixSidebarBtn'>
+
+          {/* <div className='fixSidebarBtn'>
             <Link href="#" className="btn">Logout</Link>
-          </div>
+          </div> */}
+          
         </div>
       </div>
     </>

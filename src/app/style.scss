@@ -1359,6 +1359,27 @@ input::-ms-input-placeholder {
 				}
 			}
 		}
+		
+		.noLogin {
+			display: flex;
+			align-items: center;
+			gap: 12rem;
+			padding: 30rem 20rem;
+			position: relative;
+			border-bottom: 1rem solid #d5d5d5;
+			height: 120rem;
+
+			.loginBtn {
+				background: var(--main);
+				color: #fff;
+				padding: 0 20rem;
+				border-radius: 10rem;
+				height: 40rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
 
 		.menuList {
 			list-style: none;
@@ -1486,6 +1507,21 @@ input::-ms-input-placeholder {
 		padding: 15rem 10rem;
 		display: inline-block;
 		color: var(--main);
+	}
+}
+
+.uploadImgItem {
+    border: 1rem solid #ddd;
+    border-radius: 8rem;
+    overflow: hidden;
+    width: 150rem;
+    height: 150rem;
+    background: #fdfdfd;
+
+	.imgUpload {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
 	}
 }
 
