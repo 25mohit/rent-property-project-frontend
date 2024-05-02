@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { MdMenu } from "react-icons/md";
 import { FiSearch, FiUser } from "react-icons/fi";
 import { MdNotificationsNone } from "react-icons/md";
@@ -9,11 +10,18 @@ import Link from "next/link";
 import { LiaAngleRightSolid } from "react-icons/lia";
 
 const HeaderBar = () => {
+
+  const [sidebarActive, setSidebarActive] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarActive(!sidebarActive);
+  };
+
   return (
     <>
       <div className="headerBar">
         <div className="col leftMenu">
-          <button className="btn menuBtn"><MdMenu /></button>
+          <button className="btn menuBtn"onClick={toggleSidebar}><MdMenu /></button>
           <div className="location">
             <GoLocation className="icon" />
             <div className="locationBody">
@@ -32,8 +40,8 @@ const HeaderBar = () => {
         </div>
       </div>
 
-      <div className="sideBar active">
-        <div className="overlayBg" id="overlayBg"></div>
+      <div className={`sideBar ${sidebarActive ? 'active' : ''}`} id="sidebarMenu">
+      <div className="overlayBg" id="hideSidebar" onClick={toggleSidebar}></div>
         <div className="sideBarBody">
           <div className="nameProfile lessSpace" id="nameProfile">
             <span className="profileImg">
@@ -75,7 +83,9 @@ const HeaderBar = () => {
               </Link>
             </li>
           </ul>
-
+          <div className='fixSidebarBtn'>
+            <Link href="#" className="btn">Logout</Link>
+          </div>
         </div>
       </div>
     </>
