@@ -1,8 +1,12 @@
 import { MdMenu } from "react-icons/md";
-import { FiSearch } from "react-icons/fi";
+import { FiSearch, FiUser } from "react-icons/fi";
 import { MdNotificationsNone } from "react-icons/md";
-import { GoLocation } from "react-icons/go";
+import { GoComment, GoHeart, GoLocation, GoTasklist } from "react-icons/go";
 import { FaAngleDown } from "react-icons/fa6";
+import { profileImg } from "../../../../../public/images";
+import Image from "next/image";
+import Link from "next/link";
+import { LiaAngleRightSolid } from "react-icons/lia";
 
 const HeaderBar = () => {
   return (
@@ -25,6 +29,53 @@ const HeaderBar = () => {
             <li><button className="btn search"><FiSearch /></button></li>
             <li><button className="btn notification"><MdNotificationsNone /></button></li>
           </ul>
+        </div>
+      </div>
+
+      <div className="sideBar active">
+        <div className="overlayBg" id="overlayBg"></div>
+        <div className="sideBarBody">
+          <div className="nameProfile lessSpace" id="nameProfile">
+            <span className="profileImg">
+              <Image src={profileImg} alt="profileImg" className="userImg" />
+            </span>
+            <div className="nameProfileBody">
+              <h5 className="textLimit l1">Jitendra Kumar Prajapat</h5>
+              <p className="textLimit l1">jkdesigner62@gmail.com</p>
+            </div>
+          </div>
+
+          <ul className="menuList">
+            <li>
+              <Link className="link" href="#">
+                <span className="icon"><FiUser /></span>
+                <h6 className="textLimit l1">Edit Profile</h6>
+                <LiaAngleRightSolid className="arrow" />
+              </Link>
+            </li>
+            <li>
+              <Link className="link" href="#">
+                <span className="icon"><GoHeart /></span>
+                <h6 className="textLimit l1">Whishlist</h6>
+                <LiaAngleRightSolid className="arrow" />
+              </Link>
+            </li>
+            <li>
+              <Link className="link" href="#">
+                <span className="icon"><GoTasklist /></span>
+                <h6 className="textLimit l1">My Listing</h6>
+                <LiaAngleRightSolid className="arrow" />
+              </Link>
+            </li>
+            <li>
+              <Link className="link" href="#">
+                <span className="icon"><GoComment /></span>
+                <h6 className="textLimit l1">Chat</h6>
+                <LiaAngleRightSolid className="arrow" />
+              </Link>
+            </li>
+          </ul>
+
         </div>
       </div>
     </>
