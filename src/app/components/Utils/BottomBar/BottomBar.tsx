@@ -24,7 +24,7 @@ const BottomBar = () => {
           </Link>
         </div>
         <div className="col">
-          <Link href="#" className="link center sellTap active">
+          <Link href="/AddItem" className="link center sellTap active">
             <div className="block">
               <span className="centerMenu"><LuPlus className="icon" /></span>
               <h6>Sell</h6>
@@ -40,7 +40,7 @@ const BottomBar = () => {
           </Link>
         </div>
         <div className="col">
-          <Link href="#" className="link chatTab">
+          <Link href="/Chat" className="link chatTab">
             <div className="block">
               <span className="iconBox"><GoComment className="icon" /></span>
               <h6>Chats</h6>

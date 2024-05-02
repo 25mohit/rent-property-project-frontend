@@ -12,7 +12,7 @@ interface PropertyCardInterface{
 
 const PropertyCard:React.FC<PropertyCardInterface> = ({ label, image, description }) => {
   return (
-    <Link href="#" className="productCard">
+    <Link href="/ItemDetails" className="productCard">
       <figure className="productCardImg">
         <Image src={prImg1} alt="pr1" />
         <button className='favIcon'>
