@@ -28,6 +28,7 @@ const AddItem = () => {
                         <input type="text" className='form-control' placeholder='Enter Item Name' />
                         <p className='error danger'></p>
                     </div>
+                    <SelectDropdown />
                     <div className="formGroup">
                         <div className="uploadImgItem">
                             <Image src={prImg1} alt="upload Img" className="imgUpload" />

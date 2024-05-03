@@ -10,8 +10,6 @@ import {
     groupedOptions,
 } from './data';
 
-
-
 const SelectDropdown = () => {
 
     const groupStyles = {
@@ -33,17 +31,20 @@ const SelectDropdown = () => {
     };
 
     function formatGroupLabel(group: GroupedOption): ReactNode {
-       throw new Error('Function not implemented.');
+        return (
+            <div style={groupStyles}>
+                {group.label}
+                <span style={groupBadgeStyles}>{group.options.length}</span>
+            </div>
+        );
     }
 
     return (
-        <>
-            <Select<ColourOption | FlavourOption, false, GroupedOption>
-                defaultValue={colourOptions[1]}
-                options={groupedOptions}
-                formatGroupLabel={formatGroupLabel}
-            />
-        </>
+        <Select<ColourOption | FlavourOption, false, GroupedOption>
+            defaultValue={colourOptions[1]}
+            options={groupedOptions}
+            formatGroupLabel={formatGroupLabel}
+        />
     );
 };
 
