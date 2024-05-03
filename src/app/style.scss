@@ -52,6 +52,13 @@ input::-ms-input-placeholder {
 		padding: 0 7rem;
 	    z-index: 1;
 	}
+	.formLabelNew {
+		position: relative;
+		top: -8rem;
+		font-size: var(--fontSize14);
+	    z-index: 1;
+		margin-bottom: 10rem;
+	}
 }
 .form-control {
 	width: 100%;
@@ -259,6 +266,9 @@ input::-ms-input-placeholder {
 			border-bottom: 1rem solid #e3e3e3;
 			display: flex;
 			align-items: center;
+			position: sticky;
+			top: 0;
+			z-index: 99;
 
 			.leftMenu {
 				display: flex;
@@ -672,7 +682,7 @@ input::-ms-input-placeholder {
     align-items: center;
     justify-content: space-between;
     padding: 15rem 20rem;
-	z-index: 9;
+	z-index: 2;
 	
 	.price {
 		color: var(--main);
@@ -1456,6 +1466,22 @@ input::-ms-input-placeholder {
 .defaultSpace {
 	padding: 15rem;
 	margin-top: 15rem;
+
+	&.cmsPage {
+		margin-top: 0;
+
+		p {
+			font-size: var(--fontSize14);
+			color: #222;
+			opacity: 0.9;
+			margin-bottom: 5rem;
+		}
+		h5 {
+			margin-bottom: 5rem;
+			font-size: var(--fontSize20);
+			font-weight: 500;
+		}
+	}
 }
 
 .uploadImg {
@@ -1510,20 +1536,113 @@ input::-ms-input-placeholder {
 	}
 }
 
-.uploadImgItem {
-    border: 1rem solid #ddd;
-    border-radius: 8rem;
-    overflow: hidden;
-    width: 150rem;
-    height: 150rem;
-    background: #fdfdfd;
+.uploadedMultiImg {
+	display: flex;
+	gap: 15rem;
+	flex-wrap: wrap;
 
-	.imgUpload {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
+	.uploadImgItemPlus {
+		height: 100rem;
+		background: #f8f8f8;
+		border: 1rem solid #ddd;
+		border-radius: 8rem;
+		width: 48%;
+		position: relative;
+		overflow: hidden;
+
+		.uploadIn {
+           position: absolute;
+		   left: 50%;
+		   top: 50%;
+		   transform: translate(-50%, -50%);
+
+		   .icon {
+			width: 40rem;
+			height: 40rem;
+			margin: 0 auto;
+			color: #a3a3a3;
+			margin-bottom: 3rem;
+		   }
+		}
+		input[type="file"] {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+		}
+	}
+
+	.uploadImgItem {
+		border: 1rem solid #ddd;
+		border-radius: 8rem;
+		overflow: hidden;
+		width: 48%;
+		height: 100rem;
+		background: #f8f8f8;
+		position: relative;
+	
+		.imgUpload {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+		.mainSelect {
+			position: absolute;
+			top: 5rem;
+			left: 5rem;
+			font-size: var(--fontSize12);
+			background: var(--main);
+			color: #fff;
+			border-radius: 5rem;
+			padding: 2rem 6rem;
+			cursor: pointer;
+		}
+		.closeIcon {
+			position: absolute;
+			top: 5rem;
+			right: 5rem;
+			width: 25rem;
+			height: 25rem;
+			background: #fff;
+			border-radius: 50%;
+			padding: 4rem;
+			cursor: pointer;
+			box-shadow: 0rem 2rem 8rem 0rem #00000069;
+		}
 	}
 }
+
+
+.selectDropDown {
+	
+	.css-b62m3t-container {
+		
+		.css-13cymwt-control, .css-t3ipsp-control {
+			border:1rem solid #ddd;
+			min-height: 55rem;
+			padding: 10rem 15rem;
+			border-radius: 8rem;
+			box-shadow: none;
+
+			.css-1fdsijx-ValueContainer {
+				padding: 0;
+			}
+			.css-1hb7zxy-IndicatorsContainer {
+
+				.css-1xc3v61-indicatorContainer, .css-15lsz6c-indicatorContainer {
+					padding: 0;
+					margin-left: 15rem;
+				}
+			}
+		}
+	} 
+	.css-1nmdiq5-menu {
+		z-index: 99;
+	}
+}
+
 
 
 @media (max-width:991px) {
