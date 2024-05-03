@@ -44,6 +44,14 @@ const Signup = () => {
             <input type="text" className='form-control' placeholder='Refer Code'/>
             <p className='error danger'></p>
         </div>
+        <div className="formGroup">
+            <label className="checkbox agreeTerms">
+              <input type="checkbox" />
+              <span className="checkmark"></span>
+              Are you agree with our <Link className="link" href="/Terms">Terms & Conditions</Link> and <Link className="link" href="/Privacy">Privacy Policy</Link>.
+            </label>
+            <p className='error danger'></p>
+        </div>
         <button className='btn mainBtn fillBtn'>Signup</button>
 
         <p className="orLogin"><span>or</span></p>
