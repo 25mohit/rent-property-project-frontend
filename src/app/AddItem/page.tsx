@@ -70,7 +70,7 @@ const AddItem = () => {
                         <textarea className='form-control' placeholder='Description'></textarea>
                         <p className='error danger'></p>
                     </div>
-                    <button className='btn mainBtn fillBtn'>Submit</button>
+                    <Link href="/SelectAddress" className='btn mainBtn fillBtn'>Next</Link>
 
                 </div>
             </SingleContentLayout>

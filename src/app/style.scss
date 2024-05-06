@@ -47,7 +47,7 @@ input::-ms-input-placeholder {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	padding-left: 25rem;
+	padding-left: 40rem;
 	
 	&:hover input ~ .checkmark {
 	background-color: #f3f1f1;
@@ -69,24 +69,23 @@ input:checked ~ .checkmark:after {
 	position: absolute;
 	top: 3rem;
 	left: 0;
-	height: 20rem;
-	width: 20rem;
+	height: 30rem;
+	width: 30rem;
 	background-color: #fff;
 	border-radius: 3rem;
 	border: 1rem solid #d8d8d8;
 }
 .checkmark:after {
-	content: "";
-	position: absolute;
-	display: none;
-	left: 6rem;
-	top: 3rem;
-	width: 5rem;
-	height: 10rem;
-	border: solid white;
-	border-width: 0 2rem 2rem 0;
-	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
+    content: "";
+    position: absolute;
+    display: none;
+    left: 11rem;
+    top: 4rem;
+    width: 8rem;
+    height: 15rem;
+    border: solid white;
+    border-width: 0 2rem 2rem 0;
+    transform: rotate(45deg);
 }
 }
 
@@ -114,6 +113,7 @@ input:checked ~ .checkmark:after {
 
 	.agreeTerms {
 		display: block;
+		font-size: var(--fontSize14);
 
 		.link {
 			color: var(--main);
@@ -139,6 +139,24 @@ input:checked ~ .checkmark:after {
 		background-color: #fff;
 	}
 }
+
+.numberField {
+	position: relative;
+
+	.countryCode {
+		position: absolute;
+		top: 50%;
+		left: 10rem;
+		transform: translate(-0%, -50%);
+		min-width: 50rem;
+		text-align: center;
+		min-height: 55rem;
+		line-height: 5;
+	}
+	.form-control {
+		padding-left: 60rem;
+	}
+}
 .otpBox {
 
     div {
@@ -146,20 +164,57 @@ input:checked ~ .checkmark:after {
 		justify-content: center;
 	
 		input {
-			width: 88rem !important;
-			height: 88rem !important;
-			min-height: 55rem;
+			width: 70rem !important;
+			height: 70rem !important;
+			min-height: 70rem;
 			border: 1rem solid #ddd;
 			background-color: #fff;
-			padding: 10rem 15rem;
+			padding: 5rem;
 			border-radius: 8rem;
-			font-size: var(--fontSize40);
+			font-size: var(--fontSize34);
 			font-weight: 600;
 
 			&:focus {
 				border: 1rem solid var(--main);
 			}
 		}
+	}
+}
+
+
+.otpVerification {
+	position: relative;
+
+	.getOtpBtn {
+		position: absolute;
+		right: 15rem;
+		top: 50%;
+		transform: translate(0%, -50%);
+		background: var(--main);
+		color: #fff;
+		border-radius: 5rem;
+		padding: 5rem 10rem;
+		font-size: var(--fontSize14);
+	}
+	.form-control {
+       padding-right: 100rem;    
+	}
+}
+
+.verificationForm {
+	border: 1rem solid #e7e7e7;
+    padding: 15rem 	10rem;
+    background: #f9f9f9;
+    border-radius: 8rem;
+
+	label {
+		text-align: center;
+		display: block;
+		margin-bottom: 10rem;
+		font-weight: 500;
+	}
+	.otpBox {
+		margin-bottom: 10rem;
 	}
 }
 
@@ -208,6 +263,9 @@ input:checked ~ .checkmark:after {
 
 	&.danger{
 		color:red;
+	}
+	&.success{
+		color:green;
 	}
 }
 .eyeAction {
@@ -414,6 +472,59 @@ input:checked ~ .checkmark:after {
 						font-weight: 500;
 					}
 				}
+				
+				.headerAction {
+	
+					li {
+	
+						.btn {
+							color: #222;
+						}
+						.dropdownMenu {
+							position: relative;
+				
+							.icon {
+								cursor: pointer;
+								width: 35rem;
+								height: 35rem;
+							}
+							.dropdownBody {
+								position: absolute;
+								background: #fff;
+								color: #222;
+								right: 20rem;
+								width: 140rem;
+								box-shadow: 0rem 0rem 10rem 0rem rgb(35 31 31 / 36%);
+								padding: 8rem 15rem;
+								border-radius: 5rem;
+								display: none;
+								transition: 0.5s;
+								top: 60rem;
+				
+								ul {
+									list-style: none;
+				
+									li {
+				
+										button {
+											width: 100%;
+											padding:10rem 0;
+											text-align: left;
+											line-height: 1;
+										}
+									}
+								}
+							}
+							&:hover {
+				
+								
+							.dropdownBody {
+								display: block; 
+							}
+							}
+						}
+					}
+				}
 			}
 			
 			
@@ -489,7 +600,7 @@ input:checked ~ .checkmark:after {
 				
 					.menuBtn {
 						color: #fff;
-						width: 90rem;
+						width: 60rem;
 					}
 					.userImage {
 						position: relative;
@@ -955,6 +1066,12 @@ input:checked ~ .checkmark:after {
 		background: #f9f8f8;
 		border-bottom: 1rem solid #e3e3e3;
 	}
+	&.formTile {
+		padding:0;
+		margin: 0;
+		margin-bottom: 25rem;
+
+	}
 }
 .bottomSpace {
 	padding-bottom: 30rem !important;
@@ -1080,6 +1197,12 @@ input:checked ~ .checkmark:after {
 		.location {
 			font-size: var(--fontSize12);
 			opacity: 0.5;
+		}
+		.prdTitle {
+			font-size: var(--fontSize14);
+		}
+		.distance {
+			font-size: var(--fontSize14);
 		}
 	}
 }
@@ -1275,7 +1398,45 @@ input:checked ~ .checkmark:after {
 	}
 	
 }
+.sellerCardPrd {
+    padding: 15rem 15rem;
+    background: whitesmoke;
+	display: block;
+	border-bottom: 1rem solid #e3e3e3;
 
+	h6 {
+		font-size:var(--fontSize14);
+		margin-top: 5rem;
+		font-weight: 500;
+		color: #222;
+	}
+
+    .sellerBox {
+		display: flex;
+		align-items: center;
+		gap: 10rem;
+		position: relative;
+		margin-bottom: 10rem;
+
+		.img {
+			width: 60rem;
+			height: 60rem;
+			object-fit: cover;
+			border-radius: 50rem;
+		}
+		h4 {
+			font-size: 18rem;
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			gap: 5rem;
+		}
+	}
+	
+}
+.sellerProducts {
+    padding: 30rem 0;
+}
 
 
 
@@ -1541,7 +1702,7 @@ input:checked ~ .checkmark:after {
 			opacity: 0.9;
 			margin-bottom: 5rem;
 		}
-		h5 {
+		h2 {
 			margin-bottom: 5rem;
 			font-size: var(--fontSize20);
 			font-weight: 500;
