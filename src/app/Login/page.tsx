@@ -5,6 +5,7 @@ import { AiFillEyeInvisible } from "react-icons/ai";
 import Image from "next/image";
 import { google } from "../../../public/images";
 import Link from "next/link";
+import InputField from "../components/Utils/Form/InputField/page";
 
 const Login = () => {
   return (
@@ -16,11 +17,7 @@ const Login = () => {
         <div className="pageTitle">
         <h2 className="pageTitle">Welcome to login</h2>
         </div>
-        <div className="formGroup">
-            <label className="formLabel">Email Address</label>
-            <input type="email" className='form-control' placeholder='Enter Your Email Address'/>
-            <p className='error danger'></p>
-        </div>
+        <InputField  />
         <div className="formGroup">
             <label className="formLabel">Password</label>
             <div className='flex relative'>
