@@ -17,7 +17,7 @@ const Login = () => {
         <div className="pageTitle">
         <h2 className="pageTitle">Welcome to login</h2>
         </div>
-        <InputField  />
+        <InputField  label="Email Address"/>
         <div className="formGroup">
             <label className="formLabel">Password</label>
             <div className='flex relative'>
