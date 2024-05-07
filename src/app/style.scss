@@ -1537,6 +1537,53 @@ input:checked ~ .checkmark:after {
 .overlayBg {
     background: rgba(0, 0, 0, 0.7) !important;
 }
+
+.settingsMenu {
+
+	.menuList {
+		list-style: none;
+		overflow: hidden;
+		overflow-x: hidden;
+		overflow-y: auto;
+		position: relative;
+		height: calc(100vh - 200rem);
+
+		li {
+
+			.link {
+				display: flex;
+				gap: 10rem;
+				padding: 20rem 20rem;
+				position: relative;
+				cursor: pointer;
+				border-bottom: 1rem solid #d5d5d5;
+
+				.icon {
+					width: 25rem;
+					height: 25rem;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+				   svg {
+					width: 20rem;
+					height: 20rem;
+					
+				   }
+				}
+				.arrow {
+					position: absolute;
+					right: 15rem;
+					height: 18rem;
+					width: 18rem;
+					top: 50%;
+					transform: translate(-0%, -50%);
+				}
+			}
+		}
+	}
+}
+
 .sideBar {
     position: relative;
 	display: contents;

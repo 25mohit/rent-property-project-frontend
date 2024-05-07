@@ -88,26 +88,13 @@ const HeaderBar = () => {
               </Link>
             </li>
             <li>
-              <Link className="link" href="/ChangePassword">
+              <Link className="link" href="/Settings">
                 <span className="icon"><GoComment /></span>
-                <h6 className="textLimit l1">Change Password</h6>
+                <h6 className="textLimit l1">Settings</h6>
                 <LiaAngleRightSolid className="arrow" />
               </Link>
             </li>
-            <li>
-              <Link className="link" href="/Privacy">
-                <span className="icon"><GoComment /></span>
-                <h6 className="textLimit l1">Privacy Policy</h6>
-                <LiaAngleRightSolid className="arrow" />
-              </Link>
-            </li>
-            <li>
-              <Link className="link" href="/Terms">
-                <span className="icon"><GoComment /></span>
-                <h6 className="textLimit l1">Terms & Conditions</h6>
-                <LiaAngleRightSolid className="arrow" />
-              </Link>
-            </li>
+            
           </ul>
 
           {/* <div className='fixSidebarBtn'>
