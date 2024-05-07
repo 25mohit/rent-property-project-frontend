@@ -23,7 +23,7 @@ const EditProfile = () => {
                 <div className="formGroup">
                     <div className="uploadImg">
                         <Image src={profileImg} alt="property" className="userProfile" />
-                        <button className="uploadBtn"><FaCamera /><input type="file"/></button>
+                        <button className="uploadBtn"><FaCamera /><input type="file" /></button>
                     </div>
                     <p className='error danger'></p>
                 </div>
@@ -39,7 +39,10 @@ const EditProfile = () => {
                 </div>
                 <div className="formGroup">
                     <label className="formLabel">Phone Number</label>
-                    <input type="email" className='form-control' placeholder='Enter Your Phone Number'  />
+                    <div className="numberField">
+                        <span className="countryCode">+91</span>
+                        <input type="email" className='form-control' placeholder='Enter Your Phone Number' />
+                    </div>
                     <p className='error danger'></p>
                 </div>
                 <button className='btn mainBtn fillBtn'>Submit</button>

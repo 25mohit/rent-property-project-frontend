@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import UserForm from '../components/HOC/UserForm/UserForm'
 import { AiFillEye } from "react-icons/ai";
@@ -5,6 +6,7 @@ import { AiFillEyeInvisible } from "react-icons/ai";
 import Image from "next/image";
 import { google } from "../../../public/images";
 import Link from "next/link";
+import InputField from "../components/Utils/Form/InputField/InputField";
 
 const Login = () => {
   return (
@@ -16,22 +18,9 @@ const Login = () => {
         <div className="pageTitle">
         <h2 className="pageTitle">Welcome to login</h2>
         </div>
-        <div className="formGroup">
-            <label className="formLabel">Email Address</label>
-            <input type="email" className='form-control' placeholder='Enter Your Email Address'/>
-            <p className='error danger'></p>
-        </div>
-        <div className="formGroup">
-            <label className="formLabel">Password</label>
-            <div className='flex relative'>
-                <input type="password" className='form-control' placeholder='Enter Your Password'/>
-                <button type="button" className="eyeAction">
-                  <AiFillEye/>
-                  {/* <AiFillEyeInvisible /> */}
-                </button>
-            </div>
-            <p className='error danger'></p>
-        </div>
+        <InputField type="text" placeholder="Email Address" />
+        <InputField type="password" placeholder="Password" />
+       
         <button className='btn mainBtn fillBtn' >Login</button>
         <p className="forgotPassword"><Link className="link" href="/ForgotPassword">Forgot Password?</Link></p>
 
