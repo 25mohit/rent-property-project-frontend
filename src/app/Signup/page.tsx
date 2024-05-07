@@ -6,6 +6,7 @@ import Image from "next/image";
 import { google } from "../../../public/images";
 import Link from "next/link";
 import OtpInput from 'react-otp-input';
+import InputField from "../components/Utils/Form/InputField/page";
 
 const Signup = () => {
   const [otp, setOtp] = useState('');
@@ -25,20 +26,14 @@ const Signup = () => {
       <div className="pageTitle">
         <h2>Create an account</h2>
       </div>
-      <div className="formGroup">
-        <label className="formLabel">Full Name</label>
-        <input type="text" className='form-control' placeholder='Enter Your Full Name' />
-        <p className='error danger'></p>
-      </div>
-      <div className="formGroup">
-        <label className="formLabel">Email Address</label>
-        <div className="otpVerification">
-          <input type="email" className='form-control' placeholder='Enter Your Email Address' />
-          <button type="button" className="getOtpBtn" onClick={handleGetOTPClick}>Get OTP</button>
-        </div>
-        <p className='error danger'></p>
-      </div>
-      {showVerifyOTP && (
+      
+      <InputField type="text" placeholder="Full Name" />
+      <InputField type="email" placeholder="Email Address" />
+      <InputField type="number" field="mobile" placeholder="Phone Number" />
+      <InputField type="password" placeholder="Password" />
+      <InputField type="text" placeholder="Refer Code" />
+   
+{/*      
       <div className="formGroup">
         <div className="verificationForm">
           <label>OTP has been sent please verify</label>
@@ -52,32 +47,8 @@ const Signup = () => {
           </div>
         </div>
         <p className='error success text-center'></p>
-      </div>
-      )}
-      <div className="formGroup">
-        <label className="formLabel">Phone Number</label>
-        <div className="numberField">
-          <span className="countryCode">+91</span>
-          <input type="email" className='form-control' placeholder='Enter Your Phone Number' />
-        </div>
-        <p className='error danger'></p>
-      </div>
-      <div className="formGroup">
-        <label className="formLabel">Password</label>
-        <div className='flex relative'>
-          <input type="password" className='form-control' placeholder='Create Password' />
-          <button type="button" className="eyeAction">
-            <AiFillEye />
-            {/* <AiFillEyeInvisible /> */}
-          </button>
-        </div>
-        <p className='error danger'></p>
-      </div>
-      <div className="formGroup">
-        <label className="formLabel">Refer Code</label>
-        <input type="text" className='form-control' placeholder='Refer Code' />
-        <p className='error danger'></p>
-      </div>
+      </div> */}
+      
       <div className="formGroup">
         <label className="checkbox agreeTerms">
           <input type="checkbox" />

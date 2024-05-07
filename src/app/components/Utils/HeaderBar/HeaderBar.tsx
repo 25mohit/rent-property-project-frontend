@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MdMenu } from "react-icons/md";
+import { MdClose, MdMenu } from "react-icons/md";
 import { FiSearch, FiUser } from "react-icons/fi";
 import { MdNotificationsNone } from "react-icons/md";
 import { GoComment, GoHeart, GoLocation, GoTasklist } from "react-icons/go";
@@ -8,6 +8,7 @@ import { profileImg } from "../../../../../public/images";
 import Image from "next/image";
 import Link from "next/link";
 import { LiaAngleRightSolid } from "react-icons/lia";
+import { IoArrowBack } from 'react-icons/io5';
 
 const HeaderBar = () => {
 
@@ -21,7 +22,7 @@ const HeaderBar = () => {
     <>
       <div className="headerBar">
         <div className="col leftMenu">
-          <button className="btn menuBtn"onClick={toggleSidebar}><MdMenu /></button>
+          <button className="btn menuBtn" onClick={toggleSidebar}><MdMenu /></button>
           <div className="location">
             <GoLocation className="icon" />
             <div className="locationBody">
@@ -41,9 +42,9 @@ const HeaderBar = () => {
       </div>
 
       <div className={`sideBar ${sidebarActive ? 'active' : ''}`} id="sidebarMenu">
-      <div className="overlayBg" id="hideSidebar" onClick={toggleSidebar}></div>
+        <div className="overlayBg" id="hideSidebar" onClick={toggleSidebar}></div>
         <div className="sideBarBody">
-          
+
           {/* <div className="nameProfile lessSpace" id="nameProfile">
             <span className="profileImg">
               <Image src={profileImg} alt="profileImg" className="userImg" />
@@ -58,7 +59,7 @@ const HeaderBar = () => {
             <Link href="/Login" className='loginBtn'>Login</Link>
           </div>
 
-          <ul className="menuList" style={{ height:'calc(100vh - 1rem)' }}>
+          <ul className="menuList" style={{ height: 'calc(100vh - 1rem)' }}>
             <li>
               <Link className="link" href="/EditProfile">
                 <span className="icon"><FiUser /></span>
@@ -94,15 +95,132 @@ const HeaderBar = () => {
                 <LiaAngleRightSolid className="arrow" />
               </Link>
             </li>
-            
+
           </ul>
 
           {/* <div className='fixSidebarBtn'>
             <Link href="#" className="btn">Logout</Link>
           </div> */}
-          
+
         </div>
       </div>
+
+      {/* <div className='searchPage'>
+        <div className='searchForm'>
+          <Link href="/Chat" className="btn backBtn"><IoArrowBack /></Link>
+          <div className='formIn'>
+            <input type="text" className='form-control' placeholder='Search...' />
+            <button className='searchBtn'><FiSearch /></button>
+          </div>
+        </div>
+        <ul className='searchListHints scroll'>
+          <h6 className='searchTitle'>Recent Search</h6>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5>Cars</h5>
+              <p>In Cars</p>
+            </div>
+            <button className='closeSearch'><MdClose /></button>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5>Cars</h5>
+              <p>In Cars</p>
+            </div>
+            <button className='closeSearch'><MdClose /></button>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5>Cars</h5>
+              <p>In Cars</p>
+            </div>
+            <button className='closeSearch'><MdClose /></button>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5>Cars</h5>
+              <p>In Cars</p>
+            </div>
+            <button className='closeSearch'><MdClose /></button>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5>Cars</h5>
+              <p>In Cars</p>
+            </div>
+            <button className='closeSearch'><MdClose /></button>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5>Cars</h5>
+              <p>In Cars</p>
+            </div>
+            <button className='closeSearch'><MdClose /></button>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5>Cars</h5>
+              <p>In Cars</p>
+            </div>
+            <button className='closeSearch'><MdClose /></button>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5>Cars</h5>
+              <p>In Cars</p>
+            </div>
+            <button className='closeSearch'><MdClose /></button>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5>Cars</h5>
+              <p>In Cars</p>
+            </div>
+            <button className='closeSearch'><MdClose /></button>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5>Cars</h5>
+              <p>In Cars</p>
+            </div>
+            <button className='closeSearch'><MdClose /></button>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5>Cars</h5>
+              <p>In Cars</p>
+            </div>
+            <button className='closeSearch'><MdClose /></button>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5>Cars</h5>
+              <p>In Cars</p>
+            </div>
+            <button className='closeSearch'><MdClose /></button>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5>Cars</h5>
+              <p>In Cars</p>
+            </div>
+            <button className='closeSearch'><MdClose /></button>
+          </li>
+        </ul>
+      </div> */}
     </>
   )
 }
