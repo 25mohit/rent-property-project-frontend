@@ -10,12 +10,9 @@ import InputField from "../components/Utils/Form/InputField/InputField";
 
 const Signup = () => {
   const [otp, setOtp] = useState('');
-
+  
   const [showVerifyOTP, setShowVerifyOTP] = useState(false);
-
-  const handleGetOTPClick = () => {
-    setShowVerifyOTP(true);
-  };
+  
 
   return (
     <UserForm title="Create an account">
@@ -28,13 +25,9 @@ const Signup = () => {
       </div>
       
       <InputField type="text" placeholder="Full Name" />
-      <InputField type="email" placeholder="Email Address" />
-      <InputField type="number" field="mobile" label="+91" placeholder="Phone Number" />
-      <InputField type="password" placeholder="Password" />
-      <InputField type="text" placeholder="Refer Code" />
-   
-{/*      
-      <div className="formGroup">
+      <InputField type="email" placeholder="Email Address" verifyClick={setShowVerifyOTP} />
+           
+      { showVerifyOTP && <div className='formGroup showOtp'>
         <div className="verificationForm">
           <label>OTP has been sent please verify</label>
           <div className='otpBox'>
@@ -47,7 +40,12 @@ const Signup = () => {
           </div>
         </div>
         <p className='error success text-center'></p>
-      </div> */}
+      </div> }
+      <InputField type="number" field="mobile" label="+91" placeholder="Phone Number" />
+      <InputField type="password" placeholder="Password" />
+      <InputField type="text" placeholder="Refer Code" />
+   
+
       
       <div className="formGroup">
         <label className="checkbox agreeTerms">

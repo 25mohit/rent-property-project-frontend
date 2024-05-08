@@ -6,6 +6,7 @@ import { profileImg } from "../../../public/images";
 import Image from "next/image";
 import { FaCamera } from "react-icons/fa6";
 import { AiFillEye } from "react-icons/ai";
+import InputField from "../components/Utils/Form/InputField/InputField";
 
 const ChangePassword = () => {
     return (
@@ -21,39 +22,9 @@ const ChangePassword = () => {
             </div>
 
             <div className="defaultSpace">
-                <div className="formGroup">
-                    <label className="formLabel">Old Password</label>
-                    <div className='flex relative'>
-                        <input type="password" className='form-control' placeholder='Enter Old Password' />
-                        <button type="button" className="eyeAction">
-                            <AiFillEye />
-                            {/* <AiFillEyeInvisible /> */}
-                        </button>
-                    </div>
-                    <p className='error danger'></p>
-                </div>
-                <div className="formGroup">
-                    <label className="formLabel">New Password</label>
-                    <div className='flex relative'>
-                        <input type="password" className='form-control' placeholder='Enter New Password' />
-                        <button type="button" className="eyeAction">
-                            <AiFillEye />
-                            {/* <AiFillEyeInvisible /> */}
-                        </button>
-                    </div>
-                    <p className='error danger'></p>
-                </div>
-                <div className="formGroup">
-                    <label className="formLabel">Confirm Password</label>
-                    <div className='flex relative'>
-                        <input type="password" className='form-control' placeholder='Enter Confirm Password' />
-                        <button type="button" className="eyeAction">
-                            <AiFillEye />
-                            {/* <AiFillEyeInvisible /> */}
-                        </button>
-                    </div>
-                    <p className='error danger'></p>
-                </div>
+                <InputField type="password" placeholder="New Password" />
+                <InputField type="password" placeholder="Old Password" />
+                <InputField type="password" placeholder="Confirm Password" />
                 <button className='btn mainBtn fillBtn'>Submit</button>
 
             </div>

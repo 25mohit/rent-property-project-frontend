@@ -5,7 +5,7 @@ import Link from "next/link";
 import { prImg1, profileImg } from "../../../public/images";
 import Image from "next/image";
 import { FaCamera } from "react-icons/fa6";
-import SelectDropdown from "../components/Utils/Form/SelectDropdown/page";
+import SelectDropdown from "../components/Utils/Form/SelectDropdown/SelectDropdown";
 import { MdClose, MdOutlineCloudUpload } from "react-icons/md";
 
 

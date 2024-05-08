@@ -1,15 +1,18 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
 import { prImg1, profileImg } from "../../../public/images";
 import Image from "next/image";
 import { FaCamera } from "react-icons/fa6";
-import SelectDropdown from "../components/Utils/Form/SelectDropdown/page";
+import SelectDropdown from "../components/Utils/Form/SelectDropdown/SelectDropdown";
 import { MdClose, MdOutlineCloudUpload } from "react-icons/md";
+import InputField from "../components/Utils/Form/InputField/InputField";
 
 
 const AddItem = () => {
+    const [category, setCategory] = useState('')
     return (
         <>
             <SingleContentLayout>
@@ -24,11 +27,10 @@ const AddItem = () => {
                 </div>
 
                 <div className="defaultSpace">
-                    <div className="formGroup">
-                        <label className="formLabel">Item Name</label>
-                        <input type="text" className='form-control' placeholder='Enter Item Name' />
-                        <p className='error danger'></p>
-                    </div>
+
+                    <InputField type="text" placeholder="Item Name" />
+                    <SelectDropdown placeholder="Category" setValue={setCategory} value={category}/>
+                    
                     <div className="formGroup">
                         <label className="formLabelNew">Upload Item Image</label>
                         <div className="uploadedMultiImg">
@@ -55,21 +57,12 @@ const AddItem = () => {
                         </div>
                         <p className='error danger'></p>
                     </div>
-                    <div className="formGroup">
-                        <label className="formLabel">Category</label>
-                        <SelectDropdown />
-                        <p className='error danger'></p>
-                    </div>
-                    <div className="formGroup">
-                        <label className="formLabel">Sub Category</label>
-                        <SelectDropdown />
-                        <p className='error danger'></p>
-                    </div>
-                    <div className="formGroup">
+                    
+                    {/* <div className="formGroup">
                         <label className="formLabel">Description</label>
                         <textarea className='form-control' placeholder='Description'></textarea>
                         <p className='error danger'></p>
-                    </div>
+                    </div> */}
                     <Link href="/SelectAddress" className='btn mainBtn fillBtn'>Next</Link>
 
                 </div>

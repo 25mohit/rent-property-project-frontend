@@ -107,6 +107,7 @@ input:checked ~ .checkmark:after {
 	    z-index: 1;
 		transition: 0.2s;
 		color: #999999;
+		pointer-events: none;
 	}
 
 
@@ -133,6 +134,12 @@ input:checked ~ .checkmark:after {
 	}
 	
 	.form-control:focus + .formLabel, .formGroupMain .active {
+		top: -2px;
+		color: #333;
+		z-index: 3;
+		font-size: var(--fontSize14);
+	}
+	.css-13cymwt-control + .formLabel, .formGroupMain .active {
 		top: -2px;
 		color: #333;
 		z-index: 3;
