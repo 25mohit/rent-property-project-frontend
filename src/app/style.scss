@@ -130,8 +130,6 @@ input:checked ~ .checkmark:after {
 		text-align: center;
 		min-height: 35rem;
 		line-height: 5;
-		z-index: 1;
-		display: none;
 	}
 	
 	.form-control:focus + .formLabel, .formGroupMain .active {
@@ -144,7 +142,6 @@ input:checked ~ .checkmark:after {
 	.form-control:focus + .countryCode, .formGroupMain .active +  .countryCode {
          display: block;
 	}
-
 	.formLabelNew {
 		position: relative;
 		top: -8rem;
@@ -169,12 +166,7 @@ input[type="email"] {
 		padding-right: 100rem;
 	}
 }
-input[type="number"] {
 
-	&.form-control {
-		padding-left: 60rem;
-	}
-}
 .form-control {
 	width: 100%;
     min-height: 55rem;
@@ -188,6 +180,9 @@ input[type="number"] {
 	transition: 0.5s;
 
 	
+	&.phoneNumberSpace {
+		padding-left: 60rem;
+	}
 
 	&:focus {
 	    border: 1rem solid var(--main);
