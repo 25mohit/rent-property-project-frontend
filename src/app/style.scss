@@ -471,6 +471,7 @@ input[type="email"] {
 			}
 
 			&.innerHeader {
+				background: #f3f3f3;
 
 				.backBtn {
 					padding: 0;
@@ -1095,7 +1096,7 @@ input[type="email"] {
 		.backBtn {
 			display: flex;
 			width: 40rem;
-			height: 45rem;
+			height: 50rem;
 			align-items: center;
 			justify-content: center;
 
@@ -1109,18 +1110,18 @@ input[type="email"] {
 			width: 100%;
 
 			.form-control {
-				min-height: 45rem;
-				height: 45rem;
+				min-height: 50rem;
+				height: 50rem;
 			}
 			.searchBtn {
 				position: absolute;
-				right: 5rem;
+				right: 8rem;
 				width: 35rem;
 				height: 35rem;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				top: 5rem;
+				top: 8rem;
 				background: var(--main);
 				border-radius: 8rem;
 				color: #fff;
