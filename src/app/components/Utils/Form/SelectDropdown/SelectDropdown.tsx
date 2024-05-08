@@ -38,18 +38,29 @@ const SelectDropdown: React.FC<SelectInterface> = ({ placeholder, setValue, valu
     //     }
     // }
 
-  const handleChange = (newValue: SingleValue<string>, actionMeta?: ActionMeta<string>) => {
-    const selectedOption = newValue ? { value: newValue, label: newValue } : null; // Assuming label matches value
-    setSelectedOption(selectedOption);
+  const handleChange = (val: any) => {
+    console.log("newValue", val, value);
+    setValue(val)
   };
+
+  useEffect(() => {
+    console.log("value", value);
+    if(value && Object.keys(value)?.length > 0){
+        setHasValue(true)
+    } else {
+        setHasValue(false)
+    }
+  },[value])
 
     useEffect(() => {
         if(menuIsOpen){
             setHasValue(true)
+        } else if(!menuIsOpen && !value) {
+            setHasValue(false)
         }
     },[menuIsOpen])
 
-    console.log("hasValue", hasValue)
+    console.log("hasValue", hasValue, menuIsOpen)
     return (
         <div className="formGroup">
             <div className='selectDropDown'>
@@ -58,6 +69,8 @@ const SelectDropdown: React.FC<SelectInterface> = ({ placeholder, setValue, valu
                     options={options}
                     value={value}
                     onChange={handleChange}
+                    onMenuOpen={() => setMenuIsOpen(true)} 
+                    onMenuClose={() => setMenuIsOpen(false)}  
                     />
                     {/* <Select onMenuOpen={() => setMenuIsOpen(true)} onMenuClose={() => setMenuIsOpen(false)}  autoFocus={true} value={value} options={options} placeholder="" onChange={onChangerHandler}/> */}
                     <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder}</label>

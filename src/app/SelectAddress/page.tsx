@@ -12,6 +12,8 @@ const SelectAddress = () => {
     ]
     const [state, setState] = useState('')
 
+    console.log("state", state);
+    
     return (
         <SingleContentLayout>
             <div className="headerBar innerHeader">
@@ -40,7 +42,7 @@ const SelectAddress = () => {
                 </div>
                 <div className="formGroup">
                     <label className="formLabel">State</label>
-                    <SelectDropdown options={options} value={state}/>
+                    <SelectDropdown options={options} value={state} setValue={setState}/>
                     <p className='error danger'></p>
                 </div>
                 <div className="formGroup">

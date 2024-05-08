@@ -13,6 +13,14 @@ import InputField from "../components/Utils/Form/InputField/InputField";
 
 const AddItem = () => {
     const [category, setCategory] = useState('')
+    const options = [
+        { label: "House", value: 'house' },
+        { label: "Laptop", value: 'laptop' },
+        { label: "Computer", value: 'computer' },
+        { label: "Mouse", value: 'mouse' },
+    ]
+    console.log("category", category);
+    
     return (
         <>
             <SingleContentLayout>
@@ -29,7 +37,7 @@ const AddItem = () => {
                 <div className="defaultSpace">
 
                     <InputField type="text" placeholder="Item Name" />
-                    <SelectDropdown placeholder="Category" setValue={setCategory} value={category}/>
+                    <SelectDropdown options={options} placeholder="Category" setValue={setCategory} value={category}/>
                     
                     <div className="formGroup">
                         <label className="formLabelNew">Upload Item Image</label>
