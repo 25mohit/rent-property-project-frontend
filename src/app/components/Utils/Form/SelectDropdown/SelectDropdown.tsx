@@ -1,11 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import Select, { ActionMeta, SingleValue } from 'react-select';
-
-interface MyOption {
-    value: string;
-    label: string;
-  }
+import Select from 'react-select';
 
   interface SelectInterface{
     options?: any,
@@ -18,7 +13,6 @@ const SelectDropdown: React.FC<SelectInterface> = ({ placeholder, setValue, valu
     const [newID, setNewID] = useState('');
     const [hasValue, setHasValue] = useState(false);
     const [menuIsOpen, setMenuIsOpen] = useState(false);
-    const [selectedOption, setSelectedOption] = useState<MyOption | null>(null);
 
     useEffect(() => {
         function generateRandomNumber() {
@@ -29,22 +23,11 @@ const SelectDropdown: React.FC<SelectInterface> = ({ placeholder, setValue, valu
         setNewID(generateRandomNumber())
     }, [])
 
-    // const onChangerHandler = (e: any) => {
-    //     const val = e.value
-    //     console.log("asdasd",e)
-    //     if(val !== ""){
-    //         setValue !== undefined &&   setValue(val)
-    //         setHasValue(true)
-    //     }
-    // }
-
   const handleChange = (val: any) => {
-    console.log("newValue", val, value);
     setValue(val)
   };
 
   useEffect(() => {
-    console.log("value", value);
     if(value && Object.keys(value)?.length > 0){
         setHasValue(true)
     } else {
@@ -60,7 +43,6 @@ const SelectDropdown: React.FC<SelectInterface> = ({ placeholder, setValue, valu
         }
     },[menuIsOpen])
 
-    console.log("hasValue", hasValue, menuIsOpen)
     return (
         <div className="formGroup">
             <div className='selectDropDown'>
@@ -72,7 +54,6 @@ const SelectDropdown: React.FC<SelectInterface> = ({ placeholder, setValue, valu
                     onMenuOpen={() => setMenuIsOpen(true)} 
                     onMenuClose={() => setMenuIsOpen(false)}  
                     />
-                    {/* <Select onMenuOpen={() => setMenuIsOpen(true)} onMenuClose={() => setMenuIsOpen(false)}  autoFocus={true} value={value} options={options} placeholder="" onChange={onChangerHandler}/> */}
                     <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder}</label>
                 </div>
             </div>
