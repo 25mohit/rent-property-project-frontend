@@ -1,29 +1,28 @@
 'use client'
 import React, { useEffect, useState } from 'react';
+import Select from 'react-select';
 
-import Select, { GroupBase } from 'react-select';
-
+export interface MyOption {
+    value: string;
+    label: string;
+    [otherProps: string]: any; // Allow for additional properties
+  }
 
 interface InputInterface {
     placeholder?: string,
     setValue?: React.Dispatch<React.SetStateAction<string>>,
     value?: string,
-    verifyClick?: React.Dispatch<React.SetStateAction<boolean>>
+    verifyClick?: React.Dispatch<React.SetStateAction<boolean>>,
+    options?: MyOption[]
 }
-interface OptionType {
-    value: string;
-    label: string;
-}
-const options: readonly GroupBase<OptionType>[] = [
-    { label: 'Category', options: [
-        { value: 'furniture', label: 'Furniture' },
-        { value: 'cars', label: 'Cars' },
-        { value: 'property', label: 'Property' },
-        { value: 'electronic', label: 'Electronic' }
-    ]}
-]
+// const options = [
+//     { value: 'furniture', label: 'Furniture' },
+//     { value: 'cars', label: 'Cars' },
+//     { value: 'property', label: 'Property' },
+//     { value: 'electronic', label: 'Electronic' }
+// ]
 
-const SelectDropdown: React.FC<InputInterface> = ({ placeholder, setValue, value }) => {
+const SelectDropdown: React.FC<InputInterface> = ({ placeholder, setValue, value, options }) => {
     const [newID, setNewID] = useState('');
     const [hasValue, setHasValue] = useState(false);
     const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -41,7 +40,7 @@ const SelectDropdown: React.FC<InputInterface> = ({ placeholder, setValue, value
         const val = e.value
         console.log("asdasd",e)
         if(val !== ""){
-            setValue !== undefined && setValue(val)
+            setValue !== undefined &&   setValue(val)
             setHasValue(true)
         }
     }
@@ -56,7 +55,7 @@ const SelectDropdown: React.FC<InputInterface> = ({ placeholder, setValue, value
         <div className="formGroup">
             <div className='selectDropDown'>
                 <div className='formGroupMain'>
-                    <Select onMenuOpen={() => setMenuIsOpen(true)} onMenuClose={() => setMenuIsOpen(false)}  autoFocus={true} value={value} options={options} placeholder="" onChange={onChangerHandler}/>
+                    <Select autoFocus={true} value={value} options={options} placeholder="" onChange={onChangerHandler}/>
                     <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder}</label>
                 </div>
             </div>
