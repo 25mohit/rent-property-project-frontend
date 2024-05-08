@@ -42,7 +42,7 @@ const HeaderBar = () => {
         <div className="col rightMenu">
           <ul className="headerAction">
             <li><button className="btn search" onClick={toggleSearchPopup}><FiSearch /></button></li>
-            <li><button className="btn notification"><MdNotificationsNone /></button></li>
+            <li><Link href="/Notifications" className="btn notification"><MdNotificationsNone /></Link></li>
           </ul>
         </div>
       </div>
@@ -120,95 +120,22 @@ const HeaderBar = () => {
           </div>
         </div>
         <ul className='searchListHints scroll'>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5>Cars</h5>
+              <p>In Cars</p>
+            </div>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5>Mobile Phone</h5>
+              <p>In Electronics</p>
+            </div>
+          </li>
+
           <h6 className='searchTitle'>Recent Search</h6>
-          <li>
-            <GoLocation className="icon" />
-            <div className='left'>
-              <h5>Cars</h5>
-              <p>In Cars</p>
-            </div>
-            <button className='closeSearch'><MdClose /></button>
-          </li>
-          <li>
-            <GoLocation className="icon" />
-            <div className='left'>
-              <h5>Cars</h5>
-              <p>In Cars</p>
-            </div>
-            <button className='closeSearch'><MdClose /></button>
-          </li>
-          <li>
-            <GoLocation className="icon" />
-            <div className='left'>
-              <h5>Cars</h5>
-              <p>In Cars</p>
-            </div>
-            <button className='closeSearch'><MdClose /></button>
-          </li>
-          <li>
-            <GoLocation className="icon" />
-            <div className='left'>
-              <h5>Cars</h5>
-              <p>In Cars</p>
-            </div>
-            <button className='closeSearch'><MdClose /></button>
-          </li>
-          <li>
-            <GoLocation className="icon" />
-            <div className='left'>
-              <h5>Cars</h5>
-              <p>In Cars</p>
-            </div>
-            <button className='closeSearch'><MdClose /></button>
-          </li>
-          <li>
-            <GoLocation className="icon" />
-            <div className='left'>
-              <h5>Cars</h5>
-              <p>In Cars</p>
-            </div>
-            <button className='closeSearch'><MdClose /></button>
-          </li>
-          <li>
-            <GoLocation className="icon" />
-            <div className='left'>
-              <h5>Cars</h5>
-              <p>In Cars</p>
-            </div>
-            <button className='closeSearch'><MdClose /></button>
-          </li>
-          <li>
-            <GoLocation className="icon" />
-            <div className='left'>
-              <h5>Cars</h5>
-              <p>In Cars</p>
-            </div>
-            <button className='closeSearch'><MdClose /></button>
-          </li>
-          <li>
-            <GoLocation className="icon" />
-            <div className='left'>
-              <h5>Cars</h5>
-              <p>In Cars</p>
-            </div>
-            <button className='closeSearch'><MdClose /></button>
-          </li>
-          <li>
-            <GoLocation className="icon" />
-            <div className='left'>
-              <h5>Cars</h5>
-              <p>In Cars</p>
-            </div>
-            <button className='closeSearch'><MdClose /></button>
-          </li>
-          <li>
-            <GoLocation className="icon" />
-            <div className='left'>
-              <h5>Cars</h5>
-              <p>In Cars</p>
-            </div>
-            <button className='closeSearch'><MdClose /></button>
-          </li>
           <li>
             <GoLocation className="icon" />
             <div className='left'>
