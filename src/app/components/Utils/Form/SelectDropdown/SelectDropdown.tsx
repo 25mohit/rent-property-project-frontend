@@ -1,31 +1,24 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import Select from 'react-select';
+import Select, { ActionMeta, SingleValue } from 'react-select';
 
-export interface MyOption {
+interface MyOption {
     value: string;
     label: string;
-    [otherProps: string]: any; // Allow for additional properties
   }
 
-interface InputInterface {
+  interface SelectInterface{
+    options?: any,
     placeholder?: string,
-    setValue?: React.Dispatch<React.SetStateAction<string>>,
-    value?: string,
-    verifyClick?: React.Dispatch<React.SetStateAction<boolean>>,
-    options?: MyOption[]
-}
-// const options = [
-//     { value: 'furniture', label: 'Furniture' },
-//     { value: 'cars', label: 'Cars' },
-//     { value: 'property', label: 'Property' },
-//     { value: 'electronic', label: 'Electronic' }
-// ]
+    value?: string, 
+    setValue?: any
+  }
 
-const SelectDropdown: React.FC<InputInterface> = ({ placeholder, setValue, value, options }) => {
+const SelectDropdown: React.FC<SelectInterface> = ({ placeholder, setValue, value, options }) => {
     const [newID, setNewID] = useState('');
     const [hasValue, setHasValue] = useState(false);
     const [menuIsOpen, setMenuIsOpen] = useState(false);
+    const [selectedOption, setSelectedOption] = useState<MyOption | null>(null);
 
     useEffect(() => {
         function generateRandomNumber() {
@@ -36,14 +29,20 @@ const SelectDropdown: React.FC<InputInterface> = ({ placeholder, setValue, value
         setNewID(generateRandomNumber())
     }, [])
 
-    const onChangerHandler = (e: any) => {
-        const val = e.value
-        console.log("asdasd",e)
-        if(val !== ""){
-            setValue !== undefined &&   setValue(val)
-            setHasValue(true)
-        }
-    }
+    // const onChangerHandler = (e: any) => {
+    //     const val = e.value
+    //     console.log("asdasd",e)
+    //     if(val !== ""){
+    //         setValue !== undefined &&   setValue(val)
+    //         setHasValue(true)
+    //     }
+    // }
+
+  const handleChange = (newValue: SingleValue<string>, actionMeta?: ActionMeta<string>) => {
+    const selectedOption = newValue ? { value: newValue, label: newValue } : null; // Assuming label matches value
+    setSelectedOption(selectedOption);
+  };
+
     useEffect(() => {
         if(menuIsOpen){
             setHasValue(true)
@@ -55,7 +54,12 @@ const SelectDropdown: React.FC<InputInterface> = ({ placeholder, setValue, value
         <div className="formGroup">
             <div className='selectDropDown'>
                 <div className='formGroupMain'>
-                    <Select autoFocus={true} value={value} options={options} placeholder="" onChange={onChangerHandler}/>
+                <Select
+                    options={options}
+                    value={value}
+                    onChange={handleChange}
+                    />
+                    {/* <Select onMenuOpen={() => setMenuIsOpen(true)} onMenuClose={() => setMenuIsOpen(false)}  autoFocus={true} value={value} options={options} placeholder="" onChange={onChangerHandler}/> */}
                     <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder}</label>
                 </div>
             </div>

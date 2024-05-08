@@ -1,14 +1,17 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
-import SelectDropdown, { MyOption } from "../components/Utils/Form/SelectDropdown/SelectDropdown";
+import SelectDropdown from "../components/Utils/Form/SelectDropdown/SelectDropdown";
 
 const SelectAddress = () => {
-    const options: MyOption[] = [
+    const options= [
         { value: 'option1', label: 'Option 1' },
         { value: 'option2', label: 'Option 2' },
     ]
+    const [state, setState] = useState('')
+
     return (
         <SingleContentLayout>
             <div className="headerBar innerHeader">
@@ -37,7 +40,7 @@ const SelectAddress = () => {
                 </div>
                 <div className="formGroup">
                     <label className="formLabel">State</label>
-                    <SelectDropdown options={options} />
+                    <SelectDropdown options={options} value={state}/>
                     <p className='error danger'></p>
                 </div>
                 <div className="formGroup">
