@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { LiaAngleRightSolid } from "react-icons/lia";
 import { IoArrowBack } from 'react-icons/io5';
+import { BiCurrentLocation } from 'react-icons/bi';
 
 const HeaderBar = () => {
 
@@ -19,9 +20,14 @@ const HeaderBar = () => {
   };
 
   const [isActive, setIsActive] = useState(false);
+  const [isLocationActive, setIsLocationActive] = useState(false);
 
   const toggleSearchPopup = () => {
     setIsActive(!isActive);
+  };
+
+  const toggleLocationPopup = () => {
+    setIsLocationActive(!isLocationActive);
   };
 
   return (
@@ -29,7 +35,7 @@ const HeaderBar = () => {
       <div className="headerBar">
         <div className="col leftMenu">
           <button className="btn menuBtn" onClick={toggleSidebar}><MdMenu /></button>
-          <div className="location">
+          <div className="location" onClick={toggleLocationPopup}>
             <GoLocation className="icon" />
             <div className="locationBody">
               <h5>Location
@@ -155,12 +161,66 @@ const HeaderBar = () => {
         </ul>
       </div>
 
-      {/* <div className='bottomPopup'>
-        <div className='overlayBg'></div>
-        <div className='bottomPopupBody'>
-          
+
+      <div className={`searchPage ${isLocationActive ? 'active' : ''}`} id="searchPopupBody">
+        <div className='searchForm'>
+          <button onClick={toggleLocationPopup} className="btn backBtn"><IoArrowBack /></button>
+          <div className='formIn'>
+            <input type="text" className='form-control' placeholder='Search Location...' />
+          </div>
         </div>
-      </div> */}
+        <ul className='searchListHintsLocation scroll'>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5 className='textLimit l1'><b>Use your current location</b> <BiCurrentLocation className='currentLocation' /></h5>
+            </div>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5 className='textLimit l1'><b>Atish Market</b> Mansarovar , Jaipur</h5>
+            </div>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5 className='textLimit l1'><b>Atish Market</b> Mansarovar , Jaipur</h5>
+            </div>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5 className='textLimit l1'><b>Atish Market</b> Mansarovar , Jaipur</h5>
+            </div>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5 className='textLimit l1'><b>Atish Market</b> Mansarovar , Jaipur</h5>
+            </div>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5 className='textLimit l1'><b>Atish Market</b> Mansarovar , Jaipur</h5>
+            </div>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5 className='textLimit l1'><b>Atish Market</b> Mansarovar , Jaipur</h5>
+            </div>
+          </li>
+          <li>
+            <GoLocation className="icon" />
+            <div className='left'>
+              <h5 className='textLimit l1'><b>Atish Market</b> Mansarovar , Jaipur</h5>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
     </>
   )
 }

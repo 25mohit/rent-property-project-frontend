@@ -1180,6 +1180,7 @@ input[type="email"] {
 			.form-control {
 				min-height: 50rem;
 				height: 50rem;
+				padding-right: 50rem;
 			}
 
 			.searchBtn {
@@ -1203,7 +1204,59 @@ input[type="email"] {
 			}
 		}
 	}
+.searchListHintsLocation {
+	list-style: none;
+	height: calc(100vh - 77rem);
 
+	li {
+		display: flex;
+		gap: 10rem;
+		align-items: center;
+		padding: 15rem 15rem;
+		border-bottom: 1rem solid #ededed;
+		position: relative;
+
+		.icon {
+			min-width: 20rem;
+			min-height: 20rem;
+			max-width:20rem;
+			max-height: 20rem;
+		}
+
+		.left {
+			width: 100%;
+
+			h5 {
+				font-size: var(--fontSize16);
+				font-weight: 500;
+				line-height: 1;
+				color: #9e9e9e;
+
+				b {
+					font-weight: 500;
+					opacity: 1;
+					color: #222;
+				}
+			}
+			.currentLocation {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 25rem;
+				height: 25rem;
+				color: #222;
+			}
+
+			p {
+				font-size: var(--fontSize14);
+				opacity: 0.7;
+			}
+		}
+
+	}
+
+}
 	.searchListHints {
 		list-style: none;
 		height: calc(100vh - 77rem);
@@ -2293,28 +2346,28 @@ input[type="email"] {
 
 
 
-.bottomPopup {
+// .bottomPopup {
 
-	.overlayBg {
-		position: fixed;
-		width: 425rem;
-		height: 100%;
-		top: 0;
-		left: 0;
-		z-index: 99;
-	}
-	.bottomPopupBody {
-		position: fixed;
-		left: 0;
-		width: 425rem;
-		background: #fff;
-		min-height: 200rem;
-		max-height: 100rem;
-		z-index: 99;
-		bottom: 0;
-		border-radius: 20rem 20rem 0rem 0rem;
-	}
-}
+// 	.overlayBg {
+// 		position: fixed;
+// 		width: 425rem;
+// 		height: 100%;
+// 		top: 0;
+// 		left: 0;
+// 		z-index: 99;
+// 	}
+// 	.bottomPopupBody {
+// 		position: fixed;
+// 		left: 0;
+// 		width: 425rem;
+// 		background: #fff;
+// 		min-height: 200rem;
+// 		max-height: 100rem;
+// 		z-index: 99;
+// 		bottom: 0;
+// 		border-radius: 20rem 20rem 0rem 0rem;
+// 	}
+// }
 
 
 @media (max-width:991px) {
