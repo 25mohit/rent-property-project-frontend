@@ -18,6 +18,12 @@ const HeaderBar = () => {
     setSidebarActive(!sidebarActive);
   };
 
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleSearchPopup = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <>
       <div className="headerBar">
@@ -35,7 +41,7 @@ const HeaderBar = () => {
         </div>
         <div className="col rightMenu">
           <ul className="headerAction">
-            <li><button className="btn search"><FiSearch /></button></li>
+            <li><button className="btn search" onClick={toggleSearchPopup}><FiSearch /></button></li>
             <li><button className="btn notification"><MdNotificationsNone /></button></li>
           </ul>
         </div>
@@ -105,9 +111,9 @@ const HeaderBar = () => {
         </div>
       </div>
 
-      {/* <div className='searchPage'>
+      <div className={`searchPage ${isActive ? 'active' : ''}`} id="searchPopupBody">
         <div className='searchForm'>
-          <Link href="/Chat" className="btn backBtn"><IoArrowBack /></Link>
+          <button onClick={toggleSearchPopup} className="btn backBtn"><IoArrowBack /></button>
           <div className='formIn'>
             <input type="text" className='form-control' placeholder='Search...' />
             <button className='searchBtn'><FiSearch /></button>
@@ -220,7 +226,7 @@ const HeaderBar = () => {
             <button className='closeSearch'><MdClose /></button>
           </li>
         </ul>
-      </div> */}
+      </div>
     </>
   )
 }

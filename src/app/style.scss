@@ -1074,11 +1074,16 @@ input[type="email"] {
 
 .searchPage {
     position: fixed;
-    z-index: 999;
+    z-index: 9999;
     top: 0;
     width: 425rem;
     height: 100%;
     background: #fff;
+	display: none;
+
+	&.active {
+		display: block;
+	}
 
 	.searchForm {
 		display: flex;
@@ -1354,12 +1359,12 @@ input[type="email"] {
 .myAdsCard {
     overflow: hidden;
 	border-radius: 10rem;
-	box-shadow: 0rem 0rem 10rem 0rem #231f1f75;
+	border: 1rem solid #c3c3c3;
 
 	.myAdsCardHead {
-		background: #5b4b4e;
+		background: #f3f3f3;
 		padding: 12rem 15rem;
-		color: #fff;
+		color: #000;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
