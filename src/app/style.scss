@@ -1950,11 +1950,11 @@ input[type="email"] {
 	.overlayBg {
 		position: fixed;
 		top: 50%;
-		left: 50%;
+		left: 0;
 		width: 425rem;
 		height: 100vh;
 		margin: 0 auto;
-		transform: translate(-50%, -50%);
+		transform: translate(0%, -50%);
 		z-index: 9999;
 		opacity: 0;
 		display: none;
@@ -2291,6 +2291,30 @@ input[type="email"] {
 	}
 }
 
+
+
+.bottomPopup {
+
+	.overlayBg {
+		position: fixed;
+		width: 425rem;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 99;
+	}
+	.bottomPopupBody {
+		position: fixed;
+		left: 0;
+		width: 425rem;
+		background: #fff;
+		min-height: 200rem;
+		max-height: 100rem;
+		z-index: 99;
+		bottom: 0;
+		border-radius: 20rem 20rem 0rem 0rem;
+	}
+}
 
 
 @media (max-width:991px) {

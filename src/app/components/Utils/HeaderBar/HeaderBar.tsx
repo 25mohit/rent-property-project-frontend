@@ -154,6 +154,13 @@ const HeaderBar = () => {
           </li>
         </ul>
       </div>
+
+      {/* <div className='bottomPopup'>
+        <div className='overlayBg'></div>
+        <div className='bottomPopupBody'>
+          
+        </div>
+      </div> */}
     </>
   )
 }
