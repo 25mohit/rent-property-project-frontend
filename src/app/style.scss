@@ -175,7 +175,7 @@ input::-ms-input-placeholder {
 		transition: 0.2s;
 		color: #999999;
 		pointer-events: none;
-		width:90%;
+		min-width:150rem;
 	}
 
 
@@ -385,7 +385,8 @@ input[type="email"] {
 	color: #9f9f9f;
 
 	svg {
-		font-size: var(--fontSize24);
+		width: 25rem;
+		height: 25rem;
 	}
 }
 
