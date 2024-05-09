@@ -5,6 +5,8 @@ import Link from "next/link";
 import { profileImg } from "../../../public/images";
 import Image from "next/image";
 import { FaCamera } from "react-icons/fa6";
+import InputField from "../components/Utils/Form/InputField/InputField";
+import { TbDiscountCheckFilled } from "react-icons/tb";
 
 const EditProfile = () => {
     return (
@@ -25,30 +27,20 @@ const EditProfile = () => {
                         <Image src={profileImg} alt="property" className="userProfile" />
                         <button className="uploadBtn"><FaCamera /><input type="file" /></button>
                     </div>
-                    <p className='error danger'></p>
-                </div>
-                <div className="formGroup">
-                    <label className="formLabel">Full Name</label>
-                    <input type="text" className='form-control' placeholder='Enter Your Full Name' />
-                    <p className='error danger'></p>
-                </div>
-                <div className="formGroup">
-                    <label className="formLabel">Email Address</label>
-                    <input type="email" className='form-control' placeholder='Enter Your Email Address' value="jkdesigner62@gmail.com" disabled />
-                    <p className='error danger'></p>
-                </div>
-                <div className="formGroup">
-                    <label className="formLabel">Phone Number</label>
-                    <div className="numberField">
-                        <span className="countryCode">+91</span>
-                        <input type="email" className='form-control' placeholder='Enter Your Phone Number' />
+                    <div className="verifiedTagBox">
+                        <span className="verifiedTag"><TbDiscountCheckFilled className='blueTik' /> Verified</span>
                     </div>
                     <p className='error danger'></p>
                 </div>
+                
+                <InputField type="text" placeholder="Full Name" />
+                <InputField type="text" placeholder="Email Id" />
+                <InputField type="number" field="mobile" label="+91" placeholder="Phone Number" />
+
                 <button className='btn mainBtn fillBtn'>Submit</button>
 
                 <div className="linkverification">
-                    <Link className="link" href="#">Click to Verify you account</Link>
+                    <Link className="link" href="/Verification">Click to Verify you account</Link>
                 </div>
             </div>
         </SingleContentLayout>
