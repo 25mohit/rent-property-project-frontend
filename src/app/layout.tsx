@@ -24,10 +24,6 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <head>
-      <meta charSet="utf-8"/>
-      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-      </head>
       <body className={inter.className} id="main-body">
         <section className="pageContent">
           <div className="leftContent">
