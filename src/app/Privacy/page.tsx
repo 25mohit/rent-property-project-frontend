@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Privacy = () => {
     return (
-        <>
+       
             <SingleContentLayout>
                 <div className="headerBar innerHeader">
                     <div className="col">
@@ -33,7 +33,7 @@ const Privacy = () => {
                 
                 </div>
             </SingleContentLayout>
-        </>
+        
     );
 };
 

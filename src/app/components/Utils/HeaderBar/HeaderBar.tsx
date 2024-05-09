@@ -161,7 +161,6 @@ const HeaderBar = () => {
         </ul>
       </div>
 
-
       <div className={`searchPage ${isLocationActive ? 'active' : ''}`} id="searchPopupBody">
         <div className='searchForm'>
           <button onClick={toggleLocationPopup} className="btn backBtn"><IoArrowBack /></button>

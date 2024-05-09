@@ -6,7 +6,7 @@ import PropertyCard from "../components/Utils/PropertyCard/PropertyCard";
 
 const Wishlist = () => {
   return (
-    <>
+    
     <MultiContentLayout>
       <div className="row listingProduct bottomSpace">
           <div className="titleBox">
@@ -26,7 +26,7 @@ const Wishlist = () => {
           <div className="col-6"><PropertyCard /></div>
       </div>
    </MultiContentLayout>
-   </>
+   
   );
 };
 

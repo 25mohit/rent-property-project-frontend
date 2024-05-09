@@ -20,62 +20,62 @@ const AddItem = () => {
         { label: "Mouse", value: 'mouse' },
     ]
     console.log("category", category);
-    
+
     return (
-        <>
-            <SingleContentLayout>
-                <div className="headerBar innerHeader">
-                    <div className="col">
-                        <Link href="/Chat" className="btn backBtn"><IoArrowBack /></Link>
+
+        <SingleContentLayout>
+            <div className="headerBar innerHeader">
+                <div className="col">
+                    <Link href="/Chat" className="btn backBtn"><IoArrowBack /></Link>
+                </div>
+                <div className="col centerTitle">
+                    <h5 className='dTitle textLimit l1'>Add Item</h5>
+                </div>
+                <div className="col"></div>
+            </div>
+
+            <div className="defaultSpace">
+
+                <InputField type="text" placeholder="Item Name" />
+                <SelectDropdown options={options} placeholder="Category" setValue={setCategory} value={category} />
+
+                <div className="formGroup">
+                    <label className="formLabelNew">Upload Item Image</label>
+                    <div className="uploadedMultiImg">
+                        <div className="uploadImgItemPlus">
+                            <div className="uploadIn">
+                                <MdOutlineCloudUpload className="icon" />
+                                <h6>Upload</h6>
+                            </div>
+                            <input type="file" />
+                        </div>
+                        <div className="uploadImgItem">
+                            <Image src={prImg1} alt="upload Img" className="imgUpload" />
+                            <MdClose className="closeIcon" />
+                            <span className="mainSelect">Main Image</span>
+                        </div>
+                        <div className="uploadImgItem">
+                            <Image src={prImg1} alt="upload Img" className="imgUpload" />
+                            <MdClose className="closeIcon" />
+                        </div>
+                        <div className="uploadImgItem">
+                            <Image src={prImg1} alt="upload Img" className="imgUpload" />
+                            <MdClose className="closeIcon" />
+                        </div>
                     </div>
-                    <div className="col centerTitle">
-                        <h5 className='dTitle textLimit l1'>Add Item</h5>
-                    </div>
-                    <div className="col"></div>
+                    <p className='error danger'></p>
                 </div>
 
-                <div className="defaultSpace">
-
-                    <InputField type="text" placeholder="Item Name" />
-                    <SelectDropdown options={options} placeholder="Category" setValue={setCategory} value={category}/>
-                    
-                    <div className="formGroup">
-                        <label className="formLabelNew">Upload Item Image</label>
-                        <div className="uploadedMultiImg">
-                            <div className="uploadImgItemPlus">
-                                <div className="uploadIn">
-                                    <MdOutlineCloudUpload className="icon" />
-                                    <h6>Upload</h6>
-                                </div>
-                                <input type="file" />
-                            </div>
-                            <div className="uploadImgItem">
-                                <Image src={prImg1} alt="upload Img" className="imgUpload" />
-                                <MdClose className="closeIcon" />
-                                <span className="mainSelect">Main Image</span>
-                            </div>
-                            <div className="uploadImgItem">
-                                <Image src={prImg1} alt="upload Img" className="imgUpload" />
-                                <MdClose className="closeIcon" />
-                            </div>
-                            <div className="uploadImgItem">
-                                <Image src={prImg1} alt="upload Img" className="imgUpload" />
-                                <MdClose className="closeIcon" />
-                            </div>
-                        </div>
-                        <p className='error danger'></p>
-                    </div>
-                    
-                    {/* <div className="formGroup">
+                {/* <div className="formGroup">
                         <label className="formLabel">Description</label>
                         <textarea className='form-control' placeholder='Description'></textarea>
                         <p className='error danger'></p>
                     </div> */}
-                    <Link href="/SelectAddress" className='btn mainBtn fillBtn'>Next</Link>
+                <Link href="/SelectAddress" className='btn mainBtn fillBtn'>Next</Link>
 
-                </div>
-            </SingleContentLayout>
-        </>
+            </div>
+        </SingleContentLayout>
+
     );
 };
 

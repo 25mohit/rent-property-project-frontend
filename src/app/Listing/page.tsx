@@ -5,7 +5,7 @@ import MyAds from "../components/Utils/MyAds/MyAds";
 
 const Listing = () => {
   return (
-    <>
+   
     <MultiContentLayout>
       <div className="row listingProduct bottomSpace">
           <div className="titleBox">
@@ -18,7 +18,7 @@ const Listing = () => {
           <div className="col-12"><MyAds /></div>
       </div>
    </MultiContentLayout>
-   </>
+  
   );
 };
 

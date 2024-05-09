@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Chat = () => {
   return (
-    <>
+    
     <MultiContentLayout>
       <div className="row bottomSpace">
           <div className="titleBox fixTitle">
@@ -137,7 +137,7 @@ const Chat = () => {
           </ul>
       </div>
    </MultiContentLayout>
-   </>
+   
   );
 };
 

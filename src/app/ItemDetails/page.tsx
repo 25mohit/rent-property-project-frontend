@@ -20,7 +20,7 @@ const ItemDetails = () => {
   };
 
   return (
-    <>
+   
       <SingleContentLayout>
         <div className='spaceLessDetails'>
           <div className="headerBar detailsHeader">
@@ -165,7 +165,7 @@ const ItemDetails = () => {
 
         </div>
       </SingleContentLayout>
-    </>
+    
   );
 };
 

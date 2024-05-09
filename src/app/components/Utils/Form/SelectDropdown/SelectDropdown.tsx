@@ -2,12 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import Select from 'react-select';
 
-  interface SelectInterface{
+interface SelectInterface {
     options?: any,
     placeholder?: string,
-    value?: string, 
+    value?: string,
     setValue?: any
-  }
+}
 
 const SelectDropdown: React.FC<SelectInterface> = ({ placeholder, setValue, value, options }) => {
     const [newID, setNewID] = useState('');
@@ -23,39 +23,37 @@ const SelectDropdown: React.FC<SelectInterface> = ({ placeholder, setValue, valu
         setNewID(generateRandomNumber())
     }, [])
 
-  const handleChange = (val: any) => {
-    setValue(val)
-  };
-
-  useEffect(() => {
-    if(value && Object.keys(value)?.length > 0){
-        setHasValue(true)
-    } else {
-        setHasValue(false)
-    }
-  },[value])
+    const handleChange = (val: any) => {
+        setValue(val)
+    };
 
     useEffect(() => {
-        if(menuIsOpen){
+        if (value && Object.keys(value)?.length > 0) {
             setHasValue(true)
-        } else if(!menuIsOpen && !value) {
+        } else {
             setHasValue(false)
         }
-    },[menuIsOpen])
+    }, [value])
+
+    useEffect(() => {
+        if (menuIsOpen) {
+            setHasValue(true)
+        } else if (!menuIsOpen && !value) {
+            setHasValue(false)
+        }
+    }, [menuIsOpen])
 
     return (
         <div className="formGroup">
-            <div className='selectDropDown'>
-                <div className='formGroupMain'>
+            <div className='formGroupMain selectDropDown'>
                 <Select
                     options={options}
                     value={value}
                     onChange={handleChange}
-                    onMenuOpen={() => setMenuIsOpen(true)} 
-                    onMenuClose={() => setMenuIsOpen(false)}  
-                    />
-                    <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder}</label>
-                </div>
+                    onMenuOpen={() => setMenuIsOpen(true)}
+                    onMenuClose={() => setMenuIsOpen(false)}
+                />
+                <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder}</label>
             </div>
             <p className='error danger'></p>
         </div>
