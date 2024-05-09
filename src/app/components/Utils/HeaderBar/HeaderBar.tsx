@@ -30,6 +30,8 @@ const HeaderBar = () => {
     setIsLocationActive(!isLocationActive);
   };
 
+ 
+
   return (
     <>
       <div className="headerBar">
@@ -219,7 +221,7 @@ const HeaderBar = () => {
           </li>
         </ul>
       </div>
-      
+
     </>
   )
 }
