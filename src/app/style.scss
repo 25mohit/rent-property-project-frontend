@@ -208,7 +208,7 @@ input::-ms-input-placeholder {
 		color: #333;
 		z-index: 3;
 		font-size: var(--fontSize14);
-		width:auto;
+		min-width:auto;
 	}
 
 
