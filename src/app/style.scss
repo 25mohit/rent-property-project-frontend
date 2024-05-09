@@ -114,6 +114,10 @@ input::-ms-input-placeholder {
 
 			.css-b62m3t-container {
 
+				.css-t3ipsp-control {
+					border: 1rem solid var(--main) !important;
+				}
+
 				.css-13cymwt-control,
 				.css-t3ipsp-control {
 					border: 1rem solid #ddd;
@@ -142,6 +146,21 @@ input::-ms-input-placeholder {
 			}
 		}
 
+		&.textareaField {
+
+			textarea {
+				padding: 10rem 15rem;
+			}
+
+			.formLabel {
+				top: 30rem;
+
+				&.active {
+					top: 1rem;
+				}
+			}
+		}
+
 	}
 
 	.formLabel {
@@ -156,6 +175,7 @@ input::-ms-input-placeholder {
 		transition: 0.2s;
 		color: #999999;
 		pointer-events: none;
+		width:50%;
 	}
 
 
@@ -188,9 +208,10 @@ input::-ms-input-placeholder {
 		color: #333;
 		z-index: 3;
 		font-size: var(--fontSize14);
+		width:auto;
 	}
 
-	
+
 
 	.form-control:focus+.countryCode,
 	.formGroupMain .active+.countryCode {

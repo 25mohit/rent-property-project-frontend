@@ -9,10 +9,12 @@ import { FaCamera } from "react-icons/fa6";
 import SelectDropdown from "../components/Utils/Form/SelectDropdown/SelectDropdown";
 import { MdClose, MdOutlineCloudUpload } from "react-icons/md";
 import InputField from "../components/Utils/Form/InputField/InputField";
+import TextAreaField from "../components/Utils/Form/TextAreaField/TextAreaField";
 
 
 const AddItem = () => {
     const [category, setCategory] = useState('')
+    const [subCategory, setSubCategory] = useState('')
     const options = [
         { label: "House", value: 'house' },
         { label: "Laptop", value: 'laptop' },
@@ -35,9 +37,9 @@ const AddItem = () => {
             </div>
 
             <div className="defaultSpace">
-
                 <InputField type="text" placeholder="Item Name" />
                 <SelectDropdown options={options} placeholder="Category" setValue={setCategory} value={category} />
+                <SelectDropdown options={options} placeholder="Sub Category" setValue={setSubCategory} value={subCategory} />
 
                 <div className="formGroup">
                     <label className="formLabelNew">Upload Item Image</label>
@@ -65,12 +67,9 @@ const AddItem = () => {
                     </div>
                     <p className='error danger'></p>
                 </div>
+                
+                <TextAreaField placeholder="Description" />
 
-                {/* <div className="formGroup">
-                        <label className="formLabel">Description</label>
-                        <textarea className='form-control' placeholder='Description'></textarea>
-                        <p className='error danger'></p>
-                    </div> */}
                 <Link href="/SelectAddress" className='btn mainBtn fillBtn'>Next</Link>
 
             </div>
