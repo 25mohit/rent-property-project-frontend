@@ -8,7 +8,7 @@ import { profileImg } from "../../../../../public/images";
 import Image from "next/image";
 import Link from "next/link";
 import { LiaAngleRightSolid } from "react-icons/lia";
-import { IoArrowBack } from 'react-icons/io5';
+import { IoArrowBack, IoSettingsOutline } from 'react-icons/io5';
 import { BiCurrentLocation } from 'react-icons/bi';
 
 const HeaderBar = () => {
@@ -102,7 +102,7 @@ const HeaderBar = () => {
             </li>
             <li>
               <Link className="link" href="/Settings">
-                <span className="icon"><GoComment /></span>
+                <span className="icon"><IoSettingsOutline /></span>
                 <h6 className="textLimit l1">Settings</h6>
                 <LiaAngleRightSolid className="arrow" />
               </Link>
