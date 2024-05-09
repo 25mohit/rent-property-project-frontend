@@ -31,7 +31,6 @@ export default function RootLayout({
           </div>
           <div className="rightContent">
             <div className="contentBody">
-              
             </div>
           </div>
         </section>
