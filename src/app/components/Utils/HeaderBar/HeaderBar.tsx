@@ -118,7 +118,7 @@ const HeaderBar = () => {
 
         </div>
       </div>
-
+      {isActive && (
       <div className={`searchPage ${isActive ? 'active' : ''}`} id="searchPopupBody">
         <div className='searchForm'>
           <button onClick={toggleSearchPopup} className="btn backBtn"><IoArrowBack /></button>
@@ -161,8 +161,9 @@ const HeaderBar = () => {
             <button className='closeSearch'><MdClose /></button>
           </li>
         </ul>
-      </div>
+      </div>)}
 
+      {isLocationActive && (
       <div className={`searchPage ${isLocationActive ? 'active' : ''}`} id="searchPopupBody">
         <div className='searchForm'>
           <button onClick={toggleLocationPopup} className="btn backBtn"><IoArrowBack /></button>
@@ -220,7 +221,7 @@ const HeaderBar = () => {
             </div>
           </li>
         </ul>
-      </div>
+      </div>)}
 
     </>
   )
