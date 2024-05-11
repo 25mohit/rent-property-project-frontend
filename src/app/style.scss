@@ -2080,11 +2080,11 @@ input[type="email"] {
 
 			&::before {
 				background: var(--main);
-				width: 30rem;
-				height: 30rem;
+				width: 25rem;
+				height: 25rem;
 				border: none;
 				box-shadow: none;
-				margin: -11rem -15rem;
+				margin: -8rem -12rem;
 			}
 		}
 
@@ -2505,9 +2505,6 @@ input[type="email"] {
 .bottomPopup {
 	display: none;
 
-	&.active {
-		display: block;
-	}
 
 	.overlayBg {
 		position: fixed;
@@ -2525,9 +2522,10 @@ input[type="email"] {
 		background: #fff;
 		height: 80%;
 		z-index: 99999;
-		bottom: 0;
+		bottom: -80%;
 		border-radius: 20rem 20rem 0rem 0rem;
 		overflow: hidden;
+		transition: 2s;
 
 		.filterHead {
 			border-bottom: 1rem solid #d5d5d5;
@@ -2538,6 +2536,15 @@ input[type="email"] {
 				font-size: var(--fontSize20);
 				font-weight: 500;
 			}
+		}
+	}
+	
+	&.active {
+		display: block;
+
+		.bottomPopupBody {
+			bottom: 0;
+			opacity: 1;
 		}
 	}
 }
