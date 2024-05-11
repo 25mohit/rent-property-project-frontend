@@ -53,7 +53,7 @@ const SelectDropdown: React.FC<SelectInterface> = ({ placeholder, setValue, valu
                     onMenuOpen={() => setMenuIsOpen(true)}
                     onMenuClose={() => setMenuIsOpen(false)}
                 />
-                <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder}</label>
+                <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder}<span className='requiredStar'>*</span></label>
             </div>
             <p className='error danger'></p>
         </div>

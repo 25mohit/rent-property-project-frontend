@@ -5,6 +5,7 @@ import Image from "next/image";
 import { electronic, furniture, property } from "../../../public/images";
 import PropertyCard from "../components/Utils/PropertyCard/PropertyCard";
 import { MdFilterAlt } from "react-icons/md";
+import PriceFilter from '../components/Utils/PriceFilter/PriceFilter';
 
 function valuetext(value: number) {
     return `${value}°C`;
@@ -107,7 +108,7 @@ const HomePage = () => {
                         <div className='right'>
                             <div className='tabContent'>
                                 <div className='tabPane' id="tabPaneBody1" style={{ display: activeTab === 1 ? 'block' : 'none' }}>
-                                   
+                                   <PriceFilter />
                                 </div>
                                 <div className='tabPane' id="tabPaneBody2" style={{ display: activeTab === 2 ? 'block' : 'none' }}>
                                     <ul className='sortOption'>

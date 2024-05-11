@@ -33,7 +33,7 @@ const TextAreaField:React.FC<InputInterface> = ({ type, placeholder, min, max, f
     <div className='formGroup'> 
       <div className='formGroupMain textareaField'>
         <textarea id={newID} className={`form-control`} onChange={handleInputChange} />
-        <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder}</label>
+        <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder}<span className='requiredStar'>*</span></label>
       </div>
       <p className='error danger'></p>
     </div>
