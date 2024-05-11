@@ -11,12 +11,15 @@ export default function App() {
         <div className="priceRange">
             
             <div className="priceRange">
-                <span><MdOutlineCurrencyRupee /> {minValue}</span>
-                <span><MdOutlineCurrencyRupee /> {maxValue}</span>
+            {/* <MdOutlineCurrencyRupee />  */}
+                <span>{minValue}</span>
+                <span>{maxValue}</span>
             </div>
             <MultiRangeSlider
                 min={0}
                 max={20000}
+                minValue={0}
+                maxValue={20000}
                 canMinMaxValueSame={true}
                 onInput={(e: ChangeResult) => {
                     setMinValue(e.minValue);

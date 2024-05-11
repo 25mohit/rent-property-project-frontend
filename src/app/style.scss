@@ -2075,6 +2075,9 @@ input[type="email"] {
 				box-shadow: none;
 			}
 		}
+		.input-type-range {
+			display: none;
+		}
 
 		.thumb {
 
@@ -2503,7 +2506,6 @@ input[type="email"] {
 
 
 .bottomPopup {
-	display: none;
 
 
 	.overlayBg {
@@ -2513,6 +2515,7 @@ input[type="email"] {
 		top: 0;
 		left: 0;
 		z-index: 9999;
+		opacity: 0;
 	}
 
 	.bottomPopupBody {
@@ -2520,12 +2523,12 @@ input[type="email"] {
 		left: 0;
 		width: 425rem;
 		background: #fff;
-		height: 80%;
+		height: 50%;
 		z-index: 99999;
-		bottom: -80%;
+		bottom: -50%;
 		border-radius: 20rem 20rem 0rem 0rem;
 		overflow: hidden;
-		transition: 2s;
+		transition: 0.4s;
 
 		.filterHead {
 			border-bottom: 1rem solid #d5d5d5;
@@ -2538,9 +2541,14 @@ input[type="email"] {
 			}
 		}
 	}
-	
+
 	&.active {
 		display: block;
+
+
+		.overlayBg {
+			opacity: 1;
+		}
 
 		.bottomPopupBody {
 			bottom: 0;
