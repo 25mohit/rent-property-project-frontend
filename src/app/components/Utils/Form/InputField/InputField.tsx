@@ -9,9 +9,10 @@ interface InputInterface{
     max?: string,
     field?: string,
     label?: string,
-    verifyClick?: React.Dispatch<React.SetStateAction<boolean>>
+    verifyClick?: React.Dispatch<React.SetStateAction<boolean>>,
+    required?: any
 }
-const InputField:React.FC<InputInterface> = ({ type, placeholder, min, max, field, label, verifyClick }) => {
+const InputField:React.FC<InputInterface> = ({ type, placeholder, min, max, field, label, verifyClick, required }) => {
     const [hasValue, setHasValue] = useState(false);
     const [newID, setNewID] = useState('');
 
@@ -19,6 +20,8 @@ const InputField:React.FC<InputInterface> = ({ type, placeholder, min, max, fiel
         setHasValue(event.target.value !== '');
     };
 
+    console.log("required", required);
+    
     useEffect(() => {
       function generateRandomNumber() {
         const currentTime = Date.now(); // Get the current timestamp
@@ -33,7 +36,7 @@ const InputField:React.FC<InputInterface> = ({ type, placeholder, min, max, fiel
     <div className='formGroup'> 
       <div className='formGroupMain'>
         <input type={type} id={newID} className={`form-control ${field === "mobile" ? 'phoneNumberSpace' : ''}`} min={min} max={max} onChange={handleInputChange}/>
-        <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder}<span className='requiredStar'>*</span></label>
+        <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder} { required !== undefined && required && <span className='requiredStar'>*</span>}</label>
         { field === "mobile" && <span className='countryCode'>{label}</span>}
         { type === "password" && <button type="button" className="eyeAction"><AiFillEye id="show-pass-btn"/></button> }
         { type === "email" && <button type="button" className='getOtpBtn' id="verify-btn" onClick={() => verifyClick && verifyClick(prev => !prev)}>Get OTP</button> }

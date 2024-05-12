@@ -18,7 +18,7 @@ const Login = () => {
         <div className="pageTitle">
         <h2 className="pageTitle">Welcome to login</h2>
         </div>
-        <InputField type="text" placeholder="Email Address" />
+        <InputField type="text" placeholder="Email Address" required/>
         <InputField type="password" placeholder="Password" />
        
         <button className='btn mainBtn fillBtn' >Login</button>
