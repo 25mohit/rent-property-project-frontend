@@ -3,6 +3,7 @@ import MultiContentLayout from "../components/HOC/Layout/MultiContentLayout";
 import Image from "next/image";
 import { prImg1, profileImg } from "../../../public/images";
 import Link from "next/link";
+import ChatLoader from "../components/Utils/SkeletonLoader/ChatLoader";
 
 const Chat = () => {
   return (
@@ -12,6 +13,8 @@ const Chat = () => {
           <div className="titleBox fixTitle">
             <h3 className="titleS">Chats</h3>
           </div>
+      
+          <ChatLoader />
 
           <ul className="chatList">
             <li>

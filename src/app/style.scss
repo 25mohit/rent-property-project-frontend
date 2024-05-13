@@ -1966,6 +1966,7 @@ input[type="email"] {
 
 .chatList {
 	list-style: none;
+	width:100%;
 
 	li {
 
@@ -2075,6 +2076,7 @@ input[type="email"] {
 				box-shadow: none;
 			}
 		}
+
 		.input-type-range {
 			display: none;
 		}
@@ -2622,45 +2624,70 @@ input[type="email"] {
 		0% {
 			background-position: -468px 0;
 		}
-		 100% {
+
+		100% {
 			background-position: 468px 0;
 		}
 	}
-	 @keyframes wave-squares {
+
+	@keyframes wave-squares {
 		0% {
 			background-position: -468px 0;
 		}
-		 100% {
+
+		100% {
 			background-position: 468px 0;
 		}
 	}
+
 	.height5 {
-		height:5rem;
+		height: 5rem;
 	}
+
 	.height10 {
-		height:10rem;
+		height: 10rem;
 	}
+
 	.height15 {
-		height:15rem;
+		height: 15rem;
 	}
+
 	.height20 {
-		height:20rem;
+		height: 20rem;
 	}
+
 	.height150 {
-		height:150rem;
+		height: 150rem;
 	}
+
 	.width50 {
-		width:50rem;
+		width: 50rem;
 	}
+
 	.width70 {
-		width:70rem;
+		width: 70rem;
 	}
+
 	.width100 {
-		width:100rem;
+		width: 100rem;
 	}
+
 	.width150 {
-		width:150rem;
+		width: 150rem;
 	}
+
+	.width200 {
+		width: 200rem;
+	}
+
+	.width250 {
+		width: 250rem;
+	}
+
+	.width300 {
+		width: 300rem;
+	}
+
 	.widthfull {
 		width: 100%;
 	}
@@ -2676,11 +2703,26 @@ input[type="email"] {
 
 	.productCardImg {
 		border: none;
-	  }
+	}
+
 	.productCardBoy {
 
 		.skeletonAnimation {
 			margin-bottom: 8rem;
+		}
+	}
+
+	&.chatList {
+
+		.contentBody {
+
+			.skeletonAnimation {
+				margin-top: 8rem;
+			}
+
+			time {
+				display: block;
+			}
 		}
 	}
 }
