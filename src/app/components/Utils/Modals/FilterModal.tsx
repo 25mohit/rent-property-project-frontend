@@ -7,9 +7,10 @@ function valuetext(value: number) {
     return `${value}°C`;
 }
 interface ModalInterface{
-isOpen: boolean,
-setIsOpen:boolean,
+    isOpen: boolean,
+    setIsOpen: (isOpen: boolean) => void,
 }
+
 const FilterModal:React.FC<ModalInterface> = ({ isOpen, setIsOpen }) => {
 
     const [activeTab, setActiveTab] = useState(2);
