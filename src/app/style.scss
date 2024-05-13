@@ -2725,6 +2725,20 @@ input[type="email"] {
 			}
 		}
 	}
+	.myAdsCard {
+		border: 1rem solid #f0f0f0;
+		background: #fafafa;
+
+		.productCardImg {
+			border: none;
+		}
+		.myAdsCardHead {
+			background: transparent;
+		}
+		.productCardBottom {
+			border: none;
+		}
+	}
 }
 
 

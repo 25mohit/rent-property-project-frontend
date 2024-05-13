@@ -1,5 +1,5 @@
 
-import Image from "next/image";
+
 
 const ChatLoader = () => {
     return (
