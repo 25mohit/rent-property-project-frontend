@@ -3,6 +3,7 @@ import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
 import { MdOutlineMoreVert } from "react-icons/md";
+import NotificationLoader from "../components/Utils/SkeletonLoader/NotificationLoader";
 
 const Notifications = () => {
     return (
@@ -18,6 +19,7 @@ const Notifications = () => {
             </div>
 
             <div className="">
+                <NotificationLoader />
                 <div className="notificationList">
                     <ul>
                         <li className="active">
