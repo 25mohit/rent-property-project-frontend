@@ -4,6 +4,7 @@ import Image from "next/image";
 import { prImg1, profileImg } from "../../../public/images";
 import Link from "next/link";
 import ChatLoader from "../components/Utils/SkeletonLoader/ChatLoader";
+import NoDataFound from "../components/Utils/NoDataFound/NoDataFound";
 
 const Chat = () => {
   return (
@@ -13,7 +14,7 @@ const Chat = () => {
           <div className="titleBox fixTitle">
             <h3 className="titleS">Chats</h3>
           </div>
-      
+          {/* <NoDataFound title="No Message, yet" type="chat" /> */}
           <ChatLoader />
 
           <ul className="chatList">

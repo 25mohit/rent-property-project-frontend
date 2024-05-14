@@ -2749,6 +2749,36 @@ input[type="email"] {
 }
 
 
+.noDataFound {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: calc(100vh - 200rem);
+	width: 100%;
+
+	.noDataFoundBody {
+		text-align: center;
+		padding: 20rem 20rem;
+
+		h4 {
+			font-size: var(--fontSize22);
+			font-weight: 500;
+			margin-bottom: 8rem;
+		}
+		p {
+			font-size: var(--fontSize14);
+			opacity: 0.7;
+		}
+		.svgIcon {
+			height: 180rem;
+			margin: 0 auto;
+			margin-bottom: 20rem;
+		}
+	}
+}
+
+
 @media (max-width:991px) {
 
 	.pageContent {

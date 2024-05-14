@@ -4,6 +4,7 @@ import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
 import { MdOutlineMoreVert } from "react-icons/md";
 import NotificationLoader from "../components/Utils/SkeletonLoader/NotificationLoader";
+import NoDataFound from "../components/Utils/NoDataFound/NoDataFound";
 
 const Notifications = () => {
     return (
@@ -19,6 +20,7 @@ const Notifications = () => {
             </div>
 
             <div className="">
+            {/* <NoDataFound title="No Notification, yet" type="notification" /> */}
                 <NotificationLoader />
                 <div className="notificationList">
                     <ul>
