@@ -27,7 +27,7 @@ const Settings = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link className="link" href="/Help">
+                        <Link className="link" href="/Support">
                             <h6 className="textLimit l1">Help & Support</h6>
                             <LiaAngleRightSolid className="arrow" />
                         </Link>

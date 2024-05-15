@@ -9,10 +9,11 @@ interface InputInterface{
     max?: string,
     field?: string,
     label?: string,
+    mobileVerify?: string,
     verifyClick?: React.Dispatch<React.SetStateAction<boolean>>,
     required?: any
 }
-const InputField:React.FC<InputInterface> = ({ type, placeholder, min, max, field, label, verifyClick, required }) => {
+const InputField:React.FC<InputInterface> = ({ type, placeholder, min, max, field, label,mobileVerify, verifyClick, required }) => {
     const [hasValue, setHasValue] = useState(false);
     const [newID, setNewID] = useState('');
 
@@ -40,6 +41,7 @@ const InputField:React.FC<InputInterface> = ({ type, placeholder, min, max, fiel
         { field === "mobile" && <span className='countryCode'>{label}</span>}
         { type === "password" && <button type="button" className="eyeAction"><AiFillEye id="show-pass-btn"/></button> }
         { type === "email" && <button type="button" className='getOtpBtn' id="verify-btn" onClick={() => verifyClick && verifyClick(prev => !prev)}>Get OTP</button> }
+        { mobileVerify === "mobileVerify" && <button type="button" className='getOtpBtn' id="verify-btn" onClick={() => verifyClick && verifyClick(prev => !prev)}>Get OTP</button> }
       </div>
       <p className='error danger'></p>
     </div>
