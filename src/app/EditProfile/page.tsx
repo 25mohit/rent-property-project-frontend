@@ -6,7 +6,7 @@ import { profileImg } from "../../../public/images";
 import Image from "next/image";
 import { FaCamera } from "react-icons/fa6";
 import InputField from "../components/Utils/Form/InputField/InputField";
-import { TbDiscountCheckFilled } from "react-icons/tb";
+import DisabledField from "../components/Utils/Form/DisabledField/DisabledField";
 
 const EditProfile = () => {
     return (
@@ -29,7 +29,7 @@ const EditProfile = () => {
                             <div className="progressBar" id="progressBar" style={{ width: '50%' }}></div>
                         </div>
                         <div className="actionComplete">
-                            <Link href="#" className="link">Complete Profile</Link>
+                            <Link href="/CompleteProfile" className="link">Complete Profile</Link>
                             <span>50%</span>
                         </div>
                    </div>
@@ -47,8 +47,9 @@ const EditProfile = () => {
                 </div>
 
                 <InputField type="text" placeholder="Full Name" />
-                <InputField type="text" placeholder="Email Id" />
-                <InputField type="number" field="mobile" label="+91" placeholder="Phone Number" />
+                <DisabledField value="jkdesigner62@gmail.com" supportMgs="If you want to change this mail ID please contact Help & Support. Thanks" />
+                <DisabledField value="+91 8503868641" supportMgs="If you want to change this phone number please contact Help & Support. Thanks" />
+                
 
                 <button className='btn mainBtn fillBtn'>Submit</button>
 

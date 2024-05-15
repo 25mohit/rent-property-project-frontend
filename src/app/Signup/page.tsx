@@ -1,5 +1,5 @@
 'use client'
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import UserForm from '../components/HOC/UserForm/UserForm'
 import { AiFillEye } from "react-icons/ai";
 import Image from "next/image";
@@ -10,9 +10,9 @@ import InputField from "../components/Utils/Form/InputField/InputField";
 
 const Signup = () => {
   const [otp, setOtp] = useState('');
-  
+
   const [showVerifyOTP, setShowVerifyOTP] = useState(false);
-  
+
 
   return (
     <UserForm title="Create an account">
@@ -23,11 +23,11 @@ const Signup = () => {
       <div className="pageTitle">
         <h2>Create an account</h2>
       </div>
-      
+
       <InputField type="text" placeholder="Full Name" />
       <InputField type="email" placeholder="Email Address" verifyClick={setShowVerifyOTP} />
-           
-      { showVerifyOTP && <div className='formGroup showOtp'>
+
+      {showVerifyOTP && <div className='formGroup showOtp'>
         <div className="verificationForm">
           <label>OTP has been sent please verify</label>
           <div className='otpBox'>
@@ -40,13 +40,13 @@ const Signup = () => {
           </div>
         </div>
         <p className='error success text-center'></p>
-      </div> }
-      <InputField type="number" field="mobile" label="+91" placeholder="Phone Number" />
-      <InputField type="password" placeholder="Password" />
-      <InputField type="text" placeholder="Refer Code" />
-   
+      </div>}
+      <div style={{ display: 'none' }}>
+        <InputField type="text" placeholder="Refer Code" />
+        <InputField type="password" placeholder="Password" />
+      </div>
 
-      
+
       <div className="formGroup">
         <label className="checkbox agreeTerms">
           <input type="checkbox" />
@@ -55,7 +55,7 @@ const Signup = () => {
         </label>
         <p className='error danger'></p>
       </div>
-      <button className='btn mainBtn fillBtn'>Signup</button>
+      <button className='btn mainBtn fillBtn' disabled>Signup</button>
 
       <p className="orLogin"><span>or</span></p>
 
