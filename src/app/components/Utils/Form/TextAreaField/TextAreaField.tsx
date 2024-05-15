@@ -9,9 +9,10 @@ interface InputInterface{
     max?: string,
     field?: string,
     label?: string,
+    required?: any,
     verifyClick?: React.Dispatch<React.SetStateAction<boolean>>
 }
-const TextAreaField:React.FC<InputInterface> = ({ type, placeholder, min, max, field, label, verifyClick }) => {
+const TextAreaField:React.FC<InputInterface> = ({ type, placeholder,required, verifyClick }) => {
     const [hasValue, setHasValue] = useState(false);
     const [newID, setNewID] = useState('');
 
@@ -33,7 +34,7 @@ const TextAreaField:React.FC<InputInterface> = ({ type, placeholder, min, max, f
     <div className='formGroup'> 
       <div className='formGroupMain textareaField'>
         <textarea id={newID} className={`form-control`} onChange={handleInputChange} />
-        <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder}<span className='requiredStar'>*</span></label>
+        <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder}{ required !== undefined && required && <span className='requiredStar'>*</span>}</label>
       </div>
       <p className='error danger'></p>
     </div>

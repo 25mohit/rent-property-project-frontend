@@ -6,10 +6,11 @@ interface SelectInterface {
     options?: any,
     placeholder?: string,
     value?: string,
+    required?: any,
     setValue?: any
 }
 
-const SelectDropdown: React.FC<SelectInterface> = ({ placeholder, setValue, value, options }) => {
+const SelectDropdown: React.FC<SelectInterface> = ({ placeholder, setValue, value, options,required }) => {
     const [newID, setNewID] = useState('');
     const [hasValue, setHasValue] = useState(false);
     const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -53,7 +54,7 @@ const SelectDropdown: React.FC<SelectInterface> = ({ placeholder, setValue, valu
                     onMenuOpen={() => setMenuIsOpen(true)}
                     onMenuClose={() => setMenuIsOpen(false)}
                 />
-                <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder}<span className='requiredStar'>*</span></label>
+                <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder}{ required !== undefined && required && <span className='requiredStar'>*</span>}</label>
             </div>
             <p className='error danger'></p>
         </div>

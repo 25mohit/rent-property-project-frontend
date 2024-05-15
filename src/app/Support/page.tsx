@@ -4,9 +4,16 @@ import Link from "next/link";
 import InputField from "../components/Utils/Form/InputField/InputField";
 import { IoArrowBack } from "react-icons/io5";
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
+import TextAreaField from "../components/Utils/Form/TextAreaField/TextAreaField";
+import SelectDropdown from "../components/Utils/Form/SelectDropdown/SelectDropdown";
 
 const Support = () => {
-
+    const [category, setCategory] = useState('')
+    const options = [
+        { label: "Do you want to change phone number?", value: 'Do you want to change phone number?' },
+        { label: "Do you want to change email address?", value: 'Do you want to change email address?' },
+        { label: "Other", value: 'Other' },
+    ]
 
     return (
         <SingleContentLayout>
@@ -22,8 +29,9 @@ const Support = () => {
 
             <div className="defaultSpace">
 
-
-                <button className='btn mainBtn fillBtn'>Verify</button>
+            <SelectDropdown options={options} placeholder="Select your Query" setValue={setCategory} value={category} />
+                <TextAreaField placeholder="Message" required />
+                <button className='btn mainBtn fillBtn'>Submit</button>
 
             </div>
 
