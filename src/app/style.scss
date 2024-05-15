@@ -1543,7 +1543,7 @@ input[type="email"] {
 	ul {
 		list-style: none;
 		display: flex;
-		gap: 20rem;
+		gap: 25rem;
 		padding: 0 15rem;
 
 		li {
@@ -1554,15 +1554,14 @@ input[type="email"] {
 				span {
 					width: 40rem;
 					height: 40rem;
-					background-color: #ededed;
 					display: flex;
 					align-items: center;
 					justify-content: center;
 					margin: 0 auto;
 					border-radius: 50rem;
 
-					.icon {
-						height: 20rem;
+					svg {
+						height: 34rem;
 						margin: 0 auto;
 					}
 				}
