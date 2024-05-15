@@ -2527,7 +2527,7 @@ input[type="email"] {
 		position: fixed;
 		width: 425rem;
 		height: 100%;
-		top: 0;
+		top: 100%;
 		left: 0;
 		z-index: 9999;
 		opacity: 0;
@@ -2563,6 +2563,7 @@ input[type="email"] {
 
 		.overlayBg {
 			opacity: 1;
+			top: 0;
 		}
 
 		.bottomPopupBody {

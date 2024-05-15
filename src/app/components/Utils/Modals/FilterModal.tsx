@@ -37,6 +37,7 @@ const FilterModal:React.FC<ModalInterface> = ({ isOpen, setIsOpen }) => {
                             <ul>
                                 <li onClick={() => handleTabClick(1)} className={activeTab === 1 ? 'active' : ''} id="tabId1">By Budget</li>
                                 <li onClick={() => handleTabClick(2)} className={activeTab === 2 ? 'active' : ''} id="tabId2">By Sort</li>
+                                <li onClick={() => handleTabClick(3)} className={activeTab === 3 ? 'active' : ''} id="tabId3">By Users</li>
                             </ul>
                         </div>
                         <div className='right'>
@@ -48,6 +49,13 @@ const FilterModal:React.FC<ModalInterface> = ({ isOpen, setIsOpen }) => {
                                     <ul className='sortOption'>
                                         <li className='active'>Price : Low to High</li>
                                         <li>Price : High to Low</li>
+                                    </ul>
+                                </div>
+                                <div className='tabPane' id="tabPaneBody3" style={{ display: activeTab === 3 ? 'block' : 'none' }}>
+                                    <ul className='sortOption'>
+                                        <li className='active'>All Users</li>
+                                        <li>Verified Users</li>
+                                        <li>Unverified Users</li>
                                     </ul>
                                 </div>
 

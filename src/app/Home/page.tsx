@@ -89,7 +89,7 @@ const HomePage = () => {
 
             
 
-            {isPopupActive && <FilterModal isOpen={isPopupActive} setIsOpen={setIsPopupActive} />}
+            <FilterModal isOpen={isPopupActive} setIsOpen={setIsPopupActive} />
 
         </MultiContentLayout>
 
