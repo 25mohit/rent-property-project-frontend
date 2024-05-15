@@ -1,11 +1,20 @@
-import React from "react";
+'use client'
+import React, { useState } from 'react';
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
 import { AiFillEye } from "react-icons/ai";
 import { LiaAngleRightSolid } from "react-icons/lia";
+import ConfirmationModal from '../components/Utils/Modals/ConfirmationModal';
 
 const Settings = () => {
+
+    const [isPopupActive, setIsPopupActive] = useState(false);
+
+    const togglePopup = () => {
+        setIsPopupActive(!isPopupActive);
+    };
+
     return (
         <SingleContentLayout>
             <div className="headerBar innerHeader">
@@ -44,9 +53,18 @@ const Settings = () => {
                             <LiaAngleRightSolid className="arrow" />
                         </Link>
                     </li>
+                    <li>
+                        <button className="link" onClick={togglePopup}>
+                            <h6 className="textLimit l1">Logout</h6>
+                        </button>
+                    </li>
                 </ul>
 
             </div>
+
+
+            <ConfirmationModal isOpen={isPopupActive} setIsOpen={setIsPopupActive} title="Logout" message="Are you sure want to Logout?" />
+
         </SingleContentLayout>
     );
 };

@@ -2150,6 +2150,7 @@ input[type="email"] {
 				position: relative;
 				cursor: pointer;
 				border-bottom: 1rem solid #d5d5d5;
+				width: 100%;
 
 				.icon {
 					width: 25rem;
@@ -2572,6 +2573,81 @@ input[type="email"] {
 		}
 	}
 }
+
+
+.modalPopup {
+	display: none;
+
+
+	.overlayBg {
+		position: fixed;
+		width: 425rem;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 9999;
+		opacity: 0;
+	}
+	.modalDialog {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 425rem;
+		padding: 0 20rem;
+		z-index: 99999;
+		transform: translate(-50%, -50%) scale(1, 1);
+		transition: 0.5s;
+
+		.modalContent {
+			border-radius: 6rem;
+			margin: 0 auto;
+			overflow: hidden;
+			background-color: #fff;
+
+			.modalHead {
+				padding: 15rem 25rem;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				position: relative;
+				border-bottom: 1rem solid #dedddd;
+
+				h5 {
+					font-size: var(--fontSize18);
+					font-weight: 500;
+				}
+			}
+			.modalPopupBody {
+				padding: 25rem 25rem;
+				min-height: 1rem;
+				max-height: calc(100vh - 140rem) !important;
+
+				.btnsAction {
+					display: flex;
+					gap: 15rem;
+				}
+				h5 {
+					font-size: var(--fontSize18);
+					font-weight: 500;
+					margin-bottom: 25rem;
+				}
+			}
+		}
+	}
+
+
+	&.active {
+		display: block;
+
+
+		.overlayBg {
+			opacity: 1;
+		}
+
+	}
+}
+
 
 .filterTabbing {
 	display: flex;

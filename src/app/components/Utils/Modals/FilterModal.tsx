@@ -24,7 +24,6 @@ const FilterModal:React.FC<ModalInterface> = ({ isOpen, setIsOpen }) => {
   }
     return (
 
-        <SingleContentLayout>
             
             <div className={`bottomPopup ${isOpen ? 'active' : ''}`}>
                 <div className='overlayBg' onClick={togglePopup}></div>
@@ -69,7 +68,6 @@ const FilterModal:React.FC<ModalInterface> = ({ isOpen, setIsOpen }) => {
                 </div>
             </div>
 
-        </SingleContentLayout>
 
     );
 };

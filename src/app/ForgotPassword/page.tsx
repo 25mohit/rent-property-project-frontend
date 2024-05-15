@@ -43,6 +43,11 @@ const ForgotPassword = () => {
         <p className='error success text-center'></p>
       </div>}
 
+      <div>
+        <InputField type="password" placeholder="New Password" />
+        <InputField type="password" placeholder="Confirm Password" />
+        <button className='btn mainBtn fillBtn' >Submit</button>
+      </div>
 
       <p className="switchScreen">Don't have an account? <Link className="link" href="/Signup">Signup</Link></p>
     </UserForm>
