@@ -2783,6 +2783,43 @@ input[type="email"] {
 	}
 }
 
+.progress {
+	display: flex;
+    height: 12rem;
+    overflow: hidden;
+    border-radius: 50rem;
+	background-color: #e9ecef;
+
+	.progressBar {
+		display: flex;
+		width: 0;
+		flex-direction: column;
+		justify-content: center;
+		overflow: hidden;
+		text-align: center;
+		white-space: nowrap;
+		transition: width 1s ease-in-out;
+		background-size: 20rem 20rem;
+		background: #0080008f;
+	}
+}
+
+.completeProfile {
+	margin-bottom: 20rem;
+
+	.actionComplete {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 10rem;
+
+		.link {
+			color: var(--main);
+			text-decoration: underline;
+		}
+	}
+}
+
 
 @media (max-width:991px) {
 

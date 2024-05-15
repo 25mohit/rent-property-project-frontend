@@ -23,25 +23,38 @@ const EditProfile = () => {
 
             <div className="defaultSpace">
                 <div className="formGroup">
+                   
+                   <div className="completeProfile">
+                        <div className="progress">
+                            <div className="progressBar" id="progressBar" style={{ width: '50%' }}></div>
+                        </div>
+                        <div className="actionComplete">
+                            <Link href="#" className="link">Complete Profile</Link>
+                            <span>50%</span>
+                        </div>
+                   </div>
+
                     <div className="uploadImg">
                         <Image src={profileImg} alt="property" className="userProfile" />
                         <button className="uploadBtn"><FaCamera /><input type="file" /></button>
                     </div>
-                    <div className="verifiedTagBox">
+
+
+                    {/* <div className="verifiedTagBox">
                         <span className="verifiedTag"><TbDiscountCheckFilled className='blueTik' /> Verified</span>
-                    </div>
+                    </div> */}
                     <p className='error danger'></p>
                 </div>
-                
+
                 <InputField type="text" placeholder="Full Name" />
                 <InputField type="text" placeholder="Email Id" />
                 <InputField type="number" field="mobile" label="+91" placeholder="Phone Number" />
 
                 <button className='btn mainBtn fillBtn'>Submit</button>
 
-                <div className="linkverification">
+                {/* <div className="linkverification">
                     <Link className="link" href="/Verification">Click to Verify you account</Link>
-                </div>
+                </div> */}
             </div>
         </SingleContentLayout>
     );
