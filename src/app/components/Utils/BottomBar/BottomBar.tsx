@@ -19,7 +19,7 @@ const BottomBar = () => {
         <Link href="/Whishlist" className="link categoryTap">
           <div className="block">
             <span className="iconBox"><GoHeart className="icon" /></span>
-            <h6>Whishlist</h6>
+            <h6>Wishlist</h6>
           </div>
         </Link>
       </div>

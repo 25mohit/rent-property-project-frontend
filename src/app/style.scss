@@ -2774,7 +2774,12 @@ input[type="email"] {
 			height: 180rem;
 			margin: 0 auto;
 			margin-bottom: 20rem;
+
+			&.WishlistIcon {
+				width: 180rem;
+			}
 		}
+
 	}
 }
 
