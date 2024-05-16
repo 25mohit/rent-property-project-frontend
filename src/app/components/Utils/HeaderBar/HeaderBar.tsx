@@ -2,15 +2,12 @@ import React, { useState } from 'react';
 import { MdClose, MdMenu } from "react-icons/md";
 import { FiSearch, FiUser } from "react-icons/fi";
 import { MdNotificationsNone } from "react-icons/md";
-import { GoComment, GoHeart, GoLocation, GoTasklist } from "react-icons/go";
+import { GoComment, GoHeart, GoLocation, GoTasklist, GoTrophy } from "react-icons/go";
 import { FaAngleDown } from "react-icons/fa6";
-import { profileImg } from "../../../../../public/images";
-import Image from "next/image";
 import Link from "next/link";
 import { LiaAngleRightSolid } from "react-icons/lia";
-import { IoArrowBack, IoSettingsOutline } from 'react-icons/io5';
+import { IoArrowBack, IoSettingsOutline, IoWalletOutline } from 'react-icons/io5';
 import { BiCurrentLocation } from 'react-icons/bi';
-import { TbCategory } from 'react-icons/tb';
 
 const HeaderBar = () => {
 
@@ -83,9 +80,9 @@ const HeaderBar = () => {
               </Link>
             </li>
             <li>
-              <Link className="link" href="/Category">
-                <span className="icon"><TbCategory /></span>
-                <h6 className="textLimit l1">Category</h6>
+              <Link className="link" href="/Wallet">
+                <span className="icon"><IoWalletOutline /></span>
+                <h6 className="textLimit l1">Wallet</h6>
                 <LiaAngleRightSolid className="arrow" />
               </Link>
             </li>
@@ -107,6 +104,13 @@ const HeaderBar = () => {
               <Link className="link" href="/Chat">
                 <span className="icon"><GoComment /></span>
                 <h6 className="textLimit l1">Chat</h6>
+                <LiaAngleRightSolid className="arrow" />
+              </Link>
+            </li>
+            <li>
+              <Link className="link" href="/Refer">
+                <span className="icon"><GoTrophy /></span>
+                <h6 className="textLimit l1">Refer & Rewards</h6>
                 <LiaAngleRightSolid className="arrow" />
               </Link>
             </li>
