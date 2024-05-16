@@ -6,6 +6,9 @@ import Link from "next/link";
 import SelectDropdown from "../components/Utils/Form/SelectDropdown/SelectDropdown";
 import InputField from "../components/Utils/Form/InputField/InputField";
 import TextAreaField from "../components/Utils/Form/TextAreaField/TextAreaField";
+import { MapImg } from "../../../public/images";
+import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa6";
 
 const SelectAddress = () => {
     const options = [
@@ -32,7 +35,13 @@ const SelectAddress = () => {
 
             <div className="defaultSpace">
 
-                <InputField type="text" placeholder="Search Location" />
+                <div className="selectMap">
+                    <Image src={MapImg} alt="Map Image" className="mapImg" />
+                    <div className="selectMapLink">
+                        <h5>Select Address In Map</h5>
+                        <FaArrowRight className="arrow" />
+                    </div>
+                </div>
 
                 <div className="titleBox formTile">
                     <div className="col"><h3 className="titleS">Address</h3></div>
