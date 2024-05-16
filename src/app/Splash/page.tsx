@@ -9,13 +9,13 @@ import { useRouter } from "next/navigation";
 const Splash = () => {
   const router = useRouter();
 
-  // useEffect(() => {
+  useEffect(() => {
 
-  //    setTimeout(() => {
-  //     router.push('/Home');
-  //   }, 3000); 
+     setTimeout(() => {
+      router.push('/Login');
+    }, 3000); 
 
-  // }, []); 
+  }, []); 
 
   return (
       <div className="splashSection">
