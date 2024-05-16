@@ -2913,6 +2913,22 @@ input[type="email"] {
 	}
 }
 
+.splashSection {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+	height: 100%;
+
+	.splashBody {
+
+		.logoImg {
+			width: 200rem;
+			height: 45rem;
+		}
+	}
+}
 
 @media (max-width:991px) {
 

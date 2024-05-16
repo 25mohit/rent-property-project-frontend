@@ -1,14 +1,18 @@
 'use client'
 import React from "react";
 import Image from "next/image";
+import LogoImage from "../components/Utils/SvgIcons/LogoImage";
+import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 
 const Splash = () => {
   return (
-    <div className="splashSection">
+    <SingleContentLayout>
+      <div className="splashSection">
         <div className="splashBody">
-            <p>Loading</p>      
-        </div>  
-    </div>
+          <LogoImage />
+        </div>
+      </div>
+    </SingleContentLayout>
   );
 };
 

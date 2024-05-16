@@ -21,7 +21,7 @@ const Login = () => {
         <InputField type="text" placeholder="Email Address" required/>
         <InputField type="password" placeholder="Password" />
        
-        <button className='btn mainBtn fillBtn' >Login</button>
+        <Link href="/Home" className='btn mainBtn fillBtn' >Login</Link>
         <p className="forgotPassword"><Link className="link" href="/ForgotPassword">Forgot Password?</Link></p>
 
         <p className="orLogin"><span>or</span></p>

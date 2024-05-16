@@ -1,11 +1,11 @@
-import HomePage from "./Home/page";
+import Splash from "./Splash/page";
 
 
 
 export default function Home() {
   return (
     <>
-     <HomePage />
+     <Splash />
     </>
   );
 }
