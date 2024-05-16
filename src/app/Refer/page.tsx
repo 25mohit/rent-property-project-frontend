@@ -6,7 +6,7 @@ import Link from "next/link";
 
 
 const Refer = () => {
-    
+
 
     return (
 
@@ -22,7 +22,12 @@ const Refer = () => {
             </div>
 
             <div className="defaultSpace">
-                
+                <Link href="/" className="referCount">
+                    <div className="left">
+                        <p>Total Refers</p>
+                        <h3 className="count">20</h3>
+                    </div>
+                </Link>
             </div>
         </SingleContentLayout>
 
