@@ -13,16 +13,19 @@ const Splash = () => {
 
      setTimeout(() => {
       router.push('/Login');
-    }, 3000); 
+    }, 2000); 
 
   }, []); 
 
   return (
+    <SingleContentLayout>
       <div className="splashSection">
         <div className="splashBody">
           <LogoImage />
+          <h3>Mohit</h3>
         </div>
       </div>
+      </SingleContentLayout>
   );
 };
 
