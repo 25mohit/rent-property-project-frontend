@@ -10,6 +10,7 @@ import Link from "next/link";
 import { LiaAngleRightSolid } from "react-icons/lia";
 import { IoArrowBack, IoSettingsOutline } from 'react-icons/io5';
 import { BiCurrentLocation } from 'react-icons/bi';
+import { TbCategory } from 'react-icons/tb';
 
 const HeaderBar = () => {
 
@@ -78,6 +79,13 @@ const HeaderBar = () => {
               <Link className="link" href="/EditProfile">
                 <span className="icon"><FiUser /></span>
                 <h6 className="textLimit l1">Edit Profile</h6>
+                <LiaAngleRightSolid className="arrow" />
+              </Link>
+            </li>
+            <li>
+              <Link className="link" href="/Category">
+                <span className="icon"><TbCategory /></span>
+                <h6 className="textLimit l1">Category</h6>
                 <LiaAngleRightSolid className="arrow" />
               </Link>
             </li>

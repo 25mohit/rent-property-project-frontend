@@ -161,6 +161,7 @@ input::-ms-input-placeholder {
 				}
 			}
 		}
+
 		&.disabledField {
 
 			.form-control {
@@ -395,6 +396,7 @@ input[type="email"] {
 	&.success {
 		color: green;
 	}
+
 	&.greyMgs {
 		opacity: 0.7;
 		padding: 0 5rem;
@@ -1577,6 +1579,42 @@ input[type="email"] {
 			}
 		}
 	}
+
+	&.CategoryAllList {
+		position: relative;
+		box-shadow: none;
+		background: transparent;
+
+		ul {
+			flex-wrap: wrap;
+			padding: 0;
+			gap: 0;
+			margin: -15rem -5rem;
+
+			li {
+				width: 33.33%;
+				padding: 10rem;
+
+				.link {
+					width: 100%;
+					font-weight: 500;
+					position: relative;
+					text-align: center;
+					display: block;
+					border: none;
+					border-radius: 10rem;
+					padding: 12rem 15rem 15rem 15rem;
+					box-shadow: 0rem 2rem 8rem 0rem #00000017;
+					cursor: pointer;
+
+					h5 {
+						font-size:var(--fontSize14);
+						margin-top: 5rem;
+					}
+				}
+			}
+		}
+	}
 }
 
 .row {
@@ -1978,7 +2016,7 @@ input[type="email"] {
 
 .chatList {
 	list-style: none;
-	width:100%;
+	width: 100%;
 
 	li {
 
@@ -2587,6 +2625,7 @@ input[type="email"] {
 		z-index: 9999;
 		opacity: 0;
 	}
+
 	.modalDialog {
 		position: absolute;
 		left: 50%;
@@ -2617,6 +2656,7 @@ input[type="email"] {
 					font-weight: 500;
 				}
 			}
+
 			.modalPopupBody {
 				padding: 25rem 25rem;
 				min-height: 1rem;
@@ -2626,6 +2666,7 @@ input[type="email"] {
 					display: flex;
 					gap: 15rem;
 				}
+
 				h5 {
 					font-size: var(--fontSize18);
 					font-weight: 500;
@@ -2814,6 +2855,7 @@ input[type="email"] {
 			}
 		}
 	}
+
 	.myAdsCard {
 		border: 1rem solid #f0f0f0;
 		background: #fafafa;
@@ -2821,9 +2863,11 @@ input[type="email"] {
 		.productCardImg {
 			border: none;
 		}
+
 		.myAdsCardHead {
 			background: transparent;
 		}
+
 		.productCardBottom {
 			border: none;
 		}
@@ -2840,10 +2884,10 @@ input[type="email"] {
 
 .noDataFound {
 	display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: calc(100vh - 200rem);
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	height: calc(100vh - 200rem);
 	width: 100%;
 
 	.noDataFoundBody {
@@ -2855,10 +2899,12 @@ input[type="email"] {
 			font-weight: 500;
 			margin-bottom: 8rem;
 		}
+
 		p {
 			font-size: var(--fontSize14);
 			opacity: 0.7;
 		}
+
 		.svgIcon {
 			height: 180rem;
 			margin: 0 auto;
@@ -2874,9 +2920,9 @@ input[type="email"] {
 
 .progress {
 	display: flex;
-    height: 12rem;
-    overflow: hidden;
-    border-radius: 50rem;
+	height: 12rem;
+	overflow: hidden;
+	border-radius: 50rem;
 	background-color: #e9ecef;
 
 	.progressBar {
@@ -2894,11 +2940,11 @@ input[type="email"] {
 }
 
 .completeProfile {
-    margin-bottom: 20rem;
-    background: #fff;
-    padding: 19rem 20rem;
-    box-shadow: 0rem 0rem 8rem 0rem #00000017;
-    border-radius: 10rem;
+	margin-bottom: 20rem;
+	background: #fff;
+	padding: 19rem 20rem;
+	box-shadow: 0rem 0rem 8rem 0rem #00000017;
+	border-radius: 10rem;
 
 	.actionComplete {
 		display: flex;
@@ -2915,18 +2961,19 @@ input[type="email"] {
 
 .selectMap {
 	background: #fff;
-    padding: 0rem;
-    box-shadow: 0rem 2rem 8rem 0rem #00000017;
-    margin-bottom: 20rem;
-    border-radius: 10rem;
+	padding: 0rem;
+	box-shadow: 0rem 2rem 8rem 0rem #00000017;
+	margin-bottom: 20rem;
+	border-radius: 10rem;
 	overflow: hidden;
 	display: block;
 
 	.mapImg {
 		width: 100%;
-		height:150rem;
+		height: 150rem;
 		object-fit: cover;
 	}
+
 	.selectMapLink {
 		display: flex;
 		padding: 15rem 15rem;
@@ -2937,6 +2984,7 @@ input[type="email"] {
 			width: 20rem;
 			height: 20rem;
 		}
+
 		h5 {
 			font-size: var(--fontSize18);
 		}
@@ -2945,10 +2993,10 @@ input[type="email"] {
 
 .splashSection {
 	display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
 	height: 100%;
 
 	.splashBody {

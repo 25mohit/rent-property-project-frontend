@@ -22,7 +22,6 @@ const Splash = () => {
       <div className="splashSection">
         <div className="splashBody">
           <LogoImage />
-          <h3>Mohit</h3>
         </div>
       </div>
       </SingleContentLayout>
