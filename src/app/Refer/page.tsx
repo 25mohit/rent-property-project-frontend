@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
 
 
 const Refer = () => {
@@ -27,6 +28,7 @@ const Refer = () => {
                         <p>Total Refers</p>
                         <h3 className="count">20</h3>
                     </div>
+                    <FaArrowRight className="arrow" />
                 </Link>
             </div>
         </SingleContentLayout>

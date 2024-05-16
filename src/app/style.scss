@@ -3009,7 +3009,28 @@ input[type="email"] {
 }
 
 .referCount {
-	display: flex;
+    display: flex;
+    width: 100%;
+    background: #ffe4e4;
+    padding: 15rem 20rem;
+    border-radius: 10rem;
+	align-items: center;
+    justify-content: space-between;
+
+	.left {
+
+		.count {
+			font-size: var(--fontSize24);
+			font-weight: 600;
+		}
+		p {
+			margin-bottom: 2rem;
+		}
+	}
+	.arrow {
+		width: 25rem;
+		height: 25rem;
+	}
 }
 
 
