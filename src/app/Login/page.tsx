@@ -1,8 +1,6 @@
 'use client'
 import React from "react";
 import UserForm from '../components/HOC/UserForm/UserForm'
-import { AiFillEye } from "react-icons/ai";
-import { AiFillEyeInvisible } from "react-icons/ai";
 import Image from "next/image";
 import { google } from "../../../public/images";
 import Link from "next/link";
@@ -21,7 +19,7 @@ const Login = () => {
         <InputField type="text" placeholder="Email Address" required/>
         <InputField type="password" placeholder="Password" />
        
-        <Link href="/Home" className='btn mainBtn fillBtn' >Login</Link>
+        <Link href="/Testing" className='btn mainBtn fillBtn' >Login</Link>
         <p className="forgotPassword"><Link className="link" href="/ForgotPassword">Forgot Password?</Link></p>
 
         <p className="orLogin"><span>or</span></p>

@@ -2,7 +2,6 @@
 import { useEffect } from 'react'
 import HeaderBar from '../../Utils/HeaderBar/HeaderBar';
 import BottomBar from '../../Utils/BottomBar/BottomBar';
-import CalculateFontSize from './CalculateFontSize';
 
 interface multiContentInterface{
     children: any
