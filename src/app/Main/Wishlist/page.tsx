@@ -1,4 +1,3 @@
-import React from "react";
 import PropertyCard from "@/app/components/Utils/PropertyCard/PropertyCard";
 
 const Wishlist = () => {

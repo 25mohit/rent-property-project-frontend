@@ -3,7 +3,7 @@ import CategoryListBar from '@/app/components/Utils/CategoryListBar/CategoryList
 import FilterModal from '@/app/components/Utils/Modals/FilterModal';
 import PropertyCard from '@/app/components/Utils/PropertyCard/PropertyCard';
 import HomeLoader from '@/app/components/Utils/SkeletonLoader/HomeLoader';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { MdFilterAlt } from 'react-icons/md';
 const HomePage = () => {
 
