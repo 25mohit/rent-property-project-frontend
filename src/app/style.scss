@@ -2920,15 +2920,26 @@ input[type="email"] {
     margin-bottom: 20rem;
     border-radius: 10rem;
 	overflow: hidden;
+	display: block;
 
 	.mapImg {
 		width: 100%;
-		height: 200rem;
+		height:150rem;
 		object-fit: cover;
 	}
 	.selectMapLink {
-		display: block;
+		display: flex;
 		padding: 15rem 15rem;
+		align-items: center;
+		justify-content: space-between;
+
+		.arrow {
+			width: 20rem;
+			height: 20rem;
+		}
+		h5 {
+			font-size: var(--fontSize18);
+		}
 	}
 }
 

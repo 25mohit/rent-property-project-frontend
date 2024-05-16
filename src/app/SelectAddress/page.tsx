@@ -35,13 +35,13 @@ const SelectAddress = () => {
 
             <div className="defaultSpace">
 
-                <div className="selectMap">
+                <Link href="/SelectLocation" className="selectMap">
                     <Image src={MapImg} alt="Map Image" className="mapImg" />
                     <div className="selectMapLink">
                         <h5>Select Address In Map</h5>
                         <FaArrowRight className="arrow" />
                     </div>
-                </div>
+                </Link>
 
                 <div className="titleBox formTile">
                     <div className="col"><h3 className="titleS">Address</h3></div>
