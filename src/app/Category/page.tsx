@@ -16,7 +16,7 @@ const Category = () => {
                     <Link href="/SelectAddress" className="btn backBtn"><IoArrowBack /></Link>
                 </div>
                 <div className="col centerTitle">
-                    <h5 className='dTitle textLimit l1'>Select Location</h5>
+                    <h5 className='dTitle textLimit l1'>Categories</h5>
                 </div>
                 <div className="col"></div>
             </div>
