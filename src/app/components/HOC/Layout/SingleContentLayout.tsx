@@ -26,11 +26,9 @@ const SingleContentLayout:React.FC<SingleContentInterface> = ({ children }) => {
   };
   
   return (
-    <CalculateFontSize>
-        <div className='single-content-layout scroll' style={containerStyle}> 
-            {children}
-        </div>
-    </CalculateFontSize>
+    <div className='single-content-layout scroll' style={containerStyle}> 
+        {children}
+    </div>
   )
 }
 
