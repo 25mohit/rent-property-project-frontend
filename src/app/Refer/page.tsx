@@ -7,10 +7,15 @@ import { FaArrowRight } from "react-icons/fa6";
 import ReferImage from "../components/Utils/SvgIcons/ReferImage";
 import CalculateFontSize from "../components/HOC/Layout/CalculateFontSize";
 import { MdOutlineCurrencyRupee } from "react-icons/md";
+import { IoIosArrowDown } from "react-icons/io";
 
 
 const Refer = () => {
+    const [isParagraphVisible, setIsParagraphVisible] = useState(false);
 
+    const toggleParagraphVisibility = () => {
+      setIsParagraphVisible(!isParagraphVisible);
+    };
 
     return (
 
@@ -38,9 +43,16 @@ const Refer = () => {
                     <div className="referBox">
                         <ReferImage />
                         <div className="referBoxBody">
-                            <h5>Get 10 <MdOutlineCurrencyRupee className="icon" /></h5>
-                            <h6>For every new user you refer</h6>
-                            <p>Share you referral link and earn 10 <MdOutlineCurrencyRupee className="icon" /></p>
+                            <h5>Refer & Earn <MdOutlineCurrencyRupee className="icon" /> 10</h5>
+                            <h6>Invite your friends to join and get guaranteed Cashback*</h6>
+
+                            <button className='btn mainBtn fillBtn' >Share</button>
+                            <p>Note : Lorem Ipsum is simply dummy text of the printing and typesetting industry. <Link className="link" href="/Terms">Terms & Conditions</Link></p>
+                            {/* <div className="rewardsTerms">
+                                <button className="rewardsLink" onClick={toggleParagraphVisibility}><span>Rewards Terms</span> <IoIosArrowDown className="arrow" /></button>
+                                {isParagraphVisible && ( <p className="rewardsBody">Note : Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            )}
+                            </div> */}
                         </div>
                     </div>
                 </div>

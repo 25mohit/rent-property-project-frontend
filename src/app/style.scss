@@ -3009,15 +3009,15 @@ input[type="email"] {
 }
 
 .referCount {
-    display: flex;
+	display: flex;
     width: 100%;
-    background:var(--main);
-	border: 2rem solid var(--main);
+    background: #ffeef1;
+    border: 2rem solid var(--main);
     padding: 15rem 20rem;
     border-radius: 10rem;
-	align-items: center;
+    align-items: center;
     justify-content: space-between;
-	color: #fff;
+    color: var(--main);
 
 	.left {
 
@@ -3046,7 +3046,7 @@ input[type="email"] {
 		text-align: center;
 
 		h5 {
-			font-size: var(--fontSize36);
+			font-size: var(--fontSize30);
 			color: var(--main);
 			font-weight: 600;
 			display: flex;
@@ -3056,20 +3056,55 @@ input[type="email"] {
 			margin-bottom: 8rem;
 		}
 		h6 {
-			font-size: var(--fontSize22);
-			font-weight: 500;
-		}
-		p {
 			display: inline-flex;
 			align-items: center;
 			font-size: var(--fontSize18);
 			font-weight: 500;
 			color: #adadad;
+			margin-bottom: 30rem;
+		}
+		p {
+			font-size: var(--fontSize14);
+			color: #adadad;
+			text-align: left;
+			margin-top: 15rem;
+		}
+		.link {
+			text-decoration: underline;
+			color: var(--main);
 		}
 	}
 }
 
+.rewardsTerms {
+	text-align: left;
+	margin-top: 15rem;
+	background: #fff;
+	border: 1rem solid #cdcbcb;
+	border-radius: 5rem;
+	overflow: hidden;
 
+	.rewardsLink {
+		width: 100%;
+		text-align: left;
+		font-size: var(--fontSize20);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 12rem 15rem;
+	}
+	.rewardsBody {
+		border-top: 1rem solid #cdcbcb;
+		padding: 12rem 15rem;
+
+		p {
+			font-size: var(--fontSize14);
+			color: #adadad;
+			text-align: left;
+			margin-top: 15rem;
+		}
+	}
+}
 
 @media (max-width:991px) {
 
