@@ -1,14 +1,11 @@
 import React from "react";
-import MultiContentLayout from "../components/HOC/Layout/MultiContentLayout";
-import Image from "next/image";
-import MyAds from "../components/Utils/MyAds/MyAds";
-import ListingLoader from "../components/Utils/SkeletonLoader/ListingLoader";
-import NoDataFound from "../components/Utils/NoDataFound/NoDataFound";
+import MyAds from "../../components/Utils/MyAds/MyAds";
+import ListingLoader from "../../components/Utils/SkeletonLoader/ListingLoader";
+import NoDataFound from "../../components/Utils/NoDataFound/NoDataFound";
 
 const Listing = () => {
   return (
-
-    <MultiContentLayout>
+    <>
       <ListingLoader />
       <div className="row listingProduct bottomSpace">
         <div className="titleBox">
@@ -23,8 +20,7 @@ const Listing = () => {
         <div className="col-12"><MyAds /></div>
         <div className="col-12"><MyAds /></div>
       </div>
-    </MultiContentLayout>
-
+    </>
   );
 };
 

@@ -1,15 +1,13 @@
 import React from "react";
-import MultiContentLayout from "../components/HOC/Layout/MultiContentLayout";
 import Image from "next/image";
-import { prImg1, profileImg } from "../../../public/images";
+import { prImg1, profileImg } from "../../../../public/images";
 import Link from "next/link";
-import ChatLoader from "../components/Utils/SkeletonLoader/ChatLoader";
-import NoDataFound from "../components/Utils/NoDataFound/NoDataFound";
+import ChatLoader from "../../components/Utils/SkeletonLoader/ChatLoader";
+import NoDataFound from "../../components/Utils/NoDataFound/NoDataFound";
 
 const Chat = () => {
   return (
     
-    <MultiContentLayout>
       <div className="row bottomSpace">
           <div className="titleBox fixTitle">
             <h3 className="titleS">Chats</h3>
@@ -140,7 +138,6 @@ const Chat = () => {
             </li>
           </ul>
       </div>
-   </MultiContentLayout>
    
   );
 };
