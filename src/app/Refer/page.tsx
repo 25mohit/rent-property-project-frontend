@@ -4,6 +4,8 @@ import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
+import ReferImage from "../components/Utils/SvgIcons/ReferImage";
+import CalculateFontSize from "../components/HOC/Layout/CalculateFontSize";
 
 
 const Refer = () => {
@@ -11,6 +13,7 @@ const Refer = () => {
 
     return (
 
+        <CalculateFontSize>
         <SingleContentLayout>
             <div className="headerBar innerHeader">
                 <div className="col">
@@ -30,9 +33,13 @@ const Refer = () => {
                     </div>
                     <FaArrowRight className="arrow" />
                 </Link>
+
+                <div className="referBox">
+                   <ReferImage />
+                </div>
             </div>
         </SingleContentLayout>
-
+        </CalculateFontSize>
     );
 };
 
