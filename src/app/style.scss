@@ -3011,11 +3011,13 @@ input[type="email"] {
 .referCount {
     display: flex;
     width: 100%;
-    background: #ffe4e4;
+    background:var(--main);
+	border: 2rem solid var(--main);
     padding: 15rem 20rem;
     border-radius: 10rem;
 	align-items: center;
     justify-content: space-between;
+	color: #fff;
 
 	.left {
 
@@ -3038,6 +3040,32 @@ input[type="email"] {
 	.referImage {
 		width: 100%;
 		padding: 0 50rem;
+		margin-bottom: 40rem;
+	}
+	.referBoxBody {
+		text-align: center;
+
+		h5 {
+			font-size: var(--fontSize36);
+			color: var(--main);
+			font-weight: 600;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			line-height: 1;
+			margin-bottom: 8rem;
+		}
+		h6 {
+			font-size: var(--fontSize22);
+			font-weight: 500;
+		}
+		p {
+			display: inline-flex;
+			align-items: center;
+			font-size: var(--fontSize18);
+			font-weight: 500;
+			color: #adadad;
+		}
 	}
 }
 
