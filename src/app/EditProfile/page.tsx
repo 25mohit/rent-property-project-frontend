@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/navigation";
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
@@ -7,7 +8,6 @@ import Image from "next/image";
 import { FaCamera } from "react-icons/fa6";
 import InputField from "../components/Utils/Form/InputField/InputField";
 import DisabledField from "../components/Utils/Form/DisabledField/DisabledField";
-import { useRouter } from "next/navigation";
 
 const EditProfile = () => {
     const router = useRouter()

@@ -1,8 +1,8 @@
 import React from "react";
+import { useRouter } from "next/navigation";
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
 import InputField from "../components/Utils/Form/InputField/InputField";
-import { useRouter } from "next/navigation";
 
 const ChangePassword = () => {
 const router = useRouter()
