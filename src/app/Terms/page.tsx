@@ -1,7 +1,7 @@
+"use client"
 import React from "react";
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const Terms = () => {

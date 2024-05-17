@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import MyAds from "../../components/Utils/MyAds/MyAds";
 import ListingLoader from "../../components/Utils/SkeletonLoader/ListingLoader";

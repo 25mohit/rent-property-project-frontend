@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import { prImg1, profileImg } from "../../../../public/images";

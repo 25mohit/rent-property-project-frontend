@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
