@@ -1,19 +1,19 @@
 import React from "react";
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
-import Link from "next/link";
-import { profileImg } from "../../../public/images";
-import Image from "next/image";
-import { FaCamera } from "react-icons/fa6";
-import { AiFillEye } from "react-icons/ai";
 import InputField from "../components/Utils/Form/InputField/InputField";
+import { useRouter } from "next/navigation";
 
 const ChangePassword = () => {
+const router = useRouter()
+const handleBack = () => {
+    router.back()
+}
+
     return (
         <SingleContentLayout>
             <div className="headerBar innerHeader">
-                <div className="col">
-                    <Link href="/Chat" className="btn backBtn"><IoArrowBack /></Link>
+                <div className="col"><button className="btn backBtn" onClick={handleBack}><IoArrowBack /></button>
                 </div>
                 <div className="col centerTitle">
                     <h5 className='dTitle textLimit l1'>Change Password</h5>

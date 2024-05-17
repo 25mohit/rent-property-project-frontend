@@ -7,15 +7,15 @@ import { FaArrowRight } from "react-icons/fa6";
 import ReferImage from "../components/Utils/SvgIcons/ReferImage";
 import CalculateFontSize from "../components/HOC/Layout/CalculateFontSize";
 import { MdOutlineCurrencyRupee } from "react-icons/md";
-import { IoIosArrowDown } from "react-icons/io";
+import { useRouter } from "next/navigation";
 
 
 const Refer = () => {
-    const [isParagraphVisible, setIsParagraphVisible] = useState(false);
-
-    const toggleParagraphVisibility = () => {
-      setIsParagraphVisible(!isParagraphVisible);
-    };
+   
+    const router = useRouter()
+    const handleBack = () => {
+        router.back()
+    }
 
     return (
 
@@ -23,7 +23,7 @@ const Refer = () => {
             <SingleContentLayout>
                 <div className="headerBar innerHeader">
                     <div className="col">
-                        <Link href="/SelectAddress" className="btn backBtn"><IoArrowBack /></Link>
+                        <button className="btn backBtn" onClick={handleBack}><IoArrowBack /></button>
                     </div>
                     <div className="col centerTitle">
                         <h5 className='dTitle textLimit l1'>Refer & Rewards</h5>
@@ -48,11 +48,7 @@ const Refer = () => {
 
                             <button className='btn mainBtn fillBtn' >Share</button>
                             <p>Note : Lorem Ipsum is simply dummy text of the printing and typesetting industry. <Link className="link" href="/Terms">Terms & Conditions</Link></p>
-                            {/* <div className="rewardsTerms">
-                                <button className="rewardsLink" onClick={toggleParagraphVisibility}><span>Rewards Terms</span> <IoIosArrowDown className="arrow" /></button>
-                                {isParagraphVisible && ( <p className="rewardsBody">Note : Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            )}
-                            </div> */}
+                            
                         </div>
                     </div>
                 </div>

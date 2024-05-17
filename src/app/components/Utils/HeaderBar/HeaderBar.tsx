@@ -87,21 +87,21 @@ const HeaderBar = () => {
               </Link>
             </li>
             <li>
-              <Link className="link" href="/Whishlist">
+              <Link className="link" href="/Main/Wishlist">
                 <span className="icon"><GoHeart /></span>
                 <h6 className="textLimit l1">Whishlist</h6>
                 <LiaAngleRightSolid className="arrow" />
               </Link>
             </li>
             <li>
-              <Link className="link" href="/Listing">
+              <Link className="link" href="/Main/Listing">
                 <span className="icon"><GoTasklist /></span>
                 <h6 className="textLimit l1">My Listing</h6>
                 <LiaAngleRightSolid className="arrow" />
               </Link>
             </li>
             <li>
-              <Link className="link" href="/Chat">
+              <Link className="link" href="/Main/Chat">
                 <span className="icon"><GoComment /></span>
                 <h6 className="textLimit l1">Chat</h6>
                 <LiaAngleRightSolid className="arrow" />

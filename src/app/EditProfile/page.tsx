@@ -7,13 +7,17 @@ import Image from "next/image";
 import { FaCamera } from "react-icons/fa6";
 import InputField from "../components/Utils/Form/InputField/InputField";
 import DisabledField from "../components/Utils/Form/DisabledField/DisabledField";
+import { useRouter } from "next/navigation";
 
 const EditProfile = () => {
+    const router = useRouter()
+const handleBack = () => {
+	router.back()
+}
     return (
         <SingleContentLayout>
             <div className="headerBar innerHeader">
-                <div className="col">
-                    <Link href="/Chat" className="btn backBtn"><IoArrowBack /></Link>
+                <div className="col"><button className="btn backBtn" onClick={handleBack}><IoArrowBack /></button>
                 </div>
                 <div className="col centerTitle">
                     <h5 className='dTitle textLimit l1'>Edit Profile</h5>

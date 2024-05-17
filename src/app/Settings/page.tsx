@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
-import { AiFillEye } from "react-icons/ai";
 import { LiaAngleRightSolid } from "react-icons/lia";
 import ConfirmationModal from '../components/Utils/Modals/ConfirmationModal';
+import { useRouter } from "next/navigation";
 
 const Settings = () => {
 
@@ -15,11 +15,15 @@ const Settings = () => {
         setIsPopupActive(!isPopupActive);
     };
 
+    const router = useRouter()
+const handleBack = () => {
+	router.back()
+}
+
     return (
         <SingleContentLayout>
             <div className="headerBar innerHeader">
-                <div className="col">
-                    <Link href="/Chat" className="btn backBtn"><IoArrowBack /></Link>
+                <div className="col"><button className="btn backBtn" onClick={handleBack}><IoArrowBack /></button>
                 </div>
                 <div className="col centerTitle">
                     <h5 className='dTitle textLimit l1'>Settings</h5>

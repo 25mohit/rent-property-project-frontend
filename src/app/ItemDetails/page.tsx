@@ -7,9 +7,9 @@ import { prImg1, prImg2, prImg3 } from "../../../public/images";
 import Image from "next/image";
 import { GoLocation } from 'react-icons/go';
 import Link from 'next/link';
-import { FaCircleCheck } from 'react-icons/fa6';
 import { IoIosArrowForward } from 'react-icons/io';
 import { TbDiscountCheckFilled } from 'react-icons/tb';
+import { useRouter } from "next/navigation";
 
 const ItemDetails = () => {
 
@@ -18,14 +18,17 @@ const ItemDetails = () => {
   const handleTabClick = (index: any) => {
     setActiveTab(index);
   };
-
+  const router = useRouter()
+  const handleBack = () => {
+    router.back()
+  }
   return (
    
       <SingleContentLayout>
         <div className='spaceLessDetails'>
           <div className="headerBar detailsHeader">
             <div className="col leftMenu">
-              <button className="btn menuBtn"><IoArrowBack /></button>
+              <button className="btn menuBtn" onClick={handleBack}><IoArrowBack /></button>
             </div>
             <div className="col rightMenu">
               <ul className="headerAction">

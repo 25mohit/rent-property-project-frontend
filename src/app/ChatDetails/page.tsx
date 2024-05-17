@@ -6,7 +6,8 @@ import { MdOutlineMoreVert } from "react-icons/md";
 import { prImg1, profileImg } from "../../../public/images";
 import Image from "next/image";
 import Link from 'next/link';
-import { FaCircleCheck, FaPaperPlane } from 'react-icons/fa6';
+import {  FaPaperPlane } from 'react-icons/fa6';
+import { useRouter } from "next/navigation";
 
 const ChatDetails = () => {
 
@@ -15,6 +16,10 @@ const ChatDetails = () => {
   const handleTabClick = (index: any) => {
     setActiveTab(index);
   };
+  const router = useRouter()
+const handleBack = () => {
+	router.back()
+}
 
   return (
 
@@ -22,7 +27,7 @@ const ChatDetails = () => {
       <div className='spaceLessDetailsChat'>
         <div className="headerBar detailsHeader chatDetailsHeader active">
           <div className="col leftMenu">
-            <Link href="/Chat" className="btn menuBtn"><IoArrowBack /></Link>
+            <button className="btn menuBtn" onClick={handleBack}><IoArrowBack /></button>
             <div className='userImage'>
               <Image src={prImg1} alt="property" className="imgBox" />
               <Image src={profileImg} alt="property" className="userProfile" />
