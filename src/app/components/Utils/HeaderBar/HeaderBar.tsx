@@ -82,11 +82,11 @@ const HeaderBar = () => {
             <li>
               <Link className="link" href="/Wallet">
                 <span className="icon"><IoWalletOutline /></span>
-                <h6 className="textLimit l1">Wallet</h6>
+                <h6 className="textLimit l1">Cashback</h6>
                 <LiaAngleRightSolid className="arrow" />
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link className="link" href="/Main/Wishlist">
                 <span className="icon"><GoHeart /></span>
                 <h6 className="textLimit l1">Whishlist</h6>
@@ -106,7 +106,7 @@ const HeaderBar = () => {
                 <h6 className="textLimit l1">Chat</h6>
                 <LiaAngleRightSolid className="arrow" />
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link className="link" href="/Refer">
                 <span className="icon"><GoTrophy /></span>

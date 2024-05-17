@@ -1,14 +1,14 @@
 "use client"
 import React, { useState } from "react";
-import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
+import SingleContentLayout from "../../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
-import { prImg1 } from "../../../public/images";
+import { prImg1 } from "../../../../public/images";
 import Image from "next/image";
-import SelectDropdown from "../components/Utils/Form/SelectDropdown/SelectDropdown";
+import SelectDropdown from "../../components/Utils/Form/SelectDropdown/SelectDropdown";
 import { MdClose, MdOutlineCloudUpload } from "react-icons/md";
-import InputField from "../components/Utils/Form/InputField/InputField";
-import TextAreaField from "../components/Utils/Form/TextAreaField/TextAreaField";
+import InputField from "../../components/Utils/Form/InputField/InputField";
+import TextAreaField from "../../components/Utils/Form/TextAreaField/TextAreaField";
 import { useRouter } from "next/navigation";
 
 
@@ -29,8 +29,7 @@ const AddItem = () => {
     }
 
     return (
-
-        <SingleContentLayout>
+        <>
             <div className="headerBar innerHeader">
                 <div className="col"><button className="btn backBtn" onClick={handleBack}><IoArrowBack /></button>
                 </div>
@@ -77,8 +76,7 @@ const AddItem = () => {
                 <Link href="/SelectAddress" className='btn mainBtn fillBtn'>Next</Link>
 
             </div>
-        </SingleContentLayout>
-
+        </>
     );
 };
 
