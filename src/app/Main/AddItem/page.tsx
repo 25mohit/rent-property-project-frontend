@@ -1,7 +1,5 @@
 "use client"
 import React, { useState } from "react";
-import SingleContentLayout from "../../components/HOC/Layout/SingleContentLayout";
-import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
 import { prImg1 } from "../../../../public/images";
 import Image from "next/image";
@@ -9,7 +7,6 @@ import SelectDropdown from "../../components/Utils/Form/SelectDropdown/SelectDro
 import { MdClose, MdOutlineCloudUpload } from "react-icons/md";
 import InputField from "../../components/Utils/Form/InputField/InputField";
 import TextAreaField from "../../components/Utils/Form/TextAreaField/TextAreaField";
-import { useRouter } from "next/navigation";
 
 
 const AddItem = () => {
@@ -23,23 +20,16 @@ const AddItem = () => {
     ]
     console.log("category", category);
 
-    const router = useRouter()
-    const handleBack = () => {
-        router.back()
-    }
+
 
     return (
         <>
-            <div className="headerBar innerHeader">
-                <div className="col"><button className="btn backBtn" onClick={handleBack}><IoArrowBack /></button>
-                </div>
-                <div className="col centerTitle">
-                    <h5 className='dTitle textLimit l1'>Add Item</h5>
-                </div>
-                <div className="col"></div>
-            </div>
 
+            <div className="titleBox fixTitle">
+                <h3 className="titleS">Add Item</h3>
+            </div>
             <div className="defaultSpace">
+
                 <InputField type="text" placeholder="Item Name" />
                 <SelectDropdown options={options} placeholder="Category" setValue={setCategory} value={category} />
                 <SelectDropdown options={options} placeholder="Sub Category" setValue={setSubCategory} value={subCategory} />

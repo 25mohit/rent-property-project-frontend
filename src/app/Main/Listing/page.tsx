@@ -7,11 +7,11 @@ import NoDataFound from "../../components/Utils/NoDataFound/NoDataFound";
 const Listing = () => {
   return (
     <>
-      <ListingLoader />
-      <div className="row listingProduct bottomSpace">
-        <div className="titleBox">
+      {/* <ListingLoader /> */}
+        <div className="titleBox fixTitle">
           <div className="col"><h3 className="titleS">My Ads</h3></div>
         </div>
+      <div className="row listingProduct bottomSpace">
 
         {/* <NoDataFound title="No Listing, yet" type="listing" /> */}
 
