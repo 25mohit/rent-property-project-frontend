@@ -6,6 +6,8 @@ import Link from "next/link";
 import { LiaAngleRightSolid } from "react-icons/lia";
 import ConfirmationModal from '../components/Utils/Modals/ConfirmationModal';
 import { useRouter } from "next/navigation";
+import Loader from '../components/Utils/Modals/Loader';
+import CalculateFontSize from '../components/HOC/Layout/CalculateFontSize';
 
 const Settings = () => {
 
@@ -75,6 +77,7 @@ const handleBack = () => {
 
             <ConfirmationModal isOpen={isPopupActive} setIsOpen={setIsPopupActive} title="Logout" message="Are you sure want to Logout?" />
 
+            <Loader />
         </SingleContentLayout>
     );
 };
