@@ -23,7 +23,6 @@ const Login = () => {
         <p className="forgotPassword"><Link className="link" href="/ForgotPassword">Forgot Password?</Link></p>
 
         <p className="orLogin"><span>or</span></p>
-
         <button className="gamilSignup">
             <Image src={google} alt="google" />
             <p>Continue with Google</p>
