@@ -13,7 +13,6 @@ const Transaction = () => {
     }
 
     return (
-        <CalculateFontSize>
             <SingleContentLayout>
                 <div className="headerBar innerHeader">
                     <div className="col"><button className="btn backBtn" onClick={handleBack}><IoArrowBack /></button>
@@ -75,7 +74,6 @@ const Transaction = () => {
                     </div>
                 </div>
             </SingleContentLayout>
-        </CalculateFontSize>
     );
 };
 

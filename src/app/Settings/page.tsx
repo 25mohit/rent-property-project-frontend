@@ -34,6 +34,12 @@ const handleBack = () => {
             <div className="settingsMenu">
                 <ul className="menuList" style={{ height: 'calc(100vh - 1rem)' }}>
                     <li>
+                        <Link className="link" href="/AddBank">
+                            <h6 className="textLimit l1">Add Bank Details</h6>
+                            <LiaAngleRightSolid className="arrow" />
+                        </Link>
+                    </li>
+                    <li>
                         <Link className="link" href="/ChangePassword">
                             <h6 className="textLimit l1">Change Password</h6>
                             <LiaAngleRightSolid className="arrow" />
