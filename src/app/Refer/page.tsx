@@ -7,7 +7,7 @@ import { FaArrowRight, FaShare } from "react-icons/fa6";
 import ReferImage from "../components/Utils/SvgIcons/ReferImage";
 import { MdOutlineCurrencyRupee } from "react-icons/md";
 import { useRouter } from "next/navigation";
-import CalculateFontSize from "../components/HOC/Layout/CalculateFontSize";
+import ShareListModal from "../components/Utils/Modals/ShareListModal";
 
 
 const Refer = () => {
@@ -17,8 +17,14 @@ const Refer = () => {
         router.back()
     }
 
+    const [isPopupActive, setIsPopupActive] = useState(false);
+
+    const togglePopup = () => {
+        setIsPopupActive(!isPopupActive);
+    };
+
+
     return (
-        <CalculateFontSize>
         <SingleContentLayout>
             <div className="headerBar innerHeader">
                 <div className="col">
@@ -31,13 +37,13 @@ const Refer = () => {
             </div>
 
             <div className="defaultSpace">
-                <Link href="/" className="referCount">
+                <div className="referCount" onClick={togglePopup}>
                     <div className="left">
                         <p>Total Refers</p>
                         <h3 className="count">20</h3>
                     </div>
                     <FaArrowRight className="arrow" />
-                </Link>
+                </div>
 
                 <div className="referBox">
                     <ReferImage />
@@ -53,8 +59,10 @@ const Refer = () => {
                     </div>
                 </div>
             </div>
+
+            <ShareListModal isOpen={isPopupActive} setIsOpen={setIsPopupActive} />
+
         </SingleContentLayout>
-        </CalculateFontSize>
     );
 };
 
