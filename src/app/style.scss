@@ -2655,6 +2655,7 @@ input[type="email"] {
 					font-size: var(--fontSize18);
 					font-weight: 500;
 				}
+
 				.closeIcon {
 					width: 30rem;
 					height: 30rem;
@@ -2662,10 +2663,10 @@ input[type="email"] {
 					align-items: center;
 					justify-content: center;
 
-				   svg {
-					width: 25rem;
-					height:25rem;
-				   }
+					svg {
+						width: 25rem;
+						height: 25rem;
+					}
 				}
 			}
 
@@ -3168,22 +3169,25 @@ input[type="email"] {
 }
 
 .cashbackCard {
-    background: #ffeef1;
+	background: #ffeef1;
 	border: 2px solid var(--main);
 	border-radius: 8rem;
 	margin-bottom: 15rem;
 	padding: 15rem 15rem;
-  
+
 	label {
-	  margin-bottom: 5rem;
-	  font-size: var(--fontSize18);
-	  display: block;
+		margin-bottom: 5rem;
+		font-size: var(--fontSize18);
+		display: block;
 	}
+
 	h3 {
-	  font-weight: 600;
-	  font-size: var(--fontSize22);
+		font-weight: 600;
+		font-size: var(--fontSize22);
+		display: flex;
+		align-items: center;
 	}
-  }
+}
 
 .rewardsTerms {
 	text-align: left;
@@ -3225,6 +3229,7 @@ input[type="email"] {
 		color: var(--main);
 	}
 }
+
 .confirmAccountDetails {
 	margin-bottom: 20rem;
 
@@ -3232,11 +3237,78 @@ input[type="email"] {
 		font-size: var(--fontSize20);
 		font-weight: 500;
 		color: var(--main);
+		display: flex;
+		align-items: center;
 	}
+
 	h3 {
 		font-size: var(--fontSize16);
 		font-weight: 500;
 		margin: 5rem 0rem;
+	}
+}
+
+.historyList {
+	display: flex;
+	width: 100%;
+	padding: 15rem 15rem;
+	border-bottom: 1rem solid #ededed;
+	align-items: center;
+
+	small {
+		font-size: var(--fontSize14);
+	}
+
+	.date {
+		width: 110rem;
+
+		h5 {
+			font-size: var(--fontSize14);
+			color: #222;
+			font-weight: 500;
+		}
+
+		small {
+			color: #959595;
+			font-size: var(--fontSize12);
+		}
+	}
+
+	.contentBox {
+		width: 100%;
+		border-left: 1rem solid #ededed;
+		padding: 0 10rem;
+		margin-left: 10rem;
+
+		h5 {
+			font-size: var(--fontSize16);
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+		}
+
+	}
+
+	.status {
+		text-align: right;
+		width: 150rem;
+
+		h5 {
+
+			span {
+				font-size: var(--fontSize16);
+				display: flex;
+				align-items: center;
+				justify-content: end;
+			}
+
+			small {
+				font-size: var(--fontSize14);
+			}
+		}
+
 	}
 }
 

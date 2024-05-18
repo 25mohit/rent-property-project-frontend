@@ -26,7 +26,7 @@ const WithdrawalModal: React.FC<ModalInterface> = ({ isOpen, setIsOpen }) => {
                     </div>
                     <div className='modalPopupBody'>
                         <div className='confirmAccountDetails'>
-                            <h2>Amount : 50</h2>
+                            <h2>Amount : <MdOutlineCurrencyRupee className="icon" /> 50</h2>
                             <h3>Jitendra Kumar</h3>
                             <ul>
                               <li>Account Number : XXXXXXXXX987</li>

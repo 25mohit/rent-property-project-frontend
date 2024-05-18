@@ -17,7 +17,6 @@ const AddBank = () => {
         router.back()
     }
     return (
-        <CalculateFontSize>
             <SingleContentLayout>
                 <div className="headerBar innerHeader">
                     <div className="col"><button className="btn backBtn" onClick={handleBack}><IoArrowBack /></button>
@@ -40,7 +39,6 @@ const AddBank = () => {
 
                 </div>
             </SingleContentLayout>
-        </CalculateFontSize>
     );
 };
 

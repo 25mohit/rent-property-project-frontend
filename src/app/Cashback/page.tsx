@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import CalculateFontSize from "../components/HOC/Layout/CalculateFontSize";
 import Link from "next/link";
 import WithdrawalModal from "../components/Utils/Modals/WithdrawalModal";
+import { MdOutlineCurrencyRupee } from "react-icons/md";
 
 const Cashback = () => {
     const router = useRouter()
@@ -18,7 +19,6 @@ const Cashback = () => {
         setIsPopupActive(!isPopupActive);
     };
     return (
-        <CalculateFontSize>
             <SingleContentLayout>
                 <div className="headerBar innerHeader">
                     <div className="col"><button className="btn backBtn" onClick={handleBack}><IoArrowBack /></button>
@@ -32,7 +32,7 @@ const Cashback = () => {
                 <div className="defaultSpace">
                     <div className="cashbackCard">
                         <label>Balance Available</label>
-                        <h3>₹220.57</h3>
+                        <h3><MdOutlineCurrencyRupee className="icon" /> 220.57</h3>
                     </div>
                     <button className='btn mainBtn fillBtn' onClick={togglePopup}>Withdrawal</button>
                     <p className="transationLink"><Link className="link" href="/Transaction">Transaction</Link></p>
@@ -41,7 +41,6 @@ const Cashback = () => {
 
                 <WithdrawalModal isOpen={isPopupActive} setIsOpen={setIsPopupActive} />
             </SingleContentLayout>
-        </CalculateFontSize>
     );
 };
 
