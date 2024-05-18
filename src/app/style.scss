@@ -3170,16 +3170,16 @@ input[type="email"] {
 .cashbackCard {
     background: #ffeef1;
 	border: 2px solid var(--main);
-	border-radius: 8px;
-	margin-bottom: 15px;
-	padding: 10px 15px;
+	border-radius: 8rem;
+	margin-bottom: 15rem;
+	padding: 15rem 15rem;
   
 	label {
-	  margin-bottom: 10rem;
+	  margin-bottom: 5rem;
 	  font-size: var(--fontSize18);
+	  display: block;
 	}
 	h3 {
-	  margin: 0px;
 	  font-weight: 600;
 	  font-size: var(--fontSize22);
 	}
@@ -3213,6 +3213,30 @@ input[type="email"] {
 			text-align: left;
 			margin-top: 15rem;
 		}
+	}
+}
+
+.transationLink {
+	text-align: center;
+	margin-top: 20rem;
+
+	.link {
+		text-decoration: underline;
+		color: var(--main);
+	}
+}
+.confirmAccountDetails {
+	margin-bottom: 20rem;
+
+	h2 {
+		font-size: var(--fontSize20);
+		font-weight: 500;
+		color: var(--main);
+	}
+	h3 {
+		font-size: var(--fontSize16);
+		font-weight: 500;
+		margin: 5rem 0rem;
 	}
 }
 

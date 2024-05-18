@@ -4,7 +4,7 @@ import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 
-const Transition = () => {
+const Transaction = () => {
     const router = useRouter()
 const handleBack = () => {
 	router.back()
@@ -30,4 +30,4 @@ const handleBack = () => {
     );
 };
 
-export default Transition;
+export default Transaction;
