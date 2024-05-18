@@ -3074,6 +3074,42 @@ input[type="email"] {
 			text-decoration: underline;
 			color: var(--main);
 		}
+		.referCodeBox {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10rem;
+			margin-bottom: 30rem;
+
+			.code {
+				border-style: dotted;
+				border-width: 3rem;
+				font-size: var(--fontSize30);
+				border-radius: 5rem;
+				padding: 0rem 15rem;
+				height: 55rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-color: var(--main);
+				font-weight: 500;
+			}
+			.shareIcon {
+				width: 55rem;
+				height: 55rem;
+				background: var(--main);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 5rem;
+
+				svg {
+					fill:#fff;
+					width: 28rem;
+					height:28rem;
+				}
+			}
+		}
 	}
 }
 

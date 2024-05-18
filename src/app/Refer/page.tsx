@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight, FaShare } from "react-icons/fa6";
 import ReferImage from "../components/Utils/SvgIcons/ReferImage";
 import { MdOutlineCurrencyRupee } from "react-icons/md";
 import { useRouter } from "next/navigation";
+import CalculateFontSize from "../components/HOC/Layout/CalculateFontSize";
 
 
 const Refer = () => {
@@ -17,7 +18,7 @@ const Refer = () => {
     }
 
     return (
-
+        <CalculateFontSize>
         <SingleContentLayout>
             <div className="headerBar innerHeader">
                 <div className="col">
@@ -43,14 +44,17 @@ const Refer = () => {
                     <div className="referBoxBody">
                         <h5>Refer & Earn <MdOutlineCurrencyRupee className="icon" /> 10</h5>
                         <h6>Invite your friends to join and get guaranteed Cashback*</h6>
-
-                        <button className='btn mainBtn fillBtn' >Share</button>
+                        <div className="referCodeBox">
+                            <div className="code">AF2sD9</div>
+                        <button className='btn shareIcon' ><FaShare /></button>
+                        </div>
                         <p>Note : Lorem Ipsum is simply dummy text of the printing and typesetting industry. <Link className="link" href="/Terms">Terms & Conditions</Link></p>
 
                     </div>
                 </div>
             </div>
         </SingleContentLayout>
+        </CalculateFontSize>
     );
 };
 
