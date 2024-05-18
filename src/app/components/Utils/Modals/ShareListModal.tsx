@@ -33,28 +33,28 @@ const ShareListModal: React.FC<ModalInterface> = ({ isOpen, setIsOpen }) => {
                                    <h3 className='textLimit l1'>Surendra Kumar</h3>  
                                    <small className='error success'>Success</small>
                                 </div>
-                                <h6 className='amount'>10 <MdOutlineCurrencyRupee className="icon" /></h6>
+                                <h6 className='amount'><MdOutlineCurrencyRupee className="icon" /> 10</h6>
                             </li>
                             <li>
                                 <div className="left">
                                    <h3 className='textLimit l1'>Surendra Kumar</h3>  
                                    <small className='error success'>Success</small>
                                 </div>
-                                <h6 className='amount'>10 <MdOutlineCurrencyRupee className="icon" /></h6>
+                                <h6 className='amount'><MdOutlineCurrencyRupee className="icon" /> 10</h6>
                             </li>
                             <li>
                                 <div className="left">
                                    <h3 className='textLimit l1'>Surendra Kumar</h3>  
                                    <small className='error success'>Success</small>
                                 </div>
-                                <h6 className='amount'>10 <MdOutlineCurrencyRupee className="icon" /></h6>
+                                <h6 className='amount'><MdOutlineCurrencyRupee className="icon" /> 10</h6>
                             </li>
                             <li>
                                 <div className="left">
                                    <h3 className='textLimit l1'>Surendra Kumar</h3> 
                                    <small className='error danger'>Pending</small>
                                 </div>
-                                <h6 className='amount'>10 <MdOutlineCurrencyRupee className="icon" /></h6>
+                                <h6 className='amount'><MdOutlineCurrencyRupee className="icon" /> 10</h6>
                             </li>
                         </ul>
                     </div>

@@ -80,7 +80,7 @@ const HeaderBar = () => {
               </Link>
             </li>
             <li>
-              <Link className="link" href="/Wallet">
+              <Link className="link" href="/Cashback">
                 <span className="icon"><IoWalletOutline /></span>
                 <h6 className="textLimit l1">Cashback</h6>
                 <LiaAngleRightSolid className="arrow" />

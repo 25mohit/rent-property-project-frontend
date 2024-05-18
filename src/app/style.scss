@@ -3167,6 +3167,24 @@ input[type="email"] {
 	}
 }
 
+.cashbackCard {
+    background: #ffeef1;
+	border: 2px solid var(--main);
+	border-radius: 8px;
+	margin-bottom: 15px;
+	padding: 10px 15px;
+  
+	label {
+	  margin-bottom: 10rem;
+	  font-size: var(--fontSize18);
+	}
+	h3 {
+	  margin: 0px;
+	  font-weight: 600;
+	  font-size: var(--fontSize22);
+	}
+  }
+
 .rewardsTerms {
 	text-align: left;
 	margin-top: 15rem;
