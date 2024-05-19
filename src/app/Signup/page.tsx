@@ -27,7 +27,7 @@ const Signup = () => {
   const [isBtnDisabled, setIsBtnDisabled] = useState(true)
 
   const dispatch = useDispatch<AppDispatch>()
-  const response = useSelector((state: RootState) => state.user?.data)
+  const checkEmailResponse = useSelector((state: RootState) => state.user?.checkEmailData)
   const otpResponse = useSelector((state: RootState) => state.user?.otpData)
   const registerResponse = useSelector((state: RootState) => state.user?.registerData)
 
@@ -44,26 +44,26 @@ const Signup = () => {
     }
   },[otp])
 
-  console.log("response", response, otpResponse);
+  console.log("response", otpResponse);
   useEffect(() => {
-    if(response && Object.keys(response)?.length>0){
-      if(response?.status){
-        if(response?.m === "ss"){
+    if(checkEmailResponse && Object.keys(checkEmailResponse)?.length>0){
+      if(checkEmailResponse?.status){
+        if(checkEmailResponse?.m === "ss"){
           setShowOtp(true)
           setResponseError('')
         }
-      } else if(!response?.status){
+      } else if(!checkEmailResponse?.status){
         setHandleVerifyBtn(false)
-        if(response?.m === "ex"){
+        if(checkEmailResponse?.m === "ex"){
           setResponseError("Email already Registered with us")
-        } else if(response?.m === "cl"){
+        } else if(checkEmailResponse?.m === "cl"){
           setResponseError("Previous OTP cleared, retry now !")
-        } else if(response?.m === "er"){
+        } else if(checkEmailResponse?.m === "er"){
           setResponseError("Service is not working currently, try later")
         }
       }
     }
-  },[response])
+  },[checkEmailResponse])
   
   useEffect(() => {
     if(handleVerifyBtn){

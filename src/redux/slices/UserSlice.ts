@@ -63,8 +63,9 @@ const UserSlice = createSlice({
   initialState: {
     data: {}, 
     otpData: {} ,
+    checkEmailData:{},
     registerData:{}
-  } as { data: Record<string, any>; otpData: Record<string, any>; registerData: Record<string, any> }, // Explicitly define the type of initialState
+  } as { data: Record<string, any>; otpData: Record<string, any>; registerData: Record<string, any>, checkEmailData: Record<string, any> }, // Explicitly define the type of initialState
   reducers: {}, // Define your reducers if any
   extraReducers: (builder) => {
     builder.addCase(SignInUser.fulfilled, (state, action) => {
@@ -75,7 +76,7 @@ const UserSlice = createSlice({
     builder.addCase(CheckEmail.fulfilled, (state, action) => {
         const payload = action.payload
         console.log("payload", payload);
-        state.data = payload;
+        state.checkEmailData = payload;
     })
     builder.addCase(VerifyOTP.fulfilled, (state, action) => {
         const payload = action.payload
