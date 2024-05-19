@@ -9,7 +9,7 @@ import { ShowLoader } from "./SettingSlice";
 export const SignInUser = createAsyncThunk("SignInUser", async (payload: any, { dispatch }) => {
   dispatch(ShowLoader(true))
   try {
-    const response = await axios.post(`http://localhost:5000/users/secure-login`, payload);
+    const response = await axios.post(`https://relicet.up.railway.app/users/secure-login`, payload);
     dispatch(ShowLoader(false))
     return response.data
   }
@@ -22,7 +22,7 @@ export const SignInUser = createAsyncThunk("SignInUser", async (payload: any, { 
 export const CheckEmail = createAsyncThunk("CheckEmail", async (payload: any, { dispatch }) => {
   dispatch(ShowLoader(true))
   try {
-    const response = await axios.post(`http://localhost:5000/utils/check-email`, payload);
+    const response = await axios.post(`https://relicet.up.railway.app/utils/check-email`, payload);
     dispatch(ShowLoader(false))
     return response.data
   }
@@ -35,7 +35,7 @@ export const CheckEmail = createAsyncThunk("CheckEmail", async (payload: any, { 
 export const VerifyOTP = createAsyncThunk("VerifyOTP", async (payload: any, { dispatch }) => {
   dispatch(ShowLoader(true))
   try {
-    const response = await axios.post(`http://localhost:5000/utils/verify-otp`, payload);
+    const response = await axios.post(`https://relicet.up.railway.app/utils/verify-otp`, payload);
     dispatch(ShowLoader(false))
     return response.data
   }
@@ -48,7 +48,7 @@ export const VerifyOTP = createAsyncThunk("VerifyOTP", async (payload: any, { di
 export const RegisterUser = createAsyncThunk("RegisterUser", async (payload: any, { dispatch }) => {
   dispatch(ShowLoader(true))
   try {
-    const response = await axios.post(`http://localhost:5000/users/register`, payload);
+    const response = await axios.post(`https://relicet.up.railway.app/users/register`, payload);
     dispatch(ShowLoader(false))
     return response.data
   }
