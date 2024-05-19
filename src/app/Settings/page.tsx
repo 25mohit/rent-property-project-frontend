@@ -3,9 +3,11 @@ import React, { useState } from 'react';
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
-import { AiFillEye } from "react-icons/ai";
 import { LiaAngleRightSolid } from "react-icons/lia";
 import ConfirmationModal from '../components/Utils/Modals/ConfirmationModal';
+import { useRouter } from "next/navigation";
+import Loader from '../components/Utils/Modals/Loader';
+import CalculateFontSize from '../components/HOC/Layout/CalculateFontSize';
 
 const Settings = () => {
 
@@ -15,11 +17,15 @@ const Settings = () => {
         setIsPopupActive(!isPopupActive);
     };
 
+    const router = useRouter()
+const handleBack = () => {
+	router.back()
+}
+
     return (
         <SingleContentLayout>
             <div className="headerBar innerHeader">
-                <div className="col">
-                    <Link href="/Chat" className="btn backBtn"><IoArrowBack /></Link>
+                <div className="col"><button className="btn backBtn" onClick={handleBack}><IoArrowBack /></button>
                 </div>
                 <div className="col centerTitle">
                     <h5 className='dTitle textLimit l1'>Settings</h5>
@@ -29,6 +35,12 @@ const Settings = () => {
 
             <div className="settingsMenu">
                 <ul className="menuList" style={{ height: 'calc(100vh - 1rem)' }}>
+                    <li>
+                        <Link className="link" href="/AddBank">
+                            <h6 className="textLimit l1">Add Bank Details</h6>
+                            <LiaAngleRightSolid className="arrow" />
+                        </Link>
+                    </li>
                     <li>
                         <Link className="link" href="/ChangePassword">
                             <h6 className="textLimit l1">Change Password</h6>
@@ -65,6 +77,7 @@ const Settings = () => {
 
             <ConfirmationModal isOpen={isPopupActive} setIsOpen={setIsPopupActive} title="Logout" message="Are you sure want to Logout?" />
 
+            <Loader />
         </SingleContentLayout>
     );
 };

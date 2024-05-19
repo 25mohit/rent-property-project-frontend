@@ -5,6 +5,7 @@ import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
 import OtpInput from 'react-otp-input';
 import InputField from "../components/Utils/Form/InputField/InputField";
+import { useRouter } from "next/navigation";
 
 const ForgotPassword = () => {
   const [otp, setOtp] = useState('');
@@ -16,10 +17,15 @@ const ForgotPassword = () => {
     // For simplicity, I'll just show the verifyOTP div
     setShowVerifyOTP(true);
   };
+  const router = useRouter()
+  const handleBack = () => {
+    router.back()
+  }
+
   return (
     <UserForm title="Forgot Password">
       <div className="topHead flex justify-between">
-        <Link href="/Login" className="backBtn"><IoArrowBack /></Link>
+        <button className="backBtn" onClick={handleBack}><IoArrowBack /></button>
         {/* <Link className="link" href="#">Skip {'>'}{'>'} </Link> */}
       </div>
       <div className="pageTitle">
