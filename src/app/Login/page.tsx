@@ -15,9 +15,21 @@ const Login = () => {
     email:"",
     password:""
   })
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true)
   const [responseError, setResponseError] = useState('')
   const dispatch = useDispatch<AppDispatch>()
   const response = useSelector((state: RootState) => state.user?.data)
+
+  useEffect(() => {
+    console.log("running");
+    
+    if(userForm.email && userForm.password){
+      console.log("222222", userForm.email, userForm.password);
+      setIsBtnDisabled(false)
+    } else {
+      setIsBtnDisabled(true)
+    }
+  },[userForm])
 
   useEffect(() => {
     if(response && Object.keys(response)?.length>0){
@@ -37,15 +49,16 @@ const Login = () => {
     setUserForm({...userForm, [name]:value})
   }
   
-  console.log("response", response, responseError, userForm);
-
   const onLoginHandler = (e: any) => {
     e.preventDefault()
-    const payload ={
-      email: "mo",
-      password:"ass"
+
+    if(userForm?.email && userForm?.password){
+      const payload ={
+        email: "mo",
+        password:"ass"
+      }
+      dispatch(SignInUser(payload))
     }
-    dispatch(SignInUser(payload))
   }
   return (
     <UserForm title="Welcome to login">
@@ -60,7 +73,7 @@ const Login = () => {
         <InputField name="password" value={userForm?.password} onChange={onChangeHandler} type="password" placeholder="Password" />
        
         <p className="error danger">{responseError}</p>
-        <button className='btn mainBtn fillBtn' onClick={onLoginHandler}>Login</button>
+        <button className='btn mainBtn fillBtn' disabled={isBtnDisabled} onClick={onLoginHandler}>Login</button>
         <p className="forgotPassword"><Link className="link" href="/ForgotPassword">Forgot Password?</Link></p>
 
         <p className="orLogin"><span>or</span></p>

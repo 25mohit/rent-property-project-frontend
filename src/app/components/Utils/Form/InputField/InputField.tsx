@@ -38,12 +38,10 @@ const InputField:React.FC<InputInterface> = ({ type, placeholder, name, value, o
     },[])
     
     const tooglePasswordVisible = () => {
-      // console.log("typetype", type, tooglePassword);
       if(tooglePassword === "text") setTooglePassword('password')
       else setTooglePassword('text')
     }
-    console.log("tooglePassword", tooglePassword , "+", type);
-    
+        
   return (
     <div className='formGroup'> 
       <div className='formGroupMain'>
