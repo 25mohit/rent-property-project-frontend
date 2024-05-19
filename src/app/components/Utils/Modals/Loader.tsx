@@ -1,17 +1,6 @@
 'use client'
-import React, { useState } from 'react';
-
-
-interface ModalInterface {
-    isOpen: boolean,
-    setIsOpen: (isOpen: boolean) => void,
-}
-
 const Loader = () => {
-
     return (
-
-
         <div className="modalPopup loaderPopup active">
             <div className='overlayBg'></div>
             <div className='modalDialog'>
@@ -31,8 +20,6 @@ const Loader = () => {
                 </div>
             </div>
         </div>
-
-
     );
 };
 

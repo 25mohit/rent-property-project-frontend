@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.scss";
 import "./style.scss"
 import Providers from "@/redux/Provider";
+import Loader from "./components/Utils/Modals/Loader";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className={inter.className} id="main-body">
         <section className="pageContent">
           <div className="leftContent">
+            <Loader />
             <Providers>
               {children}
             </Providers>
