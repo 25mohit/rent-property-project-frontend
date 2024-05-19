@@ -32,9 +32,39 @@ export const CheckEmail = createAsyncThunk("CheckEmail", async (payload: any, { 
 }
 })
 
+export const VerifyOTP = createAsyncThunk("VerifyOTP", async (payload: any, { dispatch }) => {
+  dispatch(ShowLoader(true))
+  try {
+    const response = await axios.post(`http://localhost:5000/utils/verify-otp`, payload);
+    dispatch(ShowLoader(false))
+    return response.data
+  }
+  catch (error) {
+    dispatch(ShowLoader(false))
+    throw error;
+}
+})
+
+export const RegisterUser = createAsyncThunk("RegisterUser", async (payload: any, { dispatch }) => {
+  dispatch(ShowLoader(true))
+  try {
+    const response = await axios.post(`http://localhost:5000/users/register`, payload);
+    dispatch(ShowLoader(false))
+    return response.data
+  }
+  catch (error) {
+    dispatch(ShowLoader(false))
+    throw error;
+}
+})
+
 const UserSlice = createSlice({
   name: "user",
-  initialState: { data: {} } as { data: Record<string, any> }, // Explicitly define the type of initialState
+  initialState: {
+    data: {}, 
+    otpData: {} ,
+    registerData:{}
+  } as { data: Record<string, any>; otpData: Record<string, any>; registerData: Record<string, any> }, // Explicitly define the type of initialState
   reducers: {}, // Define your reducers if any
   extraReducers: (builder) => {
     builder.addCase(SignInUser.fulfilled, (state, action) => {
@@ -46,6 +76,16 @@ const UserSlice = createSlice({
         const payload = action.payload
         console.log("payload", payload);
         state.data = payload;
+    })
+    builder.addCase(VerifyOTP.fulfilled, (state, action) => {
+        const payload = action.payload
+        console.log("payload", payload);
+        state.otpData = payload;
+    })
+    builder.addCase(RegisterUser.fulfilled, (state, action) => {
+        const payload = action.payload
+        console.log("payload", payload);
+        state.registerData = payload;
     })
   }
 });

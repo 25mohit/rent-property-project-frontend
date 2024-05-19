@@ -21,7 +21,7 @@ const Login = () => {
 
   const router = useRouter();
   const dispatch = useDispatch<AppDispatch>()
-  const response = useSelector((state: RootState) => state.user?.data)
+  const loginResponse = useSelector((state: RootState) => state.user?.data)
 
   useEffect(() => {
     localStorage.clear()
@@ -36,22 +36,22 @@ const Login = () => {
   },[userForm])
 
   useEffect(() => {
-    if(response && Object.keys(response)?.length>0){
-      if(!response?.status){
-        if(response?.m === "nf"){
+    if(loginResponse && Object.keys(loginResponse)?.length>0){
+      if(!loginResponse?.status){
+        if(loginResponse?.m === "nf"){
           setResponseError("User not Found")
-        } else if(response?.m === "iv"){
+        } else if(loginResponse?.m === "iv"){
           setResponseError("Your Password in Invalid")
         }
-      } else if(response?.status){
-        if(response?.m === "ss"){
+      } else if(loginResponse?.status){
+        if(loginResponse?.m === "ss"){
           setResponseError("Logged In Successfully")
-          localStorage.setItem('user-data', JSON.stringify(response?.d))
+          localStorage.setItem('user-data', JSON.stringify(loginResponse?.d))
           router.push('/UnderDevelopment')
         }
       }
     }
-  },[response])
+  },[loginResponse])
   
   const onChangeHandler = (e: any) => {
     const {name, value} = e.target
