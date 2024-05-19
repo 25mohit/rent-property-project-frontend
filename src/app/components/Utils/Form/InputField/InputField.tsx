@@ -11,17 +11,22 @@ interface InputInterface{
     label?: string,
     mobileVerify?: string,
     verifyClick?: React.Dispatch<React.SetStateAction<boolean>>,
-    required?: any
+    required?: any,
+    onChange? : (event: React.ChangeEvent<HTMLInputElement>) => void,
+    value?: string,
+    name?: string
+
 }
-const InputField:React.FC<InputInterface> = ({ type, placeholder, min, max, field, label,mobileVerify, verifyClick, required }) => {
-    const [hasValue, setHasValue] = useState(false);
+const InputField:React.FC<InputInterface> = ({ type, placeholder, name, value, onChange, min, max, field, label,mobileVerify, verifyClick, required }) => {
+    // const [hasValue, setHasValue] = useState(false);
     const [newID, setNewID] = useState('');
+    const [tooglePassword, setTooglePassword] = useState('')
 
-    const handleInputChange = (event: any) => {
-        setHasValue(event.target.value !== '');
-    };
+    // const handleInputChange = (event: any) => {
+    //     setHasValue(event.target.value !== '');
+    // };
 
-    console.log("required", required);
+    // console.log("required", required);
     
     useEffect(() => {
       function generateRandomNumber() {
@@ -32,14 +37,20 @@ const InputField:React.FC<InputInterface> = ({ type, placeholder, min, max, fiel
       setNewID(generateRandomNumber())
     },[])
     
-    // console.log("generateRandomNumber", generateRandomNumber())
+    const tooglePasswordVisible = () => {
+      // console.log("typetype", type, tooglePassword);
+      if(tooglePassword === "text") setTooglePassword('password')
+      else setTooglePassword('text')
+    }
+    console.log("tooglePassword", tooglePassword , "+", type);
+    
   return (
     <div className='formGroup'> 
       <div className='formGroupMain'>
-        <input type={type} id={newID} className={`form-control ${field === "mobile" ? 'phoneNumberSpace' : ''}`} min={min} max={max} onChange={handleInputChange}/>
-        <label htmlFor={newID} className={hasValue ? 'formLabel active' : 'formLabel'}>{placeholder} { required !== undefined && required && <span className='requiredStar'>*</span>}</label>
+        <input type={tooglePassword === '' ? type : tooglePassword} name={name} onChange={onChange} id={newID} className={`form-control ${field === "mobile" ? 'phoneNumberSpace' : ''}`} min={min} max={max}/>
+        <label htmlFor={newID} className={value ? 'formLabel active' : 'formLabel'}>{placeholder} { required !== undefined && required && <span className='requiredStar'>*</span>}</label>
         { field === "mobile" && <span className='countryCode'>{label}</span>}
-        { type === "password" && <button type="button" className="eyeAction"><AiFillEye id="show-pass-btn"/></button> }
+        { type === "password" && <button type="button" onClick={tooglePasswordVisible} className="eyeAction"><AiFillEye id="show-pass-btn"/></button> }
         { type === "email" && <button type="button" className='getOtpBtn' id="verify-btn" onClick={() => verifyClick && verifyClick(prev => !prev)}>Get OTP</button> }
         { mobileVerify === "mobileVerify" && <button type="button" className='getOtpBtn' id="verify-btn" onClick={() => verifyClick && verifyClick(prev => !prev)}>Get OTP</button> }
       </div>
