@@ -9,30 +9,36 @@ import { useRouter } from "next/navigation";
 
 const ForgotPassword = () => {
   const [otp, setOtp] = useState('');
+  const [userForm, setUserForm] = useState({
+    email:'',
+    password:"",
+    confirmPassword:""
+  })
 
   const [showVerifyOTP, setShowVerifyOTP] = useState(false);
 
-  const handleGetOTPClick = () => {
-    // Here you can add logic to send OTP
-    // For simplicity, I'll just show the verifyOTP div
-    setShowVerifyOTP(true);
-  };
   const router = useRouter()
+
   const handleBack = () => {
     router.back()
+  }
+
+  const onChangeHandler = (e: any) => {
+    const {name, value} = e.target
+    setUserForm({...userForm, [name]: value})
   }
 
   return (
     <UserForm title="Forgot Password">
       <div className="topHead flex justify-between">
-        <button className="backBtn" onClick={handleBack}><IoArrowBack /></button>
+        <Link href="/Login" className="backBtn" ><IoArrowBack /></Link>
         {/* <Link className="link" href="#">Skip {'>'}{'>'} </Link> */}
       </div>
       <div className="pageTitle">
         <h2 className="mb-2">Forgot Password</h2>
         <p>Please Enter Your Registred Email Id</p>
       </div>
-      <InputField type="email" placeholder="Email Address" verifyClick={setShowVerifyOTP} />
+      <InputField value={userForm?.email} name="email" onChange={onChangeHandler} type="email" placeholder="Email Address" verifyClick={setShowVerifyOTP} />
 
       {showVerifyOTP && <div className='formGroup showOtp'>
         <div className="verificationForm">
@@ -50,8 +56,8 @@ const ForgotPassword = () => {
       </div>}
 
       <div>
-        <InputField type="password" placeholder="New Password" />
-        <InputField type="password" placeholder="Confirm Password" />
+        <InputField value={userForm?.password} name="password" onChange={onChangeHandler} type="password" placeholder="New Password" />
+        <InputField value={userForm?.confirmPassword} name="confirmPassword" onChange={onChangeHandler} type="password" placeholder="Confirm Password" />
         <button className='btn mainBtn fillBtn' >Submit</button>
       </div>
 
