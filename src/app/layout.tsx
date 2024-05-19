@@ -29,8 +29,8 @@ export default function RootLayout({
       <body className={inter.className} id="main-body">
         <section className="pageContent">
           <div className="leftContent">
-            <Loader />
             <Providers>
+              <Loader />
               {children}
             </Providers>
           </div>

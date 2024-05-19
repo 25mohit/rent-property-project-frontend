@@ -1,28 +1,33 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { ShowLoader } from "./SettingSlice";
 
 // utils/check-email
 // utils/verify-otp
 // users/register
 
 export const SignInUser = createAsyncThunk("SignInUser", async (payload: any, { dispatch }) => {
+  dispatch(ShowLoader(true))
   try {
     const response = await axios.post(`http://localhost:5000/users/secure-login`, payload);
-    console.log("response", response, payload);
+    dispatch(ShowLoader(false))
     return response.data
   }
   catch (error) {
+    dispatch(ShowLoader(false))
     throw error;
 }
 })
+
 export const CheckEmail = createAsyncThunk("CheckEmail", async (payload: any, { dispatch }) => {
+  dispatch(ShowLoader(true))
   try {
-    const response = await axios.post(`http://localhost:5000/utils/check-email
-    `, payload);
-    console.log("response", response, payload);
+    const response = await axios.post(`http://localhost:5000/utils/check-email`, payload);
+    dispatch(ShowLoader(false))
     return response.data
   }
   catch (error) {
+    dispatch(ShowLoader(false))
     throw error;
 }
 })
