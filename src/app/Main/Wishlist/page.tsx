@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 "use client"
 import React from "react";
->>>>>>> 190e45794f1a1fd41419319896fd87a225e0eafc
 import PropertyCard from "@/app/components/Utils/PropertyCard/PropertyCard";
 
 const Wishlist = () => {
