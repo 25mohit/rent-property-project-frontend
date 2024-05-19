@@ -49,7 +49,7 @@ const InputField:React.FC<InputInterface> = ({ type, placeholder, name, value, o
         <label htmlFor={newID} className={value ? 'formLabel active' : 'formLabel'}>{placeholder} { required !== undefined && required && <span className='requiredStar'>*</span>}</label>
         { field === "mobile" && <span className='countryCode'>{label}</span>}
         { type === "password" && <button type="button" onClick={tooglePasswordVisible} className="eyeAction"><AiFillEye id="show-pass-btn"/></button> }
-        { type === "email" && <button type="button" className='getOtpBtn' id="verify-btn" onClick={() => verifyClick && verifyClick(prev => !prev)}>Get OTP</button> }
+        { (type === "email" && value !== "") && <button type="button" className='getOtpBtn' id="verify-btn" onClick={() => verifyClick && verifyClick(prev => !prev)}>Get OTP</button> }
         { mobileVerify === "mobileVerify" && <button type="button" className='getOtpBtn' id="verify-btn" onClick={() => verifyClick && verifyClick(prev => !prev)}>Get OTP</button> }
       </div>
       <p className='error danger'></p>

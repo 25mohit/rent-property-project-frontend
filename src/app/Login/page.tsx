@@ -8,6 +8,7 @@ import InputField from "../components/Utils/Form/InputField/InputField";
 import { useDispatch, useSelector } from "react-redux";
 import { SignInUser } from "@/redux/slices/UserSlice";
 import { AppDispatch, RootState } from "@/redux/store";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
 
@@ -17,14 +18,17 @@ const Login = () => {
   })
   const [isBtnDisabled, setIsBtnDisabled] = useState(true)
   const [responseError, setResponseError] = useState('')
+
+  const router = useRouter();
   const dispatch = useDispatch<AppDispatch>()
   const response = useSelector((state: RootState) => state.user?.data)
 
   useEffect(() => {
-    console.log("running");
-    
+    localStorage.clear()
+  },[])
+
+  useEffect(() => {    
     if(userForm.email && userForm.password){
-      console.log("222222", userForm.email, userForm.password);
       setIsBtnDisabled(false)
     } else {
       setIsBtnDisabled(true)
@@ -39,27 +43,28 @@ const Login = () => {
         } else if(response?.m === "iv"){
           setResponseError("Your Password in Invalid")
         }
+      } else if(response?.status){
+        if(response?.m === "ss"){
+          setResponseError("Logged In Successfully")
+          localStorage.setItem('user-data', JSON.stringify(response?.d))
+          router.push('/UnderDevelopment')
+        }
       }
     }
   },[response])
   
   const onChangeHandler = (e: any) => {
-    console.log("adasdasd", e);
     const {name, value} = e.target
     setUserForm({...userForm, [name]:value})
   }
   
   const onLoginHandler = (e: any) => {
     e.preventDefault()
-
     if(userForm?.email && userForm?.password){
-      const payload ={
-        email: "mo",
-        password:"ass"
-      }
-      dispatch(SignInUser(payload))
+      dispatch(SignInUser(userForm))
     }
   }
+  
   return (
     <UserForm title="Welcome to login">
         <div className="topHead flex justify-between">
