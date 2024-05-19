@@ -1,22 +1,25 @@
+"use client"
 import React from "react";
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
-import Link from "next/link";
 import { prImg3 } from "../../../public/images";
 import { TbDiscountCheckFilled } from "react-icons/tb";
-import { IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
 import PropertyCard from "../components/Utils/PropertyCard/PropertyCard";
 import { MdOutlineMoreVert } from "react-icons/md";
+import { useRouter } from "next/navigation";
 
 
 const SellerProduct = () => {
+    const router = useRouter()
+const handleBack = () => {
+	router.back()
+}
     return (
         <>
             <SingleContentLayout>
                 <div className="headerBar innerHeader">
-                    <div className="col">
-                        <Link href="/ItemDetails" className="btn backBtn"><IoArrowBack /></Link>
+                    <div className="col"><button className="btn backBtn" onClick={handleBack}><IoArrowBack /></button>
                     </div>
                     <div className="col centerTitle">
                         <h5 className='dTitle textLimit l1'></h5>

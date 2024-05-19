@@ -1,11 +1,10 @@
 'use client'
-import React, { useLayoutEffect, useState } from "react";
-import Link from "next/link";
-import InputField from "../components/Utils/Form/InputField/InputField";
+import React, { useState } from "react";
 import { IoArrowBack } from "react-icons/io5";
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import TextAreaField from "../components/Utils/Form/TextAreaField/TextAreaField";
 import SelectDropdown from "../components/Utils/Form/SelectDropdown/SelectDropdown";
+import { useRouter } from "next/navigation";
 
 const Support = () => {
     const [category, setCategory] = useState('')
@@ -14,12 +13,14 @@ const Support = () => {
         { label: "Do you want to change email address?", value: 'Do you want to change email address?' },
         { label: "Other", value: 'Other' },
     ]
-
+    const router = useRouter()
+    const handleBack = () => {
+        router.back()
+    }
     return (
         <SingleContentLayout>
             <div className="headerBar innerHeader">
-                <div className="col">
-                    <Link href="/Chat" className="btn backBtn"><IoArrowBack /></Link>
+                <div className="col"><button className="btn backBtn" onClick={handleBack}><IoArrowBack /></button>
                 </div>
                 <div className="col centerTitle">
                     <h5 className='dTitle textLimit l1'>Help & Support</h5>

@@ -1,11 +1,10 @@
 'use client'
-import React, { useLayoutEffect, useState } from "react";
-import UserForm from '../components/HOC/UserForm/UserForm'
-import Link from "next/link";
+import React, { useState } from "react";
 import InputField from "../components/Utils/Form/InputField/InputField";
 import OtpInput from 'react-otp-input';
 import { IoArrowBack } from "react-icons/io5";
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
+import { useRouter } from "next/navigation";
 
 const CompleteProfile = () => {
   const [otp, setOtp] = useState('');
@@ -16,12 +15,15 @@ const CompleteProfile = () => {
     // For simplicity, I'll just show the verifyOTP div
     setShowVerifyOTP(true);
   };
+  const router = useRouter()
+const handleBack = () => {
+	router.back()
+}
 
   return (
     <SingleContentLayout>
       <div className="headerBar innerHeader">
-        <div className="col">
-          <Link href="/Chat" className="btn backBtn"><IoArrowBack /></Link>
+        <div className="col"><button className="btn backBtn" onClick={handleBack}><IoArrowBack /></button>
         </div>
         <div className="col centerTitle">
           <h5 className='dTitle textLimit l1'>Complete Profile</h5>

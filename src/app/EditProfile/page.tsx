@@ -1,4 +1,6 @@
+"use client"
 import React from "react";
+import { useRouter } from "next/navigation";
 import SingleContentLayout from "../components/HOC/Layout/SingleContentLayout";
 import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
@@ -9,11 +11,14 @@ import InputField from "../components/Utils/Form/InputField/InputField";
 import DisabledField from "../components/Utils/Form/DisabledField/DisabledField";
 
 const EditProfile = () => {
+    const router = useRouter()
+const handleBack = () => {
+	router.back()
+}
     return (
         <SingleContentLayout>
             <div className="headerBar innerHeader">
-                <div className="col">
-                    <Link href="/Chat" className="btn backBtn"><IoArrowBack /></Link>
+                <div className="col"><button className="btn backBtn" onClick={handleBack}><IoArrowBack /></button>
                 </div>
                 <div className="col centerTitle">
                     <h5 className='dTitle textLimit l1'>Edit Profile</h5>
