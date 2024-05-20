@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { SignInUser } from "@/redux/slices/UserSlice";
 import { AppDispatch, RootState } from "@/redux/store";
 import { useRouter } from "next/navigation";
+import ToastMessage from "../components/Utils/Modals/ToastMessage";
 
 const Login = () => {
 
@@ -88,6 +89,8 @@ const Login = () => {
         </button>
 
         <p className="switchScreen">Don't have an account? <Link className="link" href="/Signup">Signup</Link></p>
+
+        <ToastMessage />
     </UserForm>
   );
 };
