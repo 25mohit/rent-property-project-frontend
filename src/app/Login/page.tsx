@@ -23,6 +23,8 @@ const Login = () => {
   const dispatch = useDispatch<AppDispatch>()
   const loginResponse = useSelector((state: RootState) => state.user?.data)
   
+  console.log("loginResponse", loginResponse);
+  
   useEffect(() => {
     localStorage.clear()
   },[])

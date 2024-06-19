@@ -2,10 +2,6 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { ShowLoader } from "./SettingSlice";
 
-// utils/check-email
-// utils/verify-otp
-// users/register
-
 export const SignInUser = createAsyncThunk("SignInUser", async (payload: any, { dispatch }) => {
   dispatch(ShowLoader(true))
   try {
@@ -16,7 +12,7 @@ export const SignInUser = createAsyncThunk("SignInUser", async (payload: any, { 
   catch (error) {
     dispatch(ShowLoader(false))
     throw error;
-}
+  }
 })
 
 export const CheckEmail = createAsyncThunk("CheckEmail", async (payload: any, { dispatch }) => {
@@ -29,7 +25,7 @@ export const CheckEmail = createAsyncThunk("CheckEmail", async (payload: any, { 
   catch (error) {
     dispatch(ShowLoader(false))
     throw error;
-}
+  }
 })
 
 export const VerifyOTP = createAsyncThunk("VerifyOTP", async (payload: any, { dispatch }) => {
@@ -42,7 +38,7 @@ export const VerifyOTP = createAsyncThunk("VerifyOTP", async (payload: any, { di
   catch (error) {
     dispatch(ShowLoader(false))
     throw error;
-}
+  }
 })
 
 export const RegisterUser = createAsyncThunk("RegisterUser", async (payload: any, { dispatch }) => {
@@ -55,7 +51,7 @@ export const RegisterUser = createAsyncThunk("RegisterUser", async (payload: any
   catch (error) {
     dispatch(ShowLoader(false))
     throw error;
-}
+  }
 })
 
 const UserSlice = createSlice({
