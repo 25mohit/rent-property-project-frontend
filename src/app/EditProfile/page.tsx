@@ -52,7 +52,7 @@ const handleBack = () => {
                 </div>
 
                 <InputField type="text" placeholder="Full Name" />
-                <DisabledField value="jkdesigner62@gmail.com" supportMgs="If you want to change this mail ID please contact Help & Support. Thanks" />
+                <DisabledField value="mohitagarwal.info@gmail.com" supportMgs="If you want to change this mail ID please contact Help & Support. Thanks" />
                 <DisabledField value="+91 8503868641" supportMgs="If you want to change this phone number please contact Help & Support. Thanks" />
                 
 

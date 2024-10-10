@@ -63,7 +63,7 @@ const HeaderBar = () => {
             </span>
             <div className="nameProfileBody">
               <h5 className="textLimit l1">Mohit Agarwal</h5>
-              <p className="textLimit l1">jkdesigner62@gmail.com</p>
+              <p className="textLimit l1">mohitagarwal.info@gmail.com</p>
             </div>
           </div> */}
 
