@@ -45,7 +45,7 @@ const handleBack = () => {
                     <div className='sellerCardPrd'>
                         <div className='sellerBox'>
                             <Image src={prImg3} alt="prImg1" className='img' />
-                            <h4><span className='textLimit l1'>Jitendra Kumar Prajapat</span> <TbDiscountCheckFilled className='blueTik' /></h4>
+                            <h4><span className='textLimit l1'>Mohit Agarwal</span> <TbDiscountCheckFilled className='blueTik' /></h4>
                         </div>
                         <h6>Member Since : May 2022</h6>
                         <h6>Total Items : 12</h6>

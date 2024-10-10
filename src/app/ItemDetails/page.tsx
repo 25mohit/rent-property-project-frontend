@@ -161,7 +161,7 @@ const ItemDetails = () => {
               <h6>Seller Details</h6>
               <div className='sellerBox'>
               <Image src={prImg3} alt="prImg1" className='img' />
-              <h5><span className='textLimit l1'>Jitendra Kumar Prajapat</span> <TbDiscountCheckFilled className='blueTik' /></h5>
+              <h5><span className='textLimit l1'>Mohit Agarwal</span> <TbDiscountCheckFilled className='blueTik' /></h5>
               <IoIosArrowForward className='arrow' />
               </div>
           </Link>

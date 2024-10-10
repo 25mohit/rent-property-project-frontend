@@ -62,7 +62,7 @@ const HeaderBar = () => {
               <Image src={profileImg} alt="profileImg" className="userImg" />
             </span>
             <div className="nameProfileBody">
-              <h5 className="textLimit l1">Jitendra Kumar Prajapat</h5>
+              <h5 className="textLimit l1">Mohit Agarwal</h5>
               <p className="textLimit l1">jkdesigner62@gmail.com</p>
             </div>
           </div> */}

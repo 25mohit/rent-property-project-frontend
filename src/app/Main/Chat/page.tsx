@@ -23,7 +23,7 @@ const Chat = () => {
                 <Image src={profileImg} alt="property" className="userProfile" />
 
                 <div className="contentBody">
-                  <h3 className="textLimit l1">Jitendra Kumar Prajapat </h3> 
+                  <h3 className="textLimit l1">Mohit Agarwal </h3> 
                   <p className="textLimit l1">Hello, suresh, please let me know price of this product</p>
                   <time>04 April, 2024   <span>03:26 PM</span></time>
                 </div>
@@ -35,7 +35,7 @@ const Chat = () => {
                 <Image src={profileImg} alt="property" className="userProfile" />
 
                 <div className="contentBody">
-                  <h3 className="textLimit l1">Jitendra Kumar Prajapat </h3> 
+                  <h3 className="textLimit l1">Mohit Agarwal </h3> 
                   <p className="textLimit l1">Hello, suresh, please let me know price of this product</p>
                   <time>04 April, 2024   <span>03:26 PM</span></time>
                 </div>
@@ -47,7 +47,7 @@ const Chat = () => {
                 <Image src={profileImg} alt="property" className="userProfile" />
 
                 <div className="contentBody">
-                  <h3 className="textLimit l1">Jitendra Kumar Prajapat </h3> 
+                  <h3 className="textLimit l1">Mohit Agarwal </h3> 
                   <p className="textLimit l1">Hello, suresh, please let me know price of this product</p>
                   <time>04 April, 2024   <span>03:26 PM</span></time>
                 </div>
@@ -59,7 +59,7 @@ const Chat = () => {
                 <Image src={profileImg} alt="property" className="userProfile" />
 
                 <div className="contentBody">
-                  <h3 className="textLimit l1">Jitendra Kumar Prajapat </h3> 
+                  <h3 className="textLimit l1">Mohit Agarwal </h3> 
                   <p className="textLimit l1">Hello, suresh, please let me know price of this product</p>
                   <time>04 April, 2024   <span>03:26 PM</span></time>
                 </div>
@@ -71,7 +71,7 @@ const Chat = () => {
                 <Image src={profileImg} alt="property" className="userProfile" />
 
                 <div className="contentBody">
-                  <h3 className="textLimit l1">Jitendra Kumar Prajapat </h3> 
+                  <h3 className="textLimit l1">Mohit Agarwal </h3> 
                   <p className="textLimit l1">Hello, suresh, please let me know price of this product</p>
                   <time>04 April, 2024   <span>03:26 PM</span></time>
                 </div>
@@ -83,7 +83,7 @@ const Chat = () => {
                 <Image src={profileImg} alt="property" className="userProfile" />
 
                 <div className="contentBody">
-                  <h3 className="textLimit l1">Jitendra Kumar Prajapat </h3> 
+                  <h3 className="textLimit l1">Mohit Agarwal </h3> 
                   <p className="textLimit l1">Hello, suresh, please let me know price of this product</p>
                   <time>04 April, 2024   <span>03:26 PM</span></time>
                 </div>
@@ -95,7 +95,7 @@ const Chat = () => {
                 <Image src={profileImg} alt="property" className="userProfile" />
 
                 <div className="contentBody">
-                  <h3 className="textLimit l1">Jitendra Kumar Prajapat </h3> 
+                  <h3 className="textLimit l1">Mohit Agarwal </h3> 
                   <p className="textLimit l1">Hello, suresh, please let me know price of this product</p>
                   <time>04 April, 2024   <span>03:26 PM</span></time>
                 </div>
@@ -107,7 +107,7 @@ const Chat = () => {
                 <Image src={profileImg} alt="property" className="userProfile" />
 
                 <div className="contentBody">
-                  <h3 className="textLimit l1">Jitendra Kumar Prajapat </h3> 
+                  <h3 className="textLimit l1">Mohit Agarwal </h3> 
                   <p className="textLimit l1">Hello, suresh, please let me know price of this product</p>
                   <time>04 April, 2024   <span>03:26 PM</span></time>
                 </div>
@@ -119,7 +119,7 @@ const Chat = () => {
                 <Image src={profileImg} alt="property" className="userProfile" />
 
                 <div className="contentBody">
-                  <h3 className="textLimit l1">Jitendra Kumar Prajapat </h3> 
+                  <h3 className="textLimit l1">Mohit Agarwal </h3> 
                   <p className="textLimit l1">Hello, suresh, please let me know price of this product</p>
                   <time>04 April, 2024   <span>03:26 PM</span></time>
                 </div>
@@ -131,7 +131,7 @@ const Chat = () => {
                 <Image src={profileImg} alt="property" className="userProfile" />
 
                 <div className="contentBody">
-                  <h3 className="textLimit l1">Jitendra Kumar Prajapat </h3> 
+                  <h3 className="textLimit l1">Mohit Agarwal </h3> 
                   <p className="textLimit l1">Hello, suresh, please let me know price of this product</p>
                   <time>04 April, 2024   <span>03:26 PM</span></time>
                 </div>
